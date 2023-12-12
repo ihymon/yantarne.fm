@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+.secondary-title {
+  font-family: 'Comfortaa', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: normal;
+  letter-spacing: 0;
+  color: #000; }
+
+.main-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  background-color: #CC0100;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Comfortaa', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: normal;
+  letter-spacing: 0;
+  color: #fff;
+  transition: .5s; }
+  .main-btn:hover {
+    color: #ddd;
+    transition: .5s;
+    background-color: #a60101; }
+    .main-btn:hover svg path {
+      transition: .5s;
+      fill: #ddd; }
+
+.schedule {
+  margin-bottom: 140px;
+  padding: 0 0 0 60px; }
+  .schedule__title {
+    text-align: center;
+    margin-bottom: 80px; }
+  .schedule__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .schedule__wrapper .schledule__content-title {
+      margin-bottom: 20px;
+      font-family: 'Comfortaa', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: normal;
+      letter-spacing: 0;
+      color: #000; }
+    .schedule__wrapper .schledule__content-description {
+      margin-bottom: 50px;
+      max-width: 640px;
+      font-family: 'Comfortaa', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: normal;
+      letter-spacing: 0;
+      color: rgba(0, 0, 0, 0.8); }
+    .schedule__wrapper .schledule__content-btn {
+      position: relative;
+      overflow: hidden;
+      width: 400px;
+      height: 76px;
+      transition: .5s; }
+      .schedule__wrapper .schledule__content-btn:hover {
+        transition: .5s; }
+        .schedule__wrapper .schledule__content-btn:hover .schledule__content-btn-circle {
+          transition: .5s;
+          border: 10px solid #ddd; }
+      .schedule__wrapper .schledule__content-btn-circle {
+        position: absolute;
+        top: -25px;
+        right: -25px;
+        width: 68px;
+        height: 68px;
+        border: 10px solid #fff;
+        border-radius: 50%; }
+    .schedule__wrapper .schedule__box-wrapper {
+      position: relative;
+      overflow-x: auto; }
+      .schedule__wrapper .schedule__box-wrapper .schedule__box-line {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        height: 470px;
+        width: 5px;
+        background-color: #CC0100;
+        border-radius: 10px; }
+      .schedule__wrapper .schedule__box-wrapper .schedule__box {
+        width: 700px;
+        padding: 20px 60px 20px 20px;
+        border-left: #CC0100;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+        overflow-x: auto; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar {
+          margin: 0 60px 0 20px;
+          height: 8px; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-track {
+          margin: 0 60px 0 20px;
+          background: #ddd;
+          border-radius: 10px; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-thumb {
+          margin: 0 60px 0 20px;
+          background: #CC0100;
+          border-radius: 10px; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-thumb:hover {
+          margin: 0 60px 0 20px;
+          background: #a60101; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card {
+          padding: 20px;
+          width: 550px;
+          height: 220px;
+          border-radius: 10px;
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column; }
+          .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card__title-container {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            column-gap: 15px;
+            font-family: 'Comfortaa', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: normal;
+            letter-spacing: 0;
+            color: #000; }
+            .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card__title-container .schedule__card__title-circle {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              border: 10px solid #CC0100; }
+          .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-description {
+            margin-left: 45px;
+            font-family: 'Comfortaa', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: normal;
+            letter-spacing: 0;
+            color: rgba(0, 0, 0, 0.6); }
+          .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-repeat {
+            margin-left: 45px;
+            font-family: 'Comfortaa', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: normal;
+            letter-spacing: 0;
+            color: #000; }
+            .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-repeat--bold {
+              font-weight: 600; }
+
+/*# sourceMappingURL=main.css.map */
