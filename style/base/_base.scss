@@ -1,0 +1,29 @@
+@import "./variables";
+@import "./mixin";
+
+
+.secondary-title {
+    @include font($black, 48px, 700, normal, 0);
+}
+
+.main-btn {
+    @include display-center(center, center);
+    column-gap: 10px;
+    background-color: $main;
+    border-radius: 10px;
+    border: none;
+    @include font($white, 20px, 500, normal, 0);
+    transition: .5s;
+
+
+    &:hover {
+        color: #ddd;
+        transition: .5s;
+        background-color: #a60101;
+
+        & svg path {
+            transition: .5s;
+            fill: #ddd;
+        }
+    }
+}
