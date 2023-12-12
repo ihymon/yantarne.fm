@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap');
+
+@mixin font($color, $size, $weight, $line, $spacing) {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line;
+    letter-spacing: $spacing;
+    color: $color;
+}
+
+@mixin display-center($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
