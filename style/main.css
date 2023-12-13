@@ -1,293 +1,54 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap");
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box; }
+/*
+Error: File to import not found or unreadable: ./base/variable.
+       Load path: C:/Users/rarte/OneDrive/Documents/GitHub/yantarne.fm/style
+        on line 3 of C:\Users\rarte\OneDrive\Documents\GitHub\yantarne.fm\style\main.scss
 
-:focus, :active {
-  outline: none; }
+1: // Base
+2: @import "./base/reset";
+3: @import "./base/variable";
+4: @import "./base/mixin";
+5: @import "./base/base";
+6: 
+7: 
+8: 
 
-a:focus, a:active {
-  outline: none; }
-
-input, button, textarea {
-  font-family: inherit; }
-
-button {
-  cursor: pointer; }
-
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0; }
-
-a, a:visited {
-  text-decoration: none; }
-
-a:hover {
-  text-decoration: none; }
-
-ul li {
-  list-style: none; }
-
-.secondary-title {
-  font-family: 'Comfortaa', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: normal;
-  letter-spacing: 0;
-  color: #000; }
-
-.main-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 10px;
-  background-color: #CC0100;
-  border-radius: 10px;
-  border: none;
-  font-family: 'Comfortaa', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: normal;
-  letter-spacing: 0;
-  color: #fff;
-  transition: .5s; }
-  .main-btn:hover {
-    color: #ddd;
-    transition: .5s;
-    background-color: #a60101; }
-    .main-btn:hover svg path {
-      transition: .5s;
-      fill: #ddd; }
-
-.schedule {
-  margin-bottom: 140px;
-  padding: 0 0 0 60px; }
-  .schedule__title {
-    text-align: center;
-    margin-bottom: 80px; }
-  .schedule__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    .schedule__wrapper .schledule__content-title {
-      margin-bottom: 20px;
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 36px;
-      line-height: normal;
-      letter-spacing: 0;
-      color: #000; }
-    .schedule__wrapper .schledule__content-description {
-      margin-bottom: 50px;
-      max-width: 640px;
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: normal;
-      letter-spacing: 0;
-      color: rgba(0, 0, 0, 0.8); }
-    .schedule__wrapper .schledule__content-btn {
-      position: relative;
-      overflow: hidden;
-      width: 400px;
-      height: 76px;
-      transition: .5s; }
-      .schedule__wrapper .schledule__content-btn:hover {
-        transition: .5s; }
-        .schedule__wrapper .schledule__content-btn:hover .schledule__content-btn-circle {
-          transition: .5s;
-          border: 10px solid #ddd; }
-      .schedule__wrapper .schledule__content-btn-circle {
-        position: absolute;
-        top: -25px;
-        right: -25px;
-        width: 68px;
-        height: 68px;
-        border: 10px solid #fff;
-        border-radius: 50%; }
-    .schedule__wrapper .schedule__box-wrapper {
-      position: relative;
-      overflow-x: auto; }
-      .schedule__wrapper .schedule__box-wrapper .schedule__box-line {
-        position: absolute;
-        top: 20px;
-        left: 0;
-        height: 470px;
-        width: 5px;
-        background-color: #CC0100;
-        border-radius: 10px; }
-      .schedule__wrapper .schedule__box-wrapper .schedule__box {
-        width: 700px;
-        padding: 20px 60px 20px 20px;
-        border-left: #CC0100;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 30px;
-        overflow-x: auto; }
-        .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar {
-          margin: 0 60px 0 20px;
-          height: 8px; }
-        .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-track {
-          margin: 0 60px 0 20px;
-          background: #ddd;
-          border-radius: 10px; }
-        .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-thumb {
-          margin: 0 60px 0 20px;
-          background: #CC0100;
-          border-radius: 10px; }
-        .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-thumb:hover {
-          margin: 0 60px 0 20px;
-          background: #a60101; }
-        .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card {
-          padding: 20px;
-          width: 550px;
-          height: 220px;
-          border-radius: 10px;
-          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
-          display: flex;
-          justify-content: space-between;
-          flex-direction: column; }
-          .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card__title-container {
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            column-gap: 15px;
-            font-family: 'Comfortaa', sans-serif;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: normal;
-            letter-spacing: 0;
-            color: #000; }
-            .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card__title-container .schedule__card__title-circle {
-              width: 30px;
-              height: 30px;
-              border-radius: 50%;
-              border: 10px solid #CC0100; }
-          .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-description {
-            margin-left: 45px;
-            font-family: 'Comfortaa', sans-serif;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: normal;
-            letter-spacing: 0;
-            color: rgba(0, 0, 0, 0.6); }
-          .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-repeat {
-            margin-left: 45px;
-            font-family: 'Comfortaa', sans-serif;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: normal;
-            letter-spacing: 0;
-            color: #000; }
-            .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-repeat--bold {
-              font-weight: 600; }
-
-.team {
-  padding: 0 60px; }
-  .team__title {
-    margin-bottom: 80px; }
-
-.footer {
-  padding: 120px 60px 30px;
-  background-color: #000; }
-  .footer__wrapper {
-    padding-bottom: 140px;
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    flex-wrap: wrap;
-    border-bottom: 2px solid #fff;
-    column-gap: 50px;
-    row-gap: 80px; }
-    .footer__wrapper .footer__info-logo {
-      margin-bottom: 17px; }
-    .footer__wrapper .footer__info-description {
-      max-width: 470px;
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 24px;
-      line-height: normal;
-      letter-spacing: 0;
-      color: #fff; }
-    .footer__wrapper .footer__list-title {
-      margin-bottom: 40px;
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 32px;
-      line-height: normal;
-      letter-spacing: 0;
-      color: #fff; }
-    .footer__wrapper .footer__list .footer__item {
-      margin-bottom: 15px;
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 24px;
-      line-height: normal;
-      letter-spacing: 0;
-      color: #fff;
-      cursor: pointer;
-      transition: .5s; }
-      .footer__wrapper .footer__list .footer__item .footer__contact {
-        display: flex;
-        align-items: center;
-        column-gap: 10px;
-        color: #fff;
-        transition: .5s; }
-        .footer__wrapper .footer__list .footer__item .footer__contact svg path {
-          transition: .5s; }
-      .footer__wrapper .footer__list .footer__item:hover {
-        transition: .5s;
-        color: #CC0100; }
-        .footer__wrapper .footer__list .footer__item:hover .footer__contact {
-          color: #CC0100;
-          transition: .5s; }
-          .footer__wrapper .footer__list .footer__item:hover .footer__contact svg path {
-            fill: #CC0100;
-            transition: .5s; }
-    .footer__wrapper .footer__list .social-media {
-      margin-top: 25px;
-      display: flex;
-      align-items: center;
-      column-gap: 15px; }
-      .footer__wrapper .footer__list .social-media__box {
-        width: 40px;
-        height: 40px;
-        background-color: #fff;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: .5s; }
-        .footer__wrapper .footer__list .social-media__box svg path {
-          transition: .5s; }
-        .footer__wrapper .footer__list .social-media__box:hover {
-          transition: .5s;
-          background-color: #CC0100; }
-          .footer__wrapper .footer__list .social-media__box:hover svg path {
-            transition: .5s;
-            fill: #fff; }
-  .footer__copyright {
-    padding-top: 30px;
-    text-align: center;
-    font-family: 'Comfortaa', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: normal;
-    letter-spacing: 0;
-    color: #ddd; }
-
-/*# sourceMappingURL=main.css.map */
+Backtrace:
+C:\Users\rarte\OneDrive\Documents\GitHub\yantarne.fm\style\main.scss:3
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:67:in `rescue in import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:45:in `import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:28:in `imported_file'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:37:in `css_import?'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:22:in `load'
+C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: ./base/variable.\A        Load path: C:/Users/rarte/OneDrive/Documents/GitHub/yantarne.fm/style\A         on line 3 of C:\Users\rarte\OneDrive\Documents\GitHub\yantarne.fm\style\main.scss\A \A 1: // Base\A 2: @import \"./base/reset\";\A 3: @import \"./base/variable\";\A 4: @import \"./base/mixin\";\A 5: @import \"./base/base\";\A 6: \A 7: \A 8: "; }
