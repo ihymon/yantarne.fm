@@ -24,4 +24,11 @@
 
 
 // Footer Start
+function displayCurrentYear() {
+    const currentYear = new Date().getFullYear();
+
+    copyrightYear.innerHTML = currentYear;
+}
+
+displayCurrentYear();
 // Footer End

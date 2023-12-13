@@ -172,6 +172,18 @@
 
 
 // Team Start
+.team {
+    padding: 0 60px;
+
+    &__title {
+        margin-bottom: 80px;
+    }
+
+
+    &__wrapper {
+
+    }
+}
 // Team End
 
 
@@ -182,4 +194,111 @@
 
 
 // Footer Start
+.footer {
+    padding: 120px 60px 30px;
+    background-color: $black;
+
+    &__wrapper {
+        padding-bottom: 140px;
+        @include display-center(space-between, start);
+        flex-wrap: wrap;
+        border-bottom: 2px solid $white;
+        column-gap: 50px;
+        row-gap: 80px;
+
+        
+        .footer__info {
+            &-logo {
+                margin-bottom: 17px;
+            }
+
+            &-description {
+                max-width: 470px;
+                @include font($white, 24px, 500, normal, 0);
+            }
+        }
+
+        .footer__list {
+            &-title {
+                margin-bottom: 40px;
+                @include font($white, 32px, 700, normal, 0);
+            }
+
+            .footer__item {
+                margin-bottom: 15px;
+                @include font($white, 24px, 500, normal, 0);
+                cursor: pointer;
+                transition: .5s;
+
+                .footer__contact {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 10px;
+                    color: $white;
+                    transition: .5s;
+    
+                    & svg path {
+                        transition: .5s;
+                    }
+                }
+
+                &:hover {
+                    transition: .5s;
+                    color: $main;
+
+                    & .footer__contact {
+                        color: $main; 
+                        transition: .5s;
+
+                        & svg path {
+                            fill: $main;
+                            transition: .5s;
+                        }
+                    }
+                }
+            }
+
+
+
+            .social-media {
+                margin-top: 25px;
+                display: flex;
+                align-items: center;
+                column-gap: 15px;
+
+                &__box {
+                    width: 40px;
+                    height: 40px;
+                    background-color: $white;
+                    border-radius: 50%;
+                    @include display-center(center, center);
+                    cursor: pointer;
+                    transition: .5s;
+
+
+                    & svg path {
+                        transition: .5s;
+                    }
+
+                    &:hover {
+                        transition: .5s;
+                        background-color: $main;
+
+                        & svg path {
+                            transition: .5s;
+                            fill: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    &__copyright {
+        padding-top: 30px;
+        text-align: center;
+        @include font(#ddd, 20px, 500, normal, 0);
+    }
+}
 // Footer End
