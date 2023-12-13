@@ -2,6 +2,18 @@
 @import "./mixin";
 
 
+body {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden
+}
+
+.overflow-hidden {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden
+}
+
 .secondary-title {
     @include font($black, 48px, 700, normal, 0);
 }

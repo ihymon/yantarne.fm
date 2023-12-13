@@ -1,6 +1,6 @@
 // Base
 @import "./base/reset";
-@import "./base/variable";
+@import "./base/variables";
 @import "./base/mixin";
 @import "./base/base";
 
@@ -10,6 +10,9 @@
 .home {
 	width: 100%;
 	height: 100vh;
+    margin-bottom: 140px;
+    overflow-x: hidden;
+
 	.swiper {
 		width: 100%;
 		height: 100vh;
@@ -17,8 +20,6 @@
 		z-index: -1;
 	  }
   
-	
-
 	  .swiper__bg1{
 		background-image: url(../img/home/home__bg1.jpg);
 		background-size: cover;
@@ -31,19 +32,19 @@
 		background-image: url(../img/home/home__bg3.jpg);
 		background-size: cover;
 	  }
-	  
-	
+
 
 	&__header {
 		width: 100%;
-		height: 140px;
+		height: 180px;
 		padding: 0 60px;
 		
 		@include display-center(space-between, center);
 		background-image: url(../img/home/header.svg);
-		background-size: 180%;
+		background-size: 100%;
 		background-repeat: no-repeat;
 		z-index: 2 !important;
+        padding-bottom: 55px;
 
 		&-nav {
 			width: 33.333%;
@@ -94,17 +95,33 @@
 		&-rigth {
 			@include display-center(flex-end, center);
 		}
+        
+        &-burger {
+            display: none;
+        }
 	}
 
 	&__main {
 		width: 100%;
-		height: calc(100vh - 140px);
+		height: calc(90vh - 180px);
 		@include display-center(center, center);
+        flex-direction: column;
 
 		&-container {
 			width: 100%;
-			@include display-center(flex-start, center);
+            height: 300px;
+			@include display-center(center, center);
 			flex-direction: column;
+
+            .home__wave {
+                width: 100%;
+                height: auto;
+                position: absolute;
+                svg {
+                    width: 100%;
+                    height: auto;
+                }
+            }
 
 			.home__play {
 				width: 230px;
@@ -114,7 +131,6 @@
 				border-radius: 50%;
 				cursor: pointer;
 				z-index: 2;
-
 
 				&-box {
 					width: 160px;
@@ -143,15 +159,140 @@
 
 		}
 
-		&-sound {
-			width: 100%;
-			height: 100px;
-			@include display-center(center, center);
-			background-color: red;
-			
-		}
+        &-title {
+            width: 100%;
+            padding: 0 60px;
+			@include font($white, 48px, 700, normal, 4.8px);
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        &-descripton {
+            width: 100%;
+            padding: 0 60px;
+			@include font($white, 32px, 300, normal, 4.8px);
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        &-voice {
+            width: 100%;
+            height: 200px;
+            background-color: $main;
+
+        }
 	}
 
+	.home__voice {
+        width: 100%;
+        height: 10vh;
+        @include display-center(center, flex-end);
+        flex-direction: column;
+        padding: 0 60px;
+
+        &-box {
+            width: 50px;
+            height: 50px;
+            background-color: $transparent-main;
+            border-radius: 10px;
+            z-index: 2;
+            @include display-center(center, center);
+            cursor: pointer;
+
+        }
+
+        &-animation {
+            width: 50px;
+            height: 150px;
+            border-radius: 10px;
+            position: absolute;
+            cursor: pointer;
+            display: none;
+
+            &-main {
+                width: 50px;
+                height: 150px;
+                background-color: $transparent-main;
+                border-radius: 10px;
+                position: relative;
+                bottom: 105px;
+                @include display-center(center, center);
+                cursor: pointer;
+
+               #volme__input {
+                border-radius: 8px;
+                height: 3px;
+                width: 150px;
+                outline: none;
+                -webkit-appearance: none;
+                transform: rotate(-90deg);
+                cursor: pointer;
+
+              }
+              
+              input[type='range']::-webkit-slider-thumb {
+                width: 18px;
+                -webkit-appearance: none;
+                height: 18px;
+                background: #fff;
+                border-radius: 50%;
+                cursor: pointer;
+
+              }
+
+                
+            }
+        }
+
+        &-animation--oepn {
+            display: block;
+            .home__voice-animation-main {
+                animation-name: volme;
+                animation-duration: 0.5s;
+                animation-iteration-count: 1;
+
+                @keyframes volme {
+                    0% {
+                        position: relative;
+                        bottom: 50px;
+                        opacity: 0;
+                    }
+                    100% {
+                        position: relative;
+                        bottom: 105px;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+
+        &-animation--close {
+            display: block;
+            .home__voice-animation-main {
+                animation-name: volme2;
+                animation-duration: 0.5s;
+                animation-iteration-count: 1;
+                opacity: 0;
+
+                @keyframes volme2 {
+                    0% {
+                        position: relative;
+                        bottom: 105px;
+                        opacity: 1;
+                    }
+                    100% {
+                        position: relative;
+                        bottom: 50px;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        
+
+        
+    }
 }
 // Home End
 
@@ -260,7 +401,6 @@
                 }
 
 
-
                 .schedule__card {
                     padding: 20px;
                     width: 550px;
@@ -308,11 +448,7 @@
 
     }
 }
-.schedule {
-	width: 100%;
-	height: 100vh;
-	background-color: $white;
-}
+
 // Schedule End
 
 
@@ -334,3 +470,439 @@
 
 // Footer Start
 // Footer End
+
+
+
+@media screen and (max-width: 1300px) {
+    .home {
+        &__header {
+            height: 180px;
+            padding-bottom: 55px;
+	    	background-size: 170%;
+    
+            &-nav {
+                ul {
+                    gap: 40px;
+                    li {
+                        gap: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .home {
+        @include display-center(center, center);
+        flex-direction: column;
+        overflow: hidden;
+        position: relative;
+        
+        &__menu {
+            width: 50px;
+            height: 50px;
+            background-color: $main;
+            position: absolute;
+            border-radius: 50%;
+            z-index: 5;
+            transform: scale(0);
+            transition: 0.5s;
+
+        }
+
+        &__menu-open {
+            transform: scale(30);
+        }
+
+        &__header {
+            height: 180px;
+            padding-bottom: 55px;
+	    	background-size: 130%;
+            z-index: 10 !important;
+
+            .home__header-logo {
+                @include display-center(flex-start, center);
+            }
+
+            &-rigth {
+                display: none;
+            }
+
+            &-left {
+                display: none;
+            }
+
+            &-active {
+                width: 100%;
+                display: block;
+                position: absolute;
+                left: 0%;
+                z-index: 11;
+                @include display-center(center, center);
+                flex-direction: column;
+                top: 40%;
+
+                ul {
+                    column-gap: 50px;
+                    flex-direction: column;
+                    @include display-center(center, center);
+                    animation-name: nav;
+                    animation-duration: 1s;
+                    animation-iteration-count: 1;
+    
+                    @keyframes nav {
+                        0% {
+                            position: relative;
+                            bottom: 100px;
+                            opacity: 0;
+                        }
+                        40% {
+                            opacity: 0;
+                        }
+                        100% {
+                            position: relative;
+                            bottom: 0px;
+                            opacity: 1;
+                            
+                        }
+                    }
+
+                    li {
+                        &:hover {
+                            color: $white;
+                        }
+
+                        .round {
+                            display: none;
+                        }
+                    }
+
+                }
+            }
+
+            &-active2 {
+                margin-top: 127px;
+            }
+
+    
+            &-burger {
+                display: block;
+                width: 35px;
+                height: 35px;
+                
+                @include display-center(space-around, center);
+                flex-direction: column;
+                display: flex;
+                z-index: 3;
+                overflow: hidden;
+
+                .burger__row {
+                    width: 100%;
+                    height: 2px;
+                    background-color: #fff;
+                    transition: 0.5s;
+                }
+
+                .burger__row1-active {
+                    transform: rotate(-45deg) translate(-9px, 13px);
+                    transition: 0.5s;
+
+                }
+
+                .burger__row2 {
+                    position: relative;
+                    right: 0px;
+                    transition: 0.5s;
+                }
+
+                .burger__row2-active {
+                    position: relative;
+                    right: 100px;
+                    transition: 0.5s;
+                }
+                
+                .burger__row3-active {
+                    transform: rotate(45deg) translate(-3px, -8px);
+                    transition: 0.5s;
+                }
+
+            }
+
+        }
+
+        &__main {
+            &-container {
+                width: 100%;
+                height: 200px;
+                @include display-center(center, center);
+                flex-direction: column;
+    
+                .home__wave {
+                    width: 100%;
+                    height: auto;
+                    position: absolute;
+                    svg {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+    
+                .home__play {
+                    width: 200px;
+                    height: 200px;
+    
+                    &-box {
+                        width: 140px;
+                        height: 140px;
+    
+                        .play__btn {
+                            width: 80px;
+                            height: 80px;
+    
+                            img {
+                                width: 40px;
+                                height: 40px;
+                            }
+    
+                        }
+                        
+                    }
+                }
+    
+            }
+    
+            &-title {
+                @include font($white, 42px, 700, normal, 4.8px);
+                margin-top: 40px;
+            }
+        }
+
+        .home__voice {
+            width: 100%;
+            height: 10vh;
+            @include display-center(center, flex-end);
+            flex-direction: column;
+            padding: 0 60px;
+            position: relative;
+            bottom: 20px;
+    
+            &-box {
+                width: 50px;
+                height: 50px;
+                background-color: $transparent-main;
+                border-radius: 10px;
+                z-index: 2;
+                @include display-center(center, center);
+                cursor: pointer;
+    
+            }
+    
+            &-animation {
+                width: 50px;
+                height: 150px;
+                border-radius: 10px;
+                position: absolute;
+                cursor: pointer;
+                display: none;
+    
+                &-main {
+                    width: 50px;
+                    height: 150px;
+                    background-color: $transparent-main;
+                    border-radius: 10px;
+                    position: relative;
+                    bottom: 105px;
+                    @include display-center(center, center);
+                    cursor: pointer;
+    
+                   #volme__input {
+                    border-radius: 8px;
+                    height: 3px;
+                    width: 150px;
+                    outline: none;
+                    -webkit-appearance: none;
+                    transform: rotate(-90deg);
+                    cursor: pointer;
+    
+                  }
+                  
+                  input[type='range']::-webkit-slider-thumb {
+                    width: 18px;
+                    -webkit-appearance: none;
+                    height: 18px;
+                    background: #fff;
+                    border-radius: 50%;
+                    cursor: pointer;
+    
+                  }
+    
+                    
+                }
+            }
+    
+            &-animation--oepn {
+                display: block;
+                .home__voice-animation-main {
+                    animation-name: volme;
+                    animation-duration: 0.5s;
+                    animation-iteration-count: 1;
+    
+                    @keyframes volme {
+                        0% {
+                            position: relative;
+                            bottom: 50px;
+                            opacity: 0;
+                        }
+                        100% {
+                            position: relative;
+                            bottom: 105px;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+    
+    
+            &-animation--close {
+                display: block;
+                .home__voice-animation-main {
+                    animation-name: volme2;
+                    animation-duration: 0.5s;
+                    animation-iteration-count: 1;
+                    opacity: 0;
+    
+                    @keyframes volme2 {
+                        0% {
+                            position: relative;
+                            bottom: 105px;
+                            opacity: 1;
+                        }
+                        100% {
+                            position: relative;
+                            bottom: 50px;
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .home {
+        &__header {
+            width: 100%;
+            height: 100px;
+            background-size: 130%;
+            padding-bottom: 0px;
+            background-image: none;
+            background-color: rgba(0, 0, 0, 0.45);
+            padding-top: 10px;
+
+        }
+
+        &__main {
+		height: calc(90vh - 100px);
+            &-title {
+                @include font($white, 36px, 700, normal, 4px);
+                margin-top: 35px;
+            }
+
+            &-descripton {
+                @include font($white, 28px, 300, normal, 4px);
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .home {
+        &__header {
+            padding: 0 30px;
+        
+            &-logo {
+               img {
+                width: 150px;
+               }
+            }
+        }
+
+        &__main {
+            width: 100%;
+            @include display-center(center, center);
+            flex-direction: column;
+            
+
+            &-title {
+                @include font($white, 32px, 700, normal, 4px);
+                margin-top: 35px;
+                padding: 0 30px;
+
+            }
+
+            &-descripton {
+                @include font($white, 28px, 300, normal, 4px);
+                padding: 0 30px;
+            }
+        }
+
+        .home__voice {
+            padding: 0 30px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .home {
+
+        &__main {
+            &-container {
+                width: 100%;
+                height: 200px;
+                @include display-center(center, center);
+                flex-direction: column;
+
+                .home__play {
+                    width: 165px;
+                    height: 165px;
+    
+                    &-box {
+                        width: 120px;
+                        height: 120px;
+    
+                        .play__btn {
+                            width: 70px;
+                            height: 70px;
+    
+                            img {
+                                width: 35px;
+                                height: 35px;
+                            }
+    
+                        }
+                        
+                    }
+                }
+    
+            }
+            &-title {
+                @include font($white, 28px, 700, normal, 4px);
+                margin-top: 30px;
+
+            }
+
+            &-descripton {
+                @include font($white, 24px, 300, normal, 4px);
+            }
+        }
+
+
+    }
+}
