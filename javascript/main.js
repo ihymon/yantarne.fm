@@ -99,4 +99,11 @@ $(".home__header-burger").click(() => {
 
 
 // Footer Start
+function displayCurrentYear() {
+    const currentYear = new Date().getFullYear();
+
+    copyrightYear.innerHTML = currentYear;
+}
+
+displayCurrentYear();
 // Footer End
