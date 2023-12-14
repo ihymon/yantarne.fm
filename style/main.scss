@@ -130,6 +130,7 @@
 				@include display-center(center, center);
 				border-radius: 50%;
 				cursor: pointer;
+                user-select: none;
 				z-index: 2;
 
 				&-box {
@@ -146,6 +147,7 @@
 						background-color: $main;
 						border-radius: 50%;
 						@include display-center(center, center);
+                    
 
 						img {
 							width: 50px;
@@ -454,6 +456,34 @@
 
 
 // About Us Start
+.about-us {
+    width: 100%;
+    height: 100%;
+    padding: 140px 60px;
+    margin-bottom: 140px;
+
+    background-image: url(../img/about-us/about-us__bg.jpg);
+    background-size: cover;
+    @include display-center(center, center);
+    flex-direction: column;
+
+    &__title {
+        @include font($white, 48px, 700, normal, normal);
+    }
+
+    &__destiption {
+        @include font($white, 24px, 500, normal, normal);
+        margin-top: 25px;
+        text-align: center;
+    }
+    a {
+        margin-top: 50px;
+        img {
+            width: 360px;
+            height: 120px;
+        }
+    }
+}
 // About Us End
 
 
@@ -908,6 +938,14 @@
             }
         }
     }
+
+    .about-us {
+        &__title {
+            @include font($white, 42px, 700, normal, normal);
+        }
+
+    }
+
 }
 
 
@@ -935,6 +973,12 @@
             &-descripton {
                 @include font($white, 28px, 300, normal, 4px);
             }
+        }
+    }
+
+    .about-us {
+        &__title {
+            @include font($white, 36px, 700, normal, normal);
         }
     }
 }
@@ -973,6 +1017,19 @@
 
         .home__voice {
             padding: 0 30px;
+        }
+    }
+
+    .about-us {
+        padding: 80px 30px;
+    
+        &__title {
+            @include font($white, 32px, 700, normal, normal);
+        }
+    
+        &__destiption {
+            @include font($white, 20px, 500, normal, normal);
+            margin-top: 25px;
         }
     }
 }
@@ -1023,5 +1080,26 @@
         }
 
 
+    }
+
+    
+    .about-us {
+        padding: 60px 30px;
+    
+        &__title {
+            @include font($white, 28px, 700, normal, normal);
+        }
+
+        &__descripton {
+            @include font($white, 18px, 500, normal, normal);
+            margin-top: 15px;
+        }
+    
+        a {
+            margin-top: 35px;
+            img {
+                width: 100%;
+            }
+        }
     }
 }
