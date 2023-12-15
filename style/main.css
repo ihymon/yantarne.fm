@@ -35,6 +35,15 @@ body {
   min-height: 100%;
   overflow-x: hidden; }
 
+::-webkit-scrollbar {
+  width: 13px; }
+
+::-webkit-scrollbar-track {
+  background: #000; }
+
+::-webkit-scrollbar-thumb {
+  background: #CC0100; }
+
 .overflow-hidden {
   width: 100%;
   height: 100vh;
@@ -482,6 +491,30 @@ body {
   .team__title {
     margin-bottom: 80px; }
 
+.partners {
+  width: 100%;
+  height: 100%;
+  padding: 0px 60px;
+  margin-bottom: 140px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column; }
+  .partners__title {
+    font-family: 'Comfortaa', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: normal;
+    letter-spacing: 0;
+    color: #000; }
+  .partners__box {
+    width: 100%;
+    height: auto;
+    margin-top: 50px; }
+    .partners__box .owl-carousel {
+      width: 100%; }
+
 .footer {
   padding: 120px 60px 30px;
   background-color: #000; }
@@ -810,7 +843,16 @@ body {
     font-size: 42px;
     line-height: normal;
     letter-spacing: normal;
-    color: #fff; } }
+    color: #fff; }
+
+  .partners__title {
+    font-family: 'Comfortaa', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: normal;
+    letter-spacing: 0;
+    color: #000; } }
 @media screen and (max-width: 1000px) {
   .home__header {
     width: 100%;
@@ -847,7 +889,16 @@ body {
     font-size: 36px;
     line-height: normal;
     letter-spacing: normal;
-    color: #fff; } }
+    color: #fff; }
+
+  .partners__title {
+    font-family: 'Comfortaa', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: normal;
+    letter-spacing: 0;
+    color: #000; } }
 @media screen and (max-width: 700px) {
   .home__header {
     padding: 0 30px; }
@@ -899,7 +950,19 @@ body {
       line-height: normal;
       letter-spacing: normal;
       color: #fff;
-      margin-top: 25px; } }
+      margin-top: 25px; }
+
+  .partners {
+    padding: 140px 30px;
+    margin-bottom: 140px; }
+    .partners__title {
+      font-family: 'Comfortaa', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: normal;
+      letter-spacing: 0;
+      color: #000; } }
 @media screen and (max-width: 500px) {
   .home__main-container {
     width: 100%;
@@ -960,6 +1023,15 @@ body {
     .about-us a {
       margin-top: 35px; }
       .about-us a img {
-        width: 100%; } }
+        width: 100%; }
+
+  .partners__title {
+    font-family: 'Comfortaa', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: normal;
+    letter-spacing: 0;
+    color: #000; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -8,6 +8,18 @@ body {
     overflow-x: hidden
 }
 
+::-webkit-scrollbar {
+    width: 13px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #000;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: $main;
+  }
+
 .overflow-hidden {
     width: 100%;
     height: 100vh;
