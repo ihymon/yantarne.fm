@@ -82,6 +82,18 @@ body {
       transition: .5s;
       fill: #ddd; }
 
+@media screen and (max-width: 1200px) {
+  .secondary-title {
+    font-size: 42px; } }
+@media screen and (max-width: 1000px) {
+  .secondary-title {
+    font-size: 36px; } }
+@media screen and (max-width: 700px) {
+  .secondary-title {
+    font-size: 32px; } }
+@media screen and (max-width: 500px) {
+  .secondary-title {
+    font-size: 28px; } }
 .home {
   width: 100%;
   height: 100vh;
@@ -332,7 +344,8 @@ body {
   .schedule__wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    column-gap: 100px; }
     .schedule__wrapper .schledule__content-title {
       margin-bottom: 20px;
       font-family: 'Comfortaa', sans-serif;
@@ -372,18 +385,22 @@ body {
         border: 10px solid #fff;
         border-radius: 50%; }
     .schedule__wrapper .schedule__box-wrapper {
+      width: 50%;
       position: relative;
-      overflow-x: auto; }
+      overflow-x: auto;
+      display: flex;
+      align-items: end; }
       .schedule__wrapper .schedule__box-wrapper .schedule__box-line {
         position: absolute;
         top: 20px;
-        left: 0;
         height: 470px;
         width: 5px;
         background-color: #CC0100;
         border-radius: 10px; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box-line--right {
+          display: none; }
       .schedule__wrapper .schedule__box-wrapper .schedule__box {
-        width: 700px;
+        width: 100%;
         padding: 20px 60px 20px 20px;
         border-left: #CC0100;
         display: grid;
@@ -426,8 +443,8 @@ body {
             letter-spacing: 0;
             color: #000; }
             .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card__title-container .schedule__card__title-circle {
-              width: 30px;
-              height: 30px;
+              min-width: 30px;
+              min-height: 30px;
               border-radius: 50%;
               border: 10px solid #CC0100; }
           .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-description {
@@ -517,15 +534,19 @@ body {
 
 .footer {
   position: relative;
-  padding: 120px 60px 30px;
+  padding: 120px 0 30px;
   background-color: #000; }
   .footer__ui-element {
+    width: 100%;
+    height: 180px;
     position: absolute;
     bottom: 0;
-    left: 52%;
-    transform: translateX(-48%); }
+    background-image: url(../img/footer/footer__ui-element.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 0 center;
+    background-size: contain; }
   .footer__wrapper {
-    padding-bottom: 140px;
+    padding: 0 60px 140px;
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -845,23 +866,38 @@ body {
       position: relative;
       bottom: 50px;
       opacity: 0; } }
-  .about-us__title {
-    font-family: 'Comfortaa', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #fff; }
-
-  .partners__title {
-    font-family: 'Comfortaa', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: normal;
-    letter-spacing: 0;
-    color: #000; } }
+  .schedule {
+    padding: 0 60px; }
+    .schedule__wrapper {
+      flex-direction: column;
+      row-gap: 50px; }
+      .schedule__wrapper .schledule__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; }
+        .schedule__wrapper .schledule__content-title {
+          font-size: 32px; }
+        .schedule__wrapper .schledule__content-description {
+          text-align: center; }
+      .schedule__wrapper .schedule__box-wrapper {
+        width: 100%; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box-line--right {
+          position: absolute;
+          display: block;
+          right: 0; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box {
+          padding: 20px; }
+          .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar {
+            margin: 0 20px; }
+          .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-track {
+            margin: 0 20px 0 20px;
+            background: #ddd;
+            border-radius: 10px; }
+          .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-thumb {
+            margin: 0 20px 0 20px; }
+          .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-thumb:hover {
+            margin: 0 20px 0 20px; } }
 @media screen and (max-width: 1000px) {
   .home__header {
     width: 100%;
@@ -890,24 +926,6 @@ body {
       line-height: normal;
       letter-spacing: 4px;
       color: #fff; }
-
-  .about-us__title {
-    font-family: 'Comfortaa', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #fff; }
-
-  .partners__title {
-    font-family: 'Comfortaa', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: normal;
-    letter-spacing: 0;
-    color: #000; }
 
   .footer__wrapper {
     display: flex;
@@ -968,16 +986,24 @@ body {
   .home .home__voice {
     padding: 0 30px; }
 
+  .schedule {
+    padding: 0 30px; }
+    .schedule__wrapper .schedule__box-wrapper .schedule__box-line {
+      height: 500px; }
+    .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card {
+      width: 500px;
+      height: 230px; }
+      .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card__title-container .schedule__card__title-circle {
+        min-width: 24px;
+        min-height: 24px;
+        border: 8px solid #CC0100; }
+      .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-description {
+        margin-left: 40px; }
+      .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-repeat {
+        margin-left: 40px; }
+
   .about-us {
     padding: 80px 30px; }
-    .about-us__title {
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 32px;
-      line-height: normal;
-      letter-spacing: normal;
-      color: #fff; }
     .about-us__destiption {
       font-family: 'Comfortaa', sans-serif;
       font-style: normal;
@@ -991,21 +1017,15 @@ body {
   .partners {
     padding: 140px 30px;
     margin-bottom: 140px; }
-    .partners__title {
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 32px;
-      line-height: normal;
-      letter-spacing: 0;
-      color: #000; }
 
   .footer {
-    padding: 120px 30px 30px; }
-    .footer__wrapper .footer__info-description {
-      font-size: 20px; }
-    .footer__wrapper .footer__list-title {
-      font-size: 24px; } }
+    padding: 120px 0 30px; }
+    .footer__wrapper {
+      padding: 0 30px 140px; }
+      .footer__wrapper .footer__info-description {
+        font-size: 20px; }
+      .footer__wrapper .footer__list-title {
+        font-size: 24px; } }
 @media screen and (max-width: 500px) {
   .home__main-container {
     width: 100%;
@@ -1044,16 +1064,33 @@ body {
     letter-spacing: 4px;
     color: #fff; }
 
+  .schedule__wrapper .schledule__content-btn {
+    width: 100%; }
+  .schedule__wrapper .schedule__box-wrapper .schedule__box-line {
+    display: none; }
+  .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar {
+    margin: 0 20px; }
+  .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-track {
+    margin: 0 20px 0 20px;
+    background: #ddd;
+    border-radius: 10px; }
+  .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-thumb {
+    margin: 0 20px 0 20px; }
+  .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-thumb:hover {
+    margin: 0 20px 0 20px; }
+  .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card {
+    padding: 20px;
+    width: 100%;
+    height: 530px; }
+    .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card__title-container .schedule__card__title-circle {
+      display: none; }
+    .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-description {
+      margin-left: 0px; }
+    .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-repeat {
+      margin-left: 0px; }
+
   .about-us {
     padding: 60px 30px; }
-    .about-us__title {
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 28px;
-      line-height: normal;
-      letter-spacing: normal;
-      color: #fff; }
     .about-us__descripton {
       font-family: 'Comfortaa', sans-serif;
       font-style: normal;
@@ -1068,22 +1105,16 @@ body {
       .about-us a img {
         width: 100%; }
 
-  .partners__title {
-    font-family: 'Comfortaa', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: normal;
-    letter-spacing: 0;
-    color: #000; }
-
   .footer {
-    padding: 120px 30px 30px; }
+    padding: 120px 0 30px; }
     .footer__wrapper .footer__list .footer__item {
       font-size: 18px; }
       .footer__wrapper .footer__list .footer__item .footer__contact {
-        column-gap: 5px;
+        column-gap: 10px;
         text-align: center; }
+        .footer__wrapper .footer__list .footer__item .footer__contact svg {
+          width: 24px;
+          height: 24px; }
     .footer__copyright {
       font-size: 16px; } }
 

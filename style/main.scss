@@ -312,10 +312,9 @@
 
     &__wrapper {
         @include display-center(space-between, center);
-
+        column-gap: 100px;
+    
         .schledule__content {
-
-
             &-title {
                 margin-bottom: 20px;
                 @include font($black, 36px, 600, normal, 0);
@@ -358,21 +357,28 @@
 
         
         .schedule__box-wrapper {
+            width: 50%;
             position: relative;
             overflow-x: auto;
+            display: flex;
+            align-items: end;
             
             .schedule__box-line {
                 position: absolute;
                 top: 20px;
-                left: 0;
+                // left: 0;
                 height: 470px;
                 width: 5px;
                 background-color: $main;
-                border-radius: 10px;    
+                border-radius: 10px; 
+                
+                &--right {
+                    display: none;
+                }
             }
 
             .schedule__box {
-                width: 700px;
+                width: 100%;
                 padding: 20px 60px 20px 20px;
                 border-left: $main;
                 display: grid;
@@ -418,13 +424,13 @@
                         display: flex;
                         justify-content: start;
                         align-items: center;
-
                         column-gap: 15px;
+
                         @include font($black, 20px, 500, normal, 0);
 
                         .schedule__card__title-circle {
-                            width: 30px;
-                            height: 30px;
+                            min-width: 30px;
+                            min-height: 30px;
                             border-radius: 50%;
                             border: 10px solid $main;
                         }
@@ -534,18 +540,24 @@
 // Footer Start
 .footer {
     position: relative;
-    padding: 120px 60px 30px;
+    padding: 120px 0 30px;
     background-color: $black;
 
     &__ui-element {
+        width: 100%;
+        height: 180px;
+
         position: absolute;
         bottom: 0;
-        left: 52%;
-        transform: translateX(-48%);
+
+        background-image: url(../img/footer/footer__ui-element.svg);
+        background-repeat: no-repeat;
+        background-position: bottom 0 center;
+        background-size: contain;
     }
 
     &__wrapper {
-        padding-bottom: 140px;
+        padding: 0 60px 140px;
         @include display-center(space-between, start);
         flex-wrap: wrap;
         border-bottom: 2px solid $white;
@@ -970,16 +982,62 @@
         }
     }
 
-    .about-us {
-        &__title {
-            @include font($white, 42px, 700, normal, normal);
-        }
+    .schedule {
+        padding: 0 60px;
 
-    }
+        &__wrapper {
+            flex-direction: column;
+            row-gap: 50px;
 
-    .partners {
-        &__title {
-            @include font($black, 42px, 700, normal, 0);
+            .schledule__content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                &-title {
+                    font-size: 32px;
+                }
+
+                &-description {
+                    text-align: center;
+                }
+            }
+
+            .schedule__box-wrapper {
+                width: 100%;
+
+                .schedule__box-line {
+                    &--right {
+                        position: absolute;
+                        display: block;
+                        right: 0;
+                    }
+                }
+
+                .schedule__box {
+                    padding: 20px;
+
+                    &::-webkit-scrollbar {
+                        margin: 0 20px;
+                    }
+                    
+                    &::-webkit-scrollbar-track {
+                        margin: 0 20px 0 20px;
+                        background: #ddd;
+                        border-radius: 10px;
+                    }
+                    
+                    &::-webkit-scrollbar-thumb {
+                        margin: 0 20px 0 20px;
+                    }
+                    
+                    &::-webkit-scrollbar-thumb:hover {
+                        margin: 0 20px 0 20px;
+                    }
+
+                }
+            }
         }
     }
 }
@@ -1009,18 +1067,6 @@
             &-descripton {
                 @include font($white, 28px, 300, normal, 4px);
             }
-        }
-    }
-
-    .about-us {
-        &__title {
-            @include font($white, 36px, 700, normal, normal);
-        }
-    }
-
-    .partners {
-        &__title {
-            @include font($black, 36px, 700, normal, 0);
         }
     }
 
@@ -1099,13 +1145,45 @@
         }
     }
 
+    .schedule {
+        padding: 0 30px;
+
+        &__wrapper {
+            .schedule__box-wrapper {
+
+                .schedule__box-line {
+                    height: 500px;
+                }
+
+                .schedule__box {
+                    .schedule__card {
+                        width: 500px;
+                        height: 230px;
+
+                        &__title-container {
+                            .schedule__card__title-circle {
+                                min-width: 24px;
+                                min-height: 24px;
+                                border: 8px solid $main;
+                            }
+                        }
+
+                        &-description {
+                            margin-left: 40px;
+                        }
+    
+                        &-repeat {
+                            margin-left: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .about-us {
         padding: 80px 30px;
-    
-        &__title {
-            @include font($white, 32px, 700, normal, normal);
-        }
-    
+
         &__destiption {
             @include font($white, 20px, 500, normal, normal);
             margin-top: 25px;
@@ -1115,18 +1193,16 @@
     .partners {
         padding: 140px 30px;
         margin-bottom: 140px;
-    
-        &__title {
-            @include font($black, 32px, 600, normal, 0);
-        }
     }
 
     
 
     .footer {
-        padding: 120px 30px 30px;
+        padding: 120px 0 30px;
 
         &__wrapper {
+            padding: 0 30px 140px;
+
             .footer__info {
                 &-description {
                     font-size: 20px;
@@ -1190,13 +1266,67 @@
 
     }
 
+
+    .schedule {
+        &__wrapper {
+            .schledule__content {
+                &-btn {
+                    width: 100%;
+                }
+            }
+
+            .schedule__box-wrapper {
+                .schedule__box-line {
+                    display: none;
+                }
+
+                .schedule__box {
+                    &::-webkit-scrollbar {
+                        margin: 0 20px;
+                    }
+                    
+                    &::-webkit-scrollbar-track {
+                        margin: 0 20px 0 20px;
+                        background: #ddd;
+                        border-radius: 10px;
+                    }
+                    
+                    &::-webkit-scrollbar-thumb {
+                        margin: 0 20px 0 20px;
+                    }
+                    
+                    &::-webkit-scrollbar-thumb:hover {
+                        margin: 0 20px 0 20px;
+                    }
+
+
+                    .schedule__card {
+                        padding: 20px;
+
+                        width: 100%;
+                        height: 530px;
+
+                        &__title-container {
+                            .schedule__card__title-circle {
+                                display: none;
+                                }
+                        }
+
+                        &-description {
+                            margin-left: 0px;
+                        }
+    
+                        &-repeat {
+                            margin-left: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     .about-us {
         padding: 60px 30px;
-    
-        &__title {
-            @include font($white, 28px, 700, normal, normal);
-        }
 
         &__descripton {
             @include font($white, 18px, 500, normal, normal);
@@ -1211,15 +1341,9 @@
         }
     }
 
-    .partners {
-        &__title {
-            @include font($black, 28px, 700, normal, 0);
-        }
-    }
-
 
     .footer {
-        padding: 120px 30px 30px;
+        padding: 120px 0 30px;
 
         &__wrapper {
             .footer__list {
@@ -1227,8 +1351,13 @@
                     font-size: 18px;
 
                     .footer__contact {
-                        column-gap: 5px;
+                        column-gap: 10px;
                         text-align: center;
+
+                        & svg {
+                            width: 24px;
+                            height: 24px;
+                        }
                     }
                 }
             }
