@@ -533,21 +533,31 @@
 
 // Footer Start
 .footer {
+    position: relative;
     padding: 120px 60px 30px;
     background-color: $black;
+
+    &__ui-element {
+        position: absolute;
+        bottom: 0;
+        left: 52%;
+        transform: translateX(-48%);
+    }
 
     &__wrapper {
         padding-bottom: 140px;
         @include display-center(space-between, start);
         flex-wrap: wrap;
         border-bottom: 2px solid $white;
-        column-gap: 50px;
+        column-gap: 60px;
         row-gap: 80px;
 
         
         .footer__info {
+            margin-top: -58px;
             &-logo {
-                margin-bottom: 17px;
+                margin-bottom: 10px;
+                width: 300px;
             }
 
             &-description {
@@ -605,8 +615,8 @@
                 column-gap: 15px;
 
                 &__box {
-                    width: 40px;
-                    height: 40px;
+                    width: 44px;
+                    height: 44px;
                     background-color: $white;
                     border-radius: 50%;
                     @include display-center(center, center);
@@ -1013,6 +1023,43 @@
             @include font($black, 36px, 700, normal, 0);
         }
     }
+
+
+    .footer {
+        &__wrapper {
+            @include display-center(center, center);
+            flex-direction: column;
+
+            .footer__info {
+                width: 100%;
+                @include display-center(center, center);
+                flex-direction: column;
+
+                &-description {
+                    text-align: center;
+                    max-width: 100%;
+                }
+            }
+
+            .footer__list {
+                @include display-center(center, center);
+                flex-direction: column;
+
+                &-title {
+                    margin-bottom: 25px;
+                    font-size: 28px;
+                }
+
+                .footer__item {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        &__copyright {
+            font-size: 18px;
+        }
+    }
 }
 
 
@@ -1071,6 +1118,26 @@
     
         &__title {
             @include font($black, 32px, 600, normal, 0);
+        }
+    }
+
+    
+
+    .footer {
+        padding: 120px 30px 30px;
+
+        &__wrapper {
+            .footer__info {
+                &-description {
+                    font-size: 20px;
+                }
+            }
+
+            .footer__list {
+                &-title {
+                    font-size: 24px;
+                }
+            }
         }
     }
 }
@@ -1147,6 +1214,28 @@
     .partners {
         &__title {
             @include font($black, 28px, 700, normal, 0);
+        }
+    }
+
+
+    .footer {
+        padding: 120px 30px 30px;
+
+        &__wrapper {
+            .footer__list {
+                .footer__item {
+                    font-size: 18px;
+
+                    .footer__contact {
+                        column-gap: 5px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        &__copyright {
+            font-size: 16px;
         }
     }
 }
