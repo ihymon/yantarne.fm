@@ -97,7 +97,6 @@ body {
 .home {
   width: 100%;
   height: 100vh;
-  margin-bottom: 140px;
   overflow-x: hidden; }
   .home .swiper {
     width: 100%;
@@ -336,8 +335,12 @@ body {
     bottom: 50px;
     opacity: 0; } }
 .schedule {
-  margin-bottom: 140px;
-  padding: 0 0 0 60px; }
+  position: relative;
+  padding: 140px 0 140px 60px;
+  background-image: url(./../img/main/spiral.svg);
+  background-repeat: no-repeat;
+  background-position: top 60% right -80%;
+  background-size: auto 700px; }
   .schedule__title {
     text-align: center;
     margin-bottom: 80px; }
@@ -345,7 +348,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 100px; }
+    column-gap: 100px;
+    z-index: 4; }
     .schedule__wrapper .schledule__content-title {
       margin-bottom: 20px;
       font-family: 'Comfortaa', sans-serif;
@@ -427,6 +431,7 @@ body {
           height: 220px;
           border-radius: 10px;
           box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+          background-color: #fff;
           display: flex;
           justify-content: space-between;
           flex-direction: column; }
@@ -504,9 +509,64 @@ body {
       height: 120px; }
 
 .team {
-  padding: 0 60px; }
+  padding: 0 60px 140px;
+  background-image: url(./../img/main/spiral.svg);
+  background-repeat: no-repeat;
+  background-position: center left -60%; }
   .team__title {
+    text-align: center;
     margin-bottom: 80px; }
+  .team__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 40px; }
+    .team__wrapper .team__member {
+      width: 300px;
+      height: 420px;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      flex-direction: column; }
+      .team__wrapper .team__member-picture {
+        width: 100%;
+        border-radius: 10px 10px 0px 0px; }
+      .team__wrapper .team__member-position {
+        margin-top: 15px;
+        font-family: 'Comfortaa', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: normal;
+        letter-spacing: 0;
+        color: rgba(0, 0, 0, 0.6); }
+      .team__wrapper .team__member-name {
+        margin-top: 10px;
+        font-family: 'Comfortaa', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: normal;
+        letter-spacing: 0;
+        color: #000; }
+      .team__wrapper .team__member-instagram {
+        margin-top: 25px;
+        font-family: 'Comfortaa', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: normal;
+        letter-spacing: 0;
+        color: #CC0100;
+        transition: .5s; }
+        .team__wrapper .team__member-instagram:hover {
+          transition: .5s;
+          color: #a60101; }
 
 .partners {
   width: 100%;
@@ -517,14 +577,6 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column; }
-  .partners__title {
-    font-family: 'Comfortaa', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: normal;
-    letter-spacing: 0;
-    color: #000; }
   .partners__box {
     width: 100%;
     height: auto;
@@ -639,6 +691,9 @@ body {
     letter-spacing: 0;
     color: #ddd; }
 
+@media screen and (max-width: 1400px) {
+  .schedule {
+    background-position: top 60% right -120%; } }
 @media screen and (max-width: 1300px) {
   .home__header {
     height: 180px;
@@ -647,7 +702,10 @@ body {
     .home__header-nav ul {
       gap: 40px; }
       .home__header-nav ul li {
-        gap: 10px; } }
+        gap: 10px; }
+
+  .schedule {
+    background-position: top 60% right -150%; } }
 @media screen and (max-width: 1200px) {
   .home {
     display: flex;
@@ -867,7 +925,9 @@ body {
       bottom: 50px;
       opacity: 0; } }
   .schedule {
-    padding: 0 60px; }
+    padding: 140px 60px;
+    background-position: top 88% center;
+    background-size: auto 600px; }
     .schedule__wrapper {
       flex-direction: column;
       row-gap: 50px; }
@@ -926,6 +986,9 @@ body {
       line-height: normal;
       letter-spacing: 4px;
       color: #fff; }
+
+  .team {
+    background-position: center; }
 
   .footer__wrapper {
     display: flex;
@@ -987,9 +1050,9 @@ body {
     padding: 0 30px; }
 
   .schedule {
-    padding: 0 30px; }
+    padding: 140px 0; }
     .schedule__wrapper .schedule__box-wrapper .schedule__box-line {
-      height: 500px; }
+      display: none; }
     .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card {
       width: 500px;
       height: 230px; }
@@ -1013,6 +1076,9 @@ body {
       letter-spacing: normal;
       color: #fff;
       margin-top: 25px; }
+
+  .team {
+    padding: 0 30px 140px; }
 
   .partners {
     padding: 140px 30px;
@@ -1066,8 +1132,6 @@ body {
 
   .schedule__wrapper .schledule__content-btn {
     width: 100%; }
-  .schedule__wrapper .schedule__box-wrapper .schedule__box-line {
-    display: none; }
   .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar {
     margin: 0 20px; }
   .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-track {
@@ -1104,6 +1168,25 @@ body {
       margin-top: 35px; }
       .about-us a img {
         width: 100%; }
+
+  .team__wrapper .team__member {
+    width: 260px;
+    height: 370px; }
+    .team__wrapper .team__member-position {
+      margin-top: 15px;
+      font-size: 15px; }
+    .team__wrapper .team__member-name {
+      margin-top: 10px;
+      font-size: 20px; }
+    .team__wrapper .team__member-instagram {
+      margin-top: 20px;
+      font-family: 'Comfortaa', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: normal;
+      letter-spacing: 0;
+      color: #CC0100; }
 
   .footer {
     padding: 120px 0 30px; }
