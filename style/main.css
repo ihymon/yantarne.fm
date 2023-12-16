@@ -524,8 +524,8 @@ body {
     row-gap: 50px;
     column-gap: 40px; }
     .team__wrapper .team__member {
-      width: 300px;
-      height: 420px;
+      width: 310px;
+      height: 430px;
       border-radius: 10px;
       background: #fff;
       box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
@@ -537,6 +537,7 @@ body {
         width: 100%;
         border-radius: 10px 10px 0px 0px; }
       .team__wrapper .team__member-position {
+        text-align: center;
         margin-top: 15px;
         font-family: 'Comfortaa', sans-serif;
         font-style: normal;
