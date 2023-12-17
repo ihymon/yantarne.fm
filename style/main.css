@@ -209,7 +209,6 @@ body {
           animation-direction: alternate;
           background: #CC0100;
           margin: 0 1.5px;
-          height: 40px;
           width: 6px;
           z-index: 20; }
           .home__main-container .visualaiser__container .bar:nth-child(-n + 7), .home__main-container .visualaiser__container .bar:nth-last-child(-n + 7) {
@@ -1091,7 +1090,6 @@ body {
       .home__main-container .visualaiser__container .bar {
         background: #CC0100;
         margin: 0 1.5px;
-        height: 40px;
         width: 6px;
         z-index: 20; }
     .home__main-title {
@@ -1177,7 +1175,6 @@ body {
     .home__main-container .visualaiser__container .bar {
       background: #CC0100;
       margin: 0 1.5px;
-      height: 40px;
       width: 5px;
       z-index: 20; }
     .home__main-container .home__play {
