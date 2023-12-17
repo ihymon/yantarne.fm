@@ -65,6 +65,7 @@ function updateSliderBackground($slider) {
 
   console.log(value / 100);
   streamVolume = value / 100;
+
   if (stream) {
     stream.volume = streamVolume;
     if (value == 0) {
@@ -92,7 +93,7 @@ async function loadAudio() {
       const audioUrl = data.icestats.source.listenurl;
       const title = data.icestats.source.title;
 
-      stream = new Audio(audioUrl);
+      stream = new Audio(audioUrl); // No longer a reassignment to a constant variable
       stream.volume = streamVolume;
 
       stream.addEventListener('loadedmetadata', () => {
@@ -119,31 +120,50 @@ async function loadAudio() {
   }
 }
 
+let animationBar;
+
 $(".home__play").click(() => {
   $(".play__btn-play").toggle();
   $(".play__btn-pause").toggle();
   $(".voiceBig").show();
   $(".voiceSmall").hide();
 
-  if (streamPlay === false) {
-    try {
-      if (!streamPlay) {
-        stream.play().catch((playError) => {
-          console.error("Error playing audio:", playError);
-        });
-        streamPlay = true;
-        console.log("play");
-      }
+  $('.bar').css({"animation-name": "wave-lg" });
 
-    } catch (error) {
-      console.error("Error playing or pausing the audio:", error);
-    }
-  } else {
+  animationBar = setTimeout(() => {
+    const bar = document.querySelectorAll(".bar");
+    for (let i = 0; i < bar.length; i++) {
+      bar.forEach((item, j) => {
+      // Random move
+      item.style.animationDuration = `${Math.random() * (0.7 - 0.2) + 0.3}s`;
+      });
+  }
+ }, "1200")
+
+    if (streamPlay === false) {
+      try {
+        if (!streamPlay) {
+          if (stream) {
+            stream.play().catch((playError) => {
+              console.error("Error playing audio:", playError);
+            });
+            streamPlay = true;
+            console.log("play");
+          } else {
+            console.error("Stream is not defined or could not be found.");
+          }
+        }
+      } catch (error) {
+        console.error("Error playing or pausing the audio:", error);
+      }
+    } else {
     console.log("pause");
     $(".voiceBig").hide();
     $(".voiceSmall").show();
     stream.pause();
     streamPlay = false;
+    $('.bar').css({"animation-name": "none" });
+    clearTimeout(animationBar);
   }
 });
 

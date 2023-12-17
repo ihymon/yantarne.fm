@@ -4,7 +4,11 @@
 @import "./base/mixin";
 @import "./base/base";
 
-
+:root {
+    --wave-lg: 150px;
+    --wave-md: 100px;
+    --wave-sm: 50px;
+}
 
 // Home Start
 .home {
@@ -112,15 +116,79 @@
 			@include display-center(center, center);
 			flex-direction: column;
 
-            .home__wave {
+            .visualaiser__container{
                 width: 100%;
-                height: auto;
                 position: absolute;
-                svg {
-                    width: 100%;
-                    height: auto;
-                }
-            }
+                z-index: 0;
+                        .sound-wave {
+                          width: 100%;
+                          height: 60px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: space-between;
+                          z-index: 20;
+    
+                    
+                        }
+                        .bar {
+                          animation-name: wave-lg;
+                          animation-iteration-count: infinite;
+                          animation-timing-function: ease-in-out;
+                          animation-direction: alternate;
+                          background: $main; 
+                          margin: 0 1.5px;
+                          height:40px;
+                          width: 6px; 
+                          z-index: 20;
+            
+                      
+                          &:nth-child(-n + 7),
+                          &:nth-last-child(-n + 7) {
+                            animation-name: wave-md;
+                          }
+                      
+                          &:nth-child(-n + 3),
+                          &:nth-last-child(-n + 3) {
+                            animation-name: wave-sm;
+                          }
+                        }
+                      }
+
+    
+                      
+                      @keyframes wave-sm {
+                        0% {
+                          opacity: 0.35;
+                          height: 40px;
+                        }
+                        100% {
+                          opacity: 1;
+                          height: var(--wave-sm);
+                        }
+                      }
+                      
+                      @keyframes wave-md {
+                        0% {
+                          opacity: 0.35;
+                          height: 15px;
+                        }
+                        100% {
+                          opacity: 1;
+                          height: var(--wave-md);
+                        }
+                      }
+                      
+                      @keyframes wave-lg {
+                        0% {
+                          opacity: 0.5;
+                          height: 15px;
+                        }
+                        100% {
+                          opacity: 1;
+                          height: var(--wave-lg);
+                        }
+                      }
+
 
 			.home__play {
 				width: 230px;
@@ -1179,6 +1247,17 @@
 
 
 @media screen and (max-width: 700px) {
+
+    :root {
+        --wave-lg: 100px;
+        --wave-md: 80px;
+        --wave-sm: 30px;
+      }
+
+    .bar__none {
+        display: none;
+    }
+
     .home {
         &__header {
             padding: 0 30px;
@@ -1194,7 +1273,25 @@
             width: 100%;
             @include display-center(center, center);
             flex-direction: column;
-            
+            &-container {
+                width: 100%;
+                height: 300px;
+                @include display-center(center, center);
+                flex-direction: column;
+    
+                .visualaiser__container{
+                            .bar {
+                              background: $main; 
+                              margin: 0 1.5px;
+                              height:40px;
+                              width: 6px; 
+                              z-index: 20;
+
+                            }
+                          }
+
+
+            }
 
             &-title {
                 @include font($white, 32px, 700, normal, 4px);
@@ -1294,6 +1391,16 @@
 
 
 @media screen and (max-width: 500px) {
+
+    // :root {
+    //     --wave-lg: 100px;
+    //     --wave-md: 80px;
+    //     --wave-sm: 30px;
+    //   }
+
+    .bar__none2 {
+        display: none;
+    }
     .home {
 
         &__main {
@@ -1302,6 +1409,17 @@
                 height: 200px;
                 @include display-center(center, center);
                 flex-direction: column;
+
+                .visualaiser__container{
+                    .bar {
+                      background: $main; 
+                      margin: 0 1.5px;
+                      height:40px;
+                      width: 5px; 
+                      z-index: 20;
+
+                    }
+                  }
 
                 .home__play {
                     width: 165px;
