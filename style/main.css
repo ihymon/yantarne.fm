@@ -655,7 +655,8 @@ body {
       margin-top: -58px; }
       .footer__wrapper .footer__info-logo {
         margin-bottom: 10px;
-        width: 300px; }
+        width: 300px;
+        cursor: pointer; }
       .footer__wrapper .footer__info-description {
         max-width: 470px;
         font-family: 'Comfortaa', sans-serif;
@@ -1117,6 +1118,10 @@ body {
 
   .schedule {
     padding: 140px 0; }
+    .schedule__wrapper .schledule__content {
+      padding: 0 30px; }
+      .schedule__wrapper .schledule__content-title {
+        font-size: 28px; }
     .schedule__wrapper .schedule__box-wrapper .schedule__box-line {
       display: none; }
     .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card {
@@ -1205,6 +1210,8 @@ body {
     letter-spacing: 4px;
     color: #fff; }
 
+  .schedule__wrapper .schledule__content-title {
+    font-size: 24px; }
   .schedule__wrapper .schledule__content-btn {
     width: 100%; }
   .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar {
@@ -1265,6 +1272,8 @@ body {
 
   .footer {
     padding: 120px 0 30px; }
+    .footer__wrapper .footer__info-logo {
+      width: 260px; }
     .footer__wrapper .footer__list .footer__item {
       font-size: 18px; }
       .footer__wrapper .footer__list .footer__item .footer__contact {

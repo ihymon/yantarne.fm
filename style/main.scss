@@ -665,6 +665,7 @@
 .footer {
     position: relative;
     padding: 120px 0 30px;
+    
     background-color: $black;
 
     &__ui-element {
@@ -694,6 +695,7 @@
             &-logo {
                 margin-bottom: 10px;
                 width: 300px;
+                cursor: pointer;
             }
 
             &-description {
@@ -1315,6 +1317,14 @@
         padding: 140px 0;
 
         &__wrapper {
+            .schledule__content {
+                padding: 0 30px;
+
+                &-title {
+                    font-size: 28px;
+                }
+            }
+
             .schedule__box-wrapper {
 
                 .schedule__box-line {
@@ -1462,6 +1472,10 @@
     .schedule {
         &__wrapper {
             .schledule__content {
+                &-title {
+                    font-size: 24px;
+                }
+                
                 &-btn {
                     width: 100%;
                 }
@@ -1560,6 +1574,12 @@
         padding: 120px 0 30px;
 
         &__wrapper {
+            .footer__info {
+                &-logo {
+                    width: 260px;
+                }
+            }
+
             .footer__list {
                 .footer__item {
                     font-size: 18px;

@@ -210,12 +210,16 @@ $("#volme").click(() => {
   }
 });
 
+
+let isMenuOpen = false;
+
 $(".home__header-burger").click(() => {
+  // if(!isMenuOpen) {
+  //   $("body").addClass("overflow-hidden");
+  // }
   $("body").toggleClass("overflow-hidden");
   $(".home__header-left").toggleClass("home__header-active home__header-active1");
   $(".home__header-rigth").toggleClass("home__header-active home__header-active2");
-
- 
 
 	home.scrollIntoView({
     block: "start",
@@ -227,13 +231,66 @@ $(".home__header-burger").click(() => {
   $(".burger__row2").toggleClass("burger__row2-active");
   $(".burger__row3").toggleClass("burger__row3-active");
   $(".home__menu").toggleClass("home__menu-open");
-
-
 });
 
 
 // Home End
 
+
+function resetBurger() {
+  $("body").removeClass("overflow-hidden");
+  $(".home__header-left").removeClass("home__header-active home__header-active1");
+  $(".home__header-rigth").removeClass("home__header-active home__header-active2");
+  $(".burger__row1").removeClass("burger__row1-active");
+  $(".burger__row2").removeClass("burger__row2-active");
+  $(".burger__row3").removeClass("burger__row3-active");
+  $(".home__menu").removeClass("home__menu-open");
+}
+
+// Scroll To Section
+$(".schedule--scroll").click(function() {
+  resetBurger();
+  $('html, body').animate({
+      scrollTop: $(".schedule").offset().top
+  }, 1000);
+});
+
+$(".about-us--scroll").click(function() {
+  resetBurger();
+  $('html, body').animate({
+    scrollTop: $(".about-us").offset().top
+  }, 1000);
+});
+
+$(".partners--scroll").click(function() {
+  resetBurger();
+  $('html, body').animate({
+      scrollTop: $(".partners").offset().top - 0.20 * $(window).height()
+  }, 1000);
+});
+
+$(".footer--scroll").click(function() {
+  resetBurger();
+  $('html, body').animate({
+    scrollTop: $(".footer").offset().top
+  }, 1000);
+});
+
+
+$(".team--scroll").click(function() {
+  resetBurger();
+  $('html, body').animate({
+      scrollTop: $(".team").offset().top - 0.10 * $(window).height()
+  }, 1000);
+});
+
+$(".home--scroll").click(function() {
+  resetBurger();
+  $('html, body').animate({
+      scrollTop: $(".home").offset().top
+  }, 1000);
+});
+// Scroll To Section
 
 
 // Schedule Start
