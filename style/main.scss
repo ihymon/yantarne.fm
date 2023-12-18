@@ -10,6 +10,95 @@
     --wave-sm: 50px;
 }
 
+
+// Loader Start
+.loader-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: $black;
+
+    @include display-center(center, center);
+    z-index: 9999;
+    transition: .5s;
+
+    &._closed {
+        transition: 1s;
+        opacity: .0;
+    }
+
+    &._closed .loader-line {
+        transition: .3s;
+        opacity: .0;
+    }
+
+    .loader-decoration {
+        position: absolute;
+
+        &--1 {
+            top: -40%;
+            left: -40%;
+        }
+
+        &--2 {
+            right: -45%;
+            bottom: -70%;
+        }
+    }
+
+    .loader-line {
+        width: 6px;
+        height: 0px;
+        background: $main;
+        margin: 0 3px;
+        border-radius: 10px;
+        animation: loading 1.2s infinite;
+    }
+    
+    .loader-line:nth-child(2){
+        animation-delay: 0.15s;
+    }
+    .loader-line:nth-child(3){
+        animation-delay: 0.3s;
+    }
+    .loader-line:nth-child(4){
+        animation-delay: 0.45s;
+    }
+    .loader-line:nth-child(5){
+        animation-delay: 0.6s;
+    }
+    .loader-line:nth-child(6){
+        animation-delay: 0.75s;
+    }
+    .loader-line:nth-child(7){
+        animation-delay: 0.9s;
+    }
+    .loader-line:nth-child(8){
+        animation-delay: 1.05s;
+    }
+    
+    @keyframes loading {
+        0% {
+        height: 0;
+        }
+        50% {
+        height: 50px;
+        }
+        100% {
+        height: 0;
+        }
+    }
+
+    .loader-decoration {
+        position: absolute;
+    }
+}
+// Loader End
+
+
+
+
 // Home Start
 .home {
 	width: 100%;
@@ -669,22 +758,25 @@
 
 // Footer Start
 .footer {
+    overflow: hidden;
     position: relative;
     padding: 120px 0 30px;
     
     background-color: $black;
 
     &__ui-element {
-        width: 100%;
-        height: 180px;
+        width: 970px;
+        height: 775px;
 
         position: absolute;
-        bottom: 0;
+        bottom: -96%;
+        left: 50%;
+        transform: translateX(-50%);
 
-        background-image: url(../img/footer/footer__ui-element.svg);
+        background-image: url(../img/main/spiral--white.svg);
         background-repeat: no-repeat;
         background-position: bottom 0 center;
-        background-size: contain;
+        // background-size: ;
     }
 
     &__wrapper {
@@ -821,6 +913,12 @@
 
     .schedule {
         background-position: top 60% right -150%;
+    }
+
+    .footer {
+        &__ui-element {
+            bottom: -65%;
+        }
     }
 }
 
@@ -1222,6 +1320,11 @@
     }
 
     .footer {
+        &__ui-element {
+            bottom: -48%;
+        }
+
+
         &__wrapper {
             @include display-center(center, center);
             flex-direction: column;

@@ -1,3 +1,19 @@
+// Loader Start
+$("body").addClass("wrap-hidden");
+
+const loader = () => {
+  setTimeout(() => {
+    $("body").removeClass("wrap-hidden");
+    $("#loaderOverlay").addClass("_closed");
+
+  }, 3000)
+}
+
+loader();
+// Loader End
+
+
+
 // Home Start
 
 fetch(`https://complex.in.ua/status-json.xsl?mount=/yantarne`)

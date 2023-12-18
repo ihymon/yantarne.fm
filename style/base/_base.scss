@@ -26,6 +26,10 @@ body {
     overflow: hidden
 }
 
+.wrap-hidden {
+    overflow: hidden
+}
+
 .secondary-title {
     @include font($black, 48px, 700, normal, 0);
 }

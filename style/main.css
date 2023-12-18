@@ -49,6 +49,9 @@ body {
   height: 100vh;
   overflow: hidden; }
 
+.wrap-hidden {
+  overflow: hidden; }
+
 .secondary-title {
   font-family: 'Comfortaa', sans-serif;
   font-style: normal;
@@ -98,6 +101,62 @@ body {
   --wave-lg: 150px;
   --wave-md: 100px;
   --wave-sm: 50px; }
+
+.loader-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: .5s; }
+  .loader-overlay._closed {
+    transition: 1s;
+    opacity: .0; }
+  .loader-overlay._closed .loader-line {
+    transition: .3s;
+    opacity: .0; }
+  .loader-overlay .loader-decoration {
+    position: absolute; }
+    .loader-overlay .loader-decoration--1 {
+      top: -40%;
+      left: -40%; }
+    .loader-overlay .loader-decoration--2 {
+      right: -45%;
+      bottom: -70%; }
+  .loader-overlay .loader-line {
+    width: 6px;
+    height: 0px;
+    background: #CC0100;
+    margin: 0 3px;
+    border-radius: 10px;
+    animation: loading 1.2s infinite; }
+  .loader-overlay .loader-line:nth-child(2) {
+    animation-delay: 0.15s; }
+  .loader-overlay .loader-line:nth-child(3) {
+    animation-delay: 0.3s; }
+  .loader-overlay .loader-line:nth-child(4) {
+    animation-delay: 0.45s; }
+  .loader-overlay .loader-line:nth-child(5) {
+    animation-delay: 0.6s; }
+  .loader-overlay .loader-line:nth-child(6) {
+    animation-delay: 0.75s; }
+  .loader-overlay .loader-line:nth-child(7) {
+    animation-delay: 0.9s; }
+  .loader-overlay .loader-line:nth-child(8) {
+    animation-delay: 1.05s; }
+@keyframes loading {
+  0% {
+    height: 0; }
+  50% {
+    height: 50px; }
+  100% {
+    height: 0; } }
+  .loader-overlay .loader-decoration {
+    position: absolute; }
 
 .home {
   width: 100%;
@@ -640,18 +699,20 @@ body {
       width: 100%; }
 
 .footer {
+  overflow: hidden;
   position: relative;
   padding: 120px 0 30px;
   background-color: #000; }
   .footer__ui-element {
-    width: 100%;
-    height: 180px;
+    width: 970px;
+    height: 775px;
     position: absolute;
-    bottom: 0;
-    background-image: url(../img/footer/footer__ui-element.svg);
+    bottom: -96%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(../img/main/spiral--white.svg);
     background-repeat: no-repeat;
-    background-position: bottom 0 center;
-    background-size: contain; }
+    background-position: bottom 0 center; }
   .footer__wrapper {
     padding: 0 60px 140px;
     display: flex;
@@ -761,7 +822,10 @@ body {
         gap: 10px; }
 
   .schedule {
-    background-position: top 60% right -150%; } }
+    background-position: top 60% right -150%; }
+
+  .footer__ui-element {
+    bottom: -65%; } }
 @media screen and (max-width: 1200px) {
   .home {
     display: flex;
@@ -1049,6 +1113,8 @@ body {
   .team {
     background-position: center; }
 
+  .footer__ui-element {
+    bottom: -48%; }
   .footer__wrapper {
     display: flex;
     justify-content: center;
