@@ -1,11 +1,12 @@
 // Loader Start
-$("body").addClass("wrap-hidden");
 
 const loader = () => {
   setTimeout(() => {
     $("body").removeClass("wrap-hidden");
     $("#loaderOverlay").addClass("_closed");
-
+    setTimeout(() => {
+      $("#loaderOverlay").css("display", "none");
+    }, 600);
   }, 3000)
 }
 
