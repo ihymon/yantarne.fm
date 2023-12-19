@@ -326,37 +326,36 @@ $(".home--scroll").click(function() {
 
 
 // Partners Start
-
-let owlSecond = $('.owl-carousel').owlCarousel({
-  items: 3,
-  loop: true,
-  center: true,
-  margin: 200,
-  autoWidth: true,
-  autoplay: true,
-  autoplayTimeout: 1500,
-  responsiveClass:true,
-  dots: false,
-  animateOut: 'slideOutDown',
-  animateIn: 'flipInX',
-  stagePadding:30,
-  smartSpeed:650,
+// let owlSecond = $('.owl-carousel').owlCarousel({
+//   items: 3,
+//   loop: true,
+//   center: true,
+//   margin: 200,
+//   autoWidth: true,
+//   autoplay: true,
+//   autoplayTimeout: 1500,
+//   responsiveClass:true,
+//   dots: false,
+//   animateOut: 'slideOutDown',
+//   animateIn: 'flipInX',
+//   stagePadding:30,
+//   smartSpeed:650,
   
-  responsive: {
-    600: {
-      margin: 80,
-    },
-    600: {
-      margin: 100,
-    },
-    1400: {
-      margin: 300,
-    },
-    2000: {
-      margin: 200,
-    },
-  }
-})
+//   responsive: {
+//     600: {
+//       margin: 80,
+//     },
+//     600: {
+//       margin: 100,
+//     },
+//     1400: {
+//       margin: 300,
+//     },
+//     2000: {
+//       margin: 200,
+//     },
+//   }
+// })
 // Partners End
 
 

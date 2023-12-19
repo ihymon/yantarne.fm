@@ -688,15 +688,18 @@ body {
   padding: 0px 60px;
   margin-bottom: 140px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: column; }
   .partners__box {
+    margin-top: 80px;
     width: 100%;
-    height: auto;
-    margin-top: 50px; }
-    .partners__box .owl-carousel {
-      width: 100%; }
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 50px; }
 
 .footer {
   overflow: hidden;
