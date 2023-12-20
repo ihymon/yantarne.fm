@@ -72,6 +72,8 @@ $(".voiceBig").hide();
 
 $slider.on("input", function() {
   updateSliderBackground($(this));
+  clearTimeout(timeId);
+  closeVoice();
 });
 
 
@@ -225,6 +227,26 @@ $("#volme").click(() => {
     $("#voice__change").removeClass("home__voice-animation--oepn");
     click = false;
   }
+});
+
+let timeId;
+
+function closeVoice() {
+  timeId = setTimeout(() => {
+    click = false;
+    $("#voice__change").addClass("home__voice-animation--close");
+    $("#voice__change").removeClass("home__voice-animation--oepn");
+  }, 2000);
+}
+$(".home__voice").mouseleave(() => {
+  closeVoice();
+});
+
+
+
+$(".home__voice").mouseenter(() => {
+  console.log("gg");
+  clearTimeout(timeId);
 });
 
 
