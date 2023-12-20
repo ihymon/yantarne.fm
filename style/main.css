@@ -137,10 +137,10 @@ body {
       right: -45%;
       bottom: -70%; }
   .loader-overlay .loader-line {
-    width: 6px;
+    width: 18px;
     height: 0px;
     background: #CC0100;
-    margin: 0 3px;
+    margin: 0 10px;
     border-radius: 10px;
     animation: loading 1.2s infinite; }
   .loader-overlay .loader-line:nth-child(2) {
@@ -161,7 +161,7 @@ body {
   0% {
     height: 0; }
   50% {
-    height: 50px; }
+    height: 100px; }
   100% {
     height: 0; } }
   .loader-overlay .loader-decoration {
@@ -635,10 +635,10 @@ body {
       height: 120px; }
 
 .team {
-  padding: 0 60px 140px;
+  padding: 0 140px 140px;
   background-image: url(./../img/main/spiral.svg);
   background-repeat: no-repeat;
-  background-position: center left -60%; }
+  background-position: center left -10%; }
   .team__title {
     text-align: center;
     margin-bottom: 80px; }
@@ -648,10 +648,10 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     row-gap: 50px;
-    column-gap: 40px; }
+    column-gap: 50px; }
     .team__wrapper .team__member {
-      width: 310px;
-      height: 430px;
+      width: 390px;
+      height: 550px;
       border-radius: 10px;
       background: #fff;
       box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
@@ -664,20 +664,20 @@ body {
         border-radius: 10px 10px 0px 0px; }
       .team__wrapper .team__member-position {
         text-align: center;
-        margin-top: 15px;
+        margin-top: 25px;
         font-family: 'Comfortaa', sans-serif;
         font-style: normal;
         font-weight: 500;
-        font-size: 16px;
+        font-size: 20px;
         line-height: normal;
         letter-spacing: 0;
         color: rgba(0, 0, 0, 0.6); }
       .team__wrapper .team__member-name {
-        margin-top: 10px;
+        margin-top: 20px;
         font-family: 'Comfortaa', sans-serif;
         font-style: normal;
         font-weight: 600;
-        font-size: 22px;
+        font-size: 28px;
         line-height: normal;
         letter-spacing: 0;
         color: #000; }
@@ -686,7 +686,7 @@ body {
         font-family: 'Comfortaa', sans-serif;
         font-style: normal;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 26px;
         line-height: normal;
         letter-spacing: 0;
         color: #CC0100;
@@ -825,6 +825,16 @@ body {
     color: #ddd; }
 
 @media screen and (max-width: 2000px) {
+  .loader-overlay .loader-line {
+    width: 14px;
+    margin: 0 8px; }
+  @keyframes loading {
+    0% {
+      height: 0; }
+    50% {
+      height: 80px; }
+    100% {
+      height: 0; } }
   .schedule {
     padding: 140px 0 140px 80px;
     background-position: top 60% right -30%; }
@@ -857,8 +867,35 @@ body {
         .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card {
           padding: 30px;
           width: 660px;
-          height: 330px; } }
+          height: 330px; }
+
+  .team {
+    padding: 0 80px 140px;
+    background-position: center left -35%; }
+    .team__wrapper {
+      column-gap: 40px; }
+      .team__wrapper .team__member {
+        width: 310px;
+        height: 430px; }
+        .team__wrapper .team__member-position {
+          margin-top: 15px;
+          font-size: 16px; }
+        .team__wrapper .team__member-name {
+          margin-top: 10px;
+          font-size: 22px; }
+        .team__wrapper .team__member-instagram {
+          font-size: 20px; } }
 @media screen and (max-width: 1700px) {
+  .loader-overlay .loader-line {
+    width: 10px;
+    margin: 0 6px; }
+  @keyframes loading {
+    0% {
+      height: 0; }
+    50% {
+      height: 60px; }
+    100% {
+      height: 0; } }
   .schedule {
     padding: 140px 0 140px 60px;
     background-position: top 60% right -80%; }
@@ -911,8 +948,22 @@ body {
             font-size: 16px; }
           .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-repeat {
             margin-left: 45px;
-            font-size: 16px; } }
+            font-size: 16px; }
+
+  .team {
+    padding: 0 60px 140px;
+    background-position: center left -60%; } }
 @media screen and (max-width: 1400px) {
+  .loader-overlay .loader-line {
+    width: 8px;
+    margin: 0 5px; }
+  @keyframes loading {
+    0% {
+      height: 0; }
+    50% {
+      height: 60px; }
+    100% {
+      height: 0; } }
   .schedule {
     background-position: top 60% right -120%; }
     .schedule__wrapper .schledule__content .schledule__content-description {
@@ -933,6 +984,16 @@ body {
   .footer__ui-element {
     bottom: -65%; } }
 @media screen and (max-width: 1200px) {
+  .loader-overlay .loader-line {
+    width: 6px;
+    margin: 0 4px; }
+  @keyframes loading {
+    0% {
+      height: 0; }
+    50% {
+      height: 50px; }
+    100% {
+      height: 0; } }
   .home {
     display: flex;
     justify-content: center;

@@ -48,10 +48,10 @@
     }
 
     .loader-line {
-        width: 6px;
+        width: 18px;
         height: 0px;
         background: $main;
-        margin: 0 3px;
+        margin: 0 10px;
         border-radius: 10px;
         animation: loading 1.2s infinite;
     }
@@ -80,13 +80,13 @@
     
     @keyframes loading {
         0% {
-        height: 0;
+            height: 0;
         }
         50% {
-        height: 50px;
+            height: 100px;
         }
         100% {
-        height: 0;
+            height: 0;
         }
     }
 
@@ -701,11 +701,15 @@
 
 // Team Start
 .team {
-    padding: 0 60px 140px;
+    // padding: 0 60px 140px;
+    padding: 0 140px 140px;
+
 
     background-image: url(./../img/main/spiral.svg);
     background-repeat: no-repeat;
-    background-position: center left -60%;
+    // background-position: center left -60%;
+    background-position: center left -10%;
+
 
     &__title {
         text-align: center;
@@ -719,15 +723,14 @@
         justify-content: center;
         flex-wrap: wrap;
         row-gap: 50px;        
-        column-gap: 40px;
+        column-gap: 50px;
 
         .team__member {
-            width: 310px;
-            height: 430px;
+            width: 390px;
+            height: 550px;
             border-radius: 10px;
             background:$white;
             box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.50);
-
             @include  display-center(start, center);
             flex-direction: column;
 
@@ -738,18 +741,18 @@
 
             &-position {
                 text-align: center;
-                margin-top: 15px;
-                @include font(rgba(0, 0, 0, 0.60), 16px, 500, normal, 0);
+                margin-top: 25px;
+                @include font(rgba(0, 0, 0, 0.60), 20px, 500, normal, 0);
             }
 
             &-name {
-                margin-top: 10px;
-                @include font($black, 22px, 600, normal, 0);
+                margin-top: 20px;
+                @include font($black, 28px, 600, normal, 0);
             }
 
             &-instagram {
                 margin-top: 25px;
-                @include font($main, 20px, 600, normal, 0);
+                @include font($main, 26px, 600, normal, 0);
                 transition: .5s;
 
                 &:hover {
@@ -922,6 +925,20 @@
 
 
 @media screen and (max-width: 2000px) {
+    .loader-overlay {
+        .loader-line {
+            width: 14px;
+            margin: 0 8px;
+        }
+
+        @keyframes loading {
+            0% { height: 0; }
+            50% { height: 80px; }
+            100% { height: 0; }
+        }
+    }
+
+
     .schedule {
         padding: 140px 0 140px 80px;
         background-position: top 60% right -30%;
@@ -984,10 +1001,52 @@
             }
         }
     }
+
+
+    .team {
+        padding: 0 80px 140px;
+        background-position: center left -35%;
+
+        &__wrapper {
+            column-gap: 40px;
+    
+            .team__member {
+                width: 310px;
+                height: 430px;
+    
+                &-position {
+                    margin-top: 15px;
+                    font-size: 16px;
+                }
+    
+                &-name {
+                    margin-top: 10px;
+                    font-size: 22px;
+                }
+    
+                &-instagram {
+                    font-size: 20px;
+                }
+            }
+        }   
+    }
 }
 
 
 @media screen and (max-width: 1700px)  {
+    .loader-overlay {
+        .loader-line {
+            width: 10px;
+            margin: 0 6px;
+        }
+
+        @keyframes loading {
+            0% { height: 0; }
+            50% { height: 60px; }
+            100% { height: 0; }
+        }
+    }
+
     .schedule {
         padding: 140px 0 140px 60px;
         background-position: top 60% right -80%;
@@ -1087,10 +1146,28 @@
     
         }
     }
+
+    .team {
+        padding: 0 60px 140px;
+        background-position: center left -60%;
+    }
 }
 
 
 @media screen and (max-width: 1400px) {
+    .loader-overlay {
+        .loader-line {
+            width: 8px;
+            margin: 0 5px;
+        }
+
+        @keyframes loading {
+            0% { height: 0; }
+            50% { height: 60px; }
+            100% { height: 0; }
+        }
+    }
+
     .schedule {
         background-position: top 60% right -120%;
 
@@ -1135,6 +1212,19 @@
 
 
 @media screen and (max-width: 1200px) {
+    .loader-overlay {
+        .loader-line {
+            width: 6px;
+            margin: 0 4px;
+        }
+
+        @keyframes loading {
+            0% { height: 0; }
+            50% { height: 50px; }
+            100% { height: 0; }
+        }
+    }
+
     .home {
         @include display-center(center, center);
         flex-direction: column;
