@@ -459,11 +459,14 @@
 .schedule {
     position: relative;
     
-    padding: 140px 0 140px 60px;
+    // padding: 140px 0 140px 60px;
+    padding: 140px 0 140px 140px;
+
 
     background-image: url(./../img/main/spiral.svg);
     background-repeat: no-repeat;
-    background-position: top 60% right -80%;
+    // background-position: top 60% right -80%;
+    background-position: top 60% right -20%;
     background-size: auto 700px;
 
 
@@ -480,22 +483,34 @@
         .schledule__content {
             &-title {
                 margin-bottom: 20px;
-                @include font($black, 36px, 600, normal, 0);
+                // @include font($black, 36px, 600, normal, 0);
+                @include font($black, 56px, 600, normal, 0);
             }
 
             &-description {
                 margin-bottom: 50px;
-                max-width: 640px;
-                @include font($black-light, 20px, 500, normal, 0);
+                // max-width: 640px;
+                max-width: 750px;
+
+                // @include font($black-light, 20px, 500, normal, 0);
+                @include font($black-light, 28px, 500, normal, 0);
             }
 
             &-btn {
                 position: relative;
                 overflow: hidden;
-                width: 400px;
-                height: 76px;
+                // width: 400px;
+                // height: 76px;
+                width: 500px;
+                height: 90px;
                 transition: .5s;
+                column-gap: 20px;
 
+
+                & svg {
+                    width: 38px;
+                    height: 38px;
+                }
 
                 &:hover {
                     transition: .5s;
@@ -520,7 +535,6 @@
 
         
         .schedule__box-wrapper {
-
             width: 50%;
             position: relative;
             overflow-x: auto;
@@ -529,10 +543,13 @@
             
             .schedule__box-line {
                 position: absolute;
-                top: 20px;
+                // top: 20px;
                 // left: 0;
-                height: 470px;
-                width: 5px;
+                // height: 470px;
+                // width: 5px;
+                top: 40px;
+                height: 690px;
+                width: 8px;
                 background-color: $main;
                 border-radius: 10px; 
                 
@@ -543,7 +560,8 @@
 
             .schedule__box {
                 width: 100%;
-                padding: 20px 60px 20px 20px;
+                // padding: 20px 60px 20px 20px;
+                padding: 40px 60px 40px 40px;
                 border-left: $main;
                 display: grid;
                 grid-template-columns: repeat(5, 1fr);
@@ -551,18 +569,25 @@
                 overflow-x: auto;
 
                 &::-webkit-scrollbar {
-                    margin: 0 60px 0 20px;
-                    height: 8px;
+                    // margin: 0 60px 0 20px;
+                    margin: 0 140px 0 20px;
+
+                    // height: 8px;
+                    height: 15px;
                 }
                 
                 &::-webkit-scrollbar-track {
-                    margin: 0 60px 0 20px;
+                    // margin: 0 60px 0 20px;
+                    margin: 0 140px 0 20px;
+
                     background: #ddd;
                     border-radius: 10px;
                 }
                 
                 &::-webkit-scrollbar-thumb {
-                    margin: 0 60px 0 20px;
+                    // margin: 0 60px 0 20px;
+                    margin: 0 140px 0 20px;
+
                     background: $main;
                     border-radius: 10px;
                 }
@@ -574,9 +599,11 @@
 
 
                 .schedule__card {
-                    padding: 20px;
-                    width: 550px;
-                    height: 220px;
+                    padding: 30px;
+                    // width: 550px;
+                    // height: 220px;
+                    width: 720px;
+                    height: 330px;
                     border-radius: 10px;
                     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.50);
                     background-color: $white;
@@ -591,11 +618,14 @@
                         align-items: center;
                         column-gap: 15px;
 
-                        @include font($black, 20px, 500, normal, 0);
+                        // @include font($black, 20px, 500, normal, 0);
+                        @include font($black, 28px, 500, normal, 0);
 
                         .schedule__card__title-circle {
-                            min-width: 30px;
-                            min-height: 30px;
+                            // min-width: 30px;
+                            // min-height: 30px;
+                            min-width: 35px;
+                            min-height: 35px;
                             border-radius: 50%;
                             border: 10px solid $main;
                         }
@@ -603,14 +633,16 @@
 
 
                     &-description {
-                        margin-left: 45px;
-                        @include font(rgba(0, 0, 0, 0.60), 16px, 500, normal, 0);
+                        // margin-left: 45px;
+                        margin-left: 50px;
+                        // @include font(rgba(0, 0, 0, 0.60), 16px, 500, normal, 0);
+                        @include font(rgba(0, 0, 0, 0.60), 24px, 500, normal, 0);
                     }
 
                     &-repeat {
-                        margin-left: 45px;
-                            @include font($black, 16px, 500, normal, 0);
-
+                        margin-left: 50px;
+                            // @include font($black, 16px, 500, normal, 0);
+                            @include font($black, 24px, 500, normal, 0);
                         &--bold {
                             font-weight: 600;
                         }
@@ -888,9 +920,187 @@
 }
 // Footer End
 
+
+@media screen and (max-width: 2000px) {
+    .schedule {
+        padding: 140px 0 140px 80px;
+        background-position: top 60% right -30%;
+
+        &__wrapper {
+            .schledule__content {
+                &-title {
+                    font-size: 48px;
+                }
+    
+                &-description {
+                    max-width: 700px;
+                    font-size: 26px;
+                }
+    
+                &-btn {
+                    width: 450px;
+                    height: 80px;
+
+                    & svg {
+                        width: 38px;
+                        height: 38px;
+                    }
+                }
+            }
+
+            .schedule__box-wrapper {
+                width: 45%;
+
+                .schedule__box-line {
+                    top: 30px;
+                    height: 690px;
+                }
+    
+                .schedule__box {
+                    padding: 30px 60px 30px 30px;
+    
+                    &::-webkit-scrollbar {
+                        margin: 0 80px 0 20px;
+                    }
+                    
+                    &::-webkit-scrollbar-track {
+                        margin: 0 80px 0 20px;
+                    }
+                    
+                    &::-webkit-scrollbar-thumb {
+                        margin: 0 80px 0 20px;
+                    }
+                    
+                    &::-webkit-scrollbar-thumb:hover {
+                        margin: 0 80px 0 20px;
+                    }
+    
+                    .schedule__card {
+                        padding: 30px;
+                        width: 660px;
+                        height: 330px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1700px)  {
+    .schedule {
+        padding: 140px 0 140px 60px;
+        background-position: top 60% right -80%;
+
+        &__wrapper {
+            .schledule__content {
+                &-title {
+                    font-size: 36px;
+                }
+    
+                &-description {
+                    max-width: 640px;
+                    font-size: 24px;
+                }
+    
+                &-btn {
+                    width: 400px;
+                    height: 76px;
+                    column-gap: 10px;
+    
+                    & svg {
+                        width: 28px;
+                        height: 28px;
+                    }
+    
+                    &:hover {
+                        transition: .5s;
+    
+                        .schledule__content-btn-circle {
+                            transition: .5s;
+                            border: 10px solid #ddd;
+                        }
+                    }
+                }
+            }
+
+            .schedule__box-wrapper {
+                width: 50%;
+                
+                .schedule__box-line {
+                    top: 20px;
+                    // left: 0;
+                    height: 470px;
+                    width: 5px;
+                }
+    
+                .schedule__box {
+                    padding: 20px 60px 20px 20px;
+    
+                    &::-webkit-scrollbar {
+                        margin: 0 60px 0 20px;
+                        height: 8px;
+                    }
+                    
+                    &::-webkit-scrollbar-track {
+                        margin: 0 60px 0 20px;
+                    }
+                    
+                    &::-webkit-scrollbar-thumb {
+                        margin: 0 60px 0 20px;
+                    }
+                    
+                    &::-webkit-scrollbar-thumb:hover {
+                        margin: 0 60px 0 20px;
+                    }
+    
+    
+                    .schedule__card {
+                        padding: 30px;
+                        width: 550px;
+                        height: 220px;
+                        border-radius: 10px;
+    
+    
+                        &__title-container {
+                            font-size: 20px;
+    
+                            .schedule__card__title-circle {
+                                min-width: 30px;
+                                min-height: 30px;
+                            }
+                        }
+    
+    
+                        &-description {
+                            margin-left: 45px;
+                            font-size: 16px;
+                        }
+    
+                        &-repeat {
+                            margin-left: 45px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+}
+
+
 @media screen and (max-width: 1400px) {
     .schedule {
         background-position: top 60% right -120%;
+
+        &__wrapper {
+            .schledule__content {
+                .schledule__content-description {
+                    font-size: 20px;
+                }
+            }
+        }
     }
 }
 

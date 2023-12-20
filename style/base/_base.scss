@@ -31,7 +31,8 @@ body {
 }
 
 .secondary-title {
-    @include font($black, 48px, 700, normal, 0);
+    // @include font($black, 48px, 700, normal, 0);
+    @include font($black, 64px, 700, normal, 0);
 }
 
 .main-btn {
@@ -40,7 +41,8 @@ body {
     background-color: $main;
     border-radius: 10px;
     border: none;
-    @include font($white, 20px, 500, normal, 0);
+    // @include font($white, 20px, 500, normal, 0);
+    @include font($white, 28px, 500, normal, 0);
     transition: .5s;
 
 
@@ -55,6 +57,25 @@ body {
         }
     }
 }
+
+
+@media screen and (max-width: 2000px) {
+    .secondary-title {
+        font-size: 56px;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .secondary-title {
+        font-size: 48px;
+    }
+
+    .main-btn {
+        font-size: 20px;
+    }
+    
+}
+
 
 
 @media screen and (max-width: 1200px) {

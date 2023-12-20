@@ -56,7 +56,7 @@ body {
   font-family: 'Comfortaa', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 64px;
   line-height: normal;
   letter-spacing: 0;
   color: #000; }
@@ -72,7 +72,7 @@ body {
   font-family: 'Comfortaa', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 28px;
   line-height: normal;
   letter-spacing: 0;
   color: #fff;
@@ -85,6 +85,15 @@ body {
       transition: .5s;
       fill: #ddd; }
 
+@media screen and (max-width: 2000px) {
+  .secondary-title {
+    font-size: 56px; } }
+@media screen and (max-width: 1700px) {
+  .secondary-title {
+    font-size: 48px; }
+
+  .main-btn {
+    font-size: 20px; } }
 @media screen and (max-width: 1200px) {
   .secondary-title {
     font-size: 42px; } }
@@ -438,10 +447,10 @@ body {
     opacity: 0; } }
 .schedule {
   position: relative;
-  padding: 140px 0 140px 60px;
+  padding: 140px 0 140px 140px;
   background-image: url(./../img/main/spiral.svg);
   background-repeat: no-repeat;
-  background-position: top 60% right -80%;
+  background-position: top 60% right -20%;
   background-size: auto 700px; }
   .schedule__title {
     text-align: center;
@@ -457,26 +466,30 @@ body {
       font-family: 'Comfortaa', sans-serif;
       font-style: normal;
       font-weight: 600;
-      font-size: 36px;
+      font-size: 56px;
       line-height: normal;
       letter-spacing: 0;
       color: #000; }
     .schedule__wrapper .schledule__content-description {
       margin-bottom: 50px;
-      max-width: 640px;
+      max-width: 750px;
       font-family: 'Comfortaa', sans-serif;
       font-style: normal;
       font-weight: 500;
-      font-size: 20px;
+      font-size: 28px;
       line-height: normal;
       letter-spacing: 0;
       color: rgba(0, 0, 0, 0.8); }
     .schedule__wrapper .schledule__content-btn {
       position: relative;
       overflow: hidden;
-      width: 400px;
-      height: 76px;
-      transition: .5s; }
+      width: 500px;
+      height: 90px;
+      transition: .5s;
+      column-gap: 20px; }
+      .schedule__wrapper .schledule__content-btn svg {
+        width: 38px;
+        height: 38px; }
       .schedule__wrapper .schledule__content-btn:hover {
         transition: .5s; }
         .schedule__wrapper .schledule__content-btn:hover .schledule__content-btn-circle {
@@ -498,39 +511,39 @@ body {
       align-items: end; }
       .schedule__wrapper .schedule__box-wrapper .schedule__box-line {
         position: absolute;
-        top: 20px;
-        height: 470px;
-        width: 5px;
+        top: 40px;
+        height: 690px;
+        width: 8px;
         background-color: #CC0100;
         border-radius: 10px; }
         .schedule__wrapper .schedule__box-wrapper .schedule__box-line--right {
           display: none; }
       .schedule__wrapper .schedule__box-wrapper .schedule__box {
         width: 100%;
-        padding: 20px 60px 20px 20px;
+        padding: 40px 60px 40px 40px;
         border-left: #CC0100;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         gap: 30px;
         overflow-x: auto; }
         .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar {
-          margin: 0 60px 0 20px;
-          height: 8px; }
+          margin: 0 140px 0 20px;
+          height: 15px; }
         .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-track {
-          margin: 0 60px 0 20px;
+          margin: 0 140px 0 20px;
           background: #ddd;
           border-radius: 10px; }
         .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-thumb {
-          margin: 0 60px 0 20px;
+          margin: 0 140px 0 20px;
           background: #CC0100;
           border-radius: 10px; }
         .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-thumb:hover {
           margin: 0 60px 0 20px;
           background: #a60101; }
         .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card {
-          padding: 20px;
-          width: 550px;
-          height: 220px;
+          padding: 30px;
+          width: 720px;
+          height: 330px;
           border-radius: 10px;
           box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
           background-color: #fff;
@@ -545,30 +558,30 @@ body {
             font-family: 'Comfortaa', sans-serif;
             font-style: normal;
             font-weight: 500;
-            font-size: 20px;
+            font-size: 28px;
             line-height: normal;
             letter-spacing: 0;
             color: #000; }
             .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card__title-container .schedule__card__title-circle {
-              min-width: 30px;
-              min-height: 30px;
+              min-width: 35px;
+              min-height: 35px;
               border-radius: 50%;
               border: 10px solid #CC0100; }
           .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-description {
-            margin-left: 45px;
+            margin-left: 50px;
             font-family: 'Comfortaa', sans-serif;
             font-style: normal;
             font-weight: 500;
-            font-size: 16px;
+            font-size: 24px;
             line-height: normal;
             letter-spacing: 0;
             color: rgba(0, 0, 0, 0.6); }
           .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-repeat {
-            margin-left: 45px;
+            margin-left: 50px;
             font-family: 'Comfortaa', sans-serif;
             font-style: normal;
             font-weight: 500;
-            font-size: 16px;
+            font-size: 24px;
             line-height: normal;
             letter-spacing: 0;
             color: #000; }
@@ -811,9 +824,99 @@ body {
     letter-spacing: 0;
     color: #ddd; }
 
+@media screen and (max-width: 2000px) {
+  .schedule {
+    padding: 140px 0 140px 80px;
+    background-position: top 60% right -30%; }
+    .schedule__wrapper .schledule__content-title {
+      font-size: 48px; }
+    .schedule__wrapper .schledule__content-description {
+      max-width: 700px;
+      font-size: 26px; }
+    .schedule__wrapper .schledule__content-btn {
+      width: 450px;
+      height: 80px; }
+      .schedule__wrapper .schledule__content-btn svg {
+        width: 38px;
+        height: 38px; }
+    .schedule__wrapper .schedule__box-wrapper {
+      width: 45%; }
+      .schedule__wrapper .schedule__box-wrapper .schedule__box-line {
+        top: 30px;
+        height: 690px; }
+      .schedule__wrapper .schedule__box-wrapper .schedule__box {
+        padding: 30px 60px 30px 30px; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar {
+          margin: 0 80px 0 20px; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-track {
+          margin: 0 80px 0 20px; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-thumb {
+          margin: 0 80px 0 20px; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-thumb:hover {
+          margin: 0 80px 0 20px; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card {
+          padding: 30px;
+          width: 660px;
+          height: 330px; } }
+@media screen and (max-width: 1700px) {
+  .schedule {
+    padding: 140px 0 140px 60px;
+    background-position: top 60% right -80%; }
+    .schedule__wrapper .schledule__content-title {
+      font-size: 36px; }
+    .schedule__wrapper .schledule__content-description {
+      max-width: 640px;
+      font-size: 24px; }
+    .schedule__wrapper .schledule__content-btn {
+      width: 400px;
+      height: 76px;
+      column-gap: 10px; }
+      .schedule__wrapper .schledule__content-btn svg {
+        width: 28px;
+        height: 28px; }
+      .schedule__wrapper .schledule__content-btn:hover {
+        transition: .5s; }
+        .schedule__wrapper .schledule__content-btn:hover .schledule__content-btn-circle {
+          transition: .5s;
+          border: 10px solid #ddd; }
+    .schedule__wrapper .schedule__box-wrapper {
+      width: 50%; }
+      .schedule__wrapper .schedule__box-wrapper .schedule__box-line {
+        top: 20px;
+        height: 470px;
+        width: 5px; }
+      .schedule__wrapper .schedule__box-wrapper .schedule__box {
+        padding: 20px 60px 20px 20px; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar {
+          margin: 0 60px 0 20px;
+          height: 8px; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-track {
+          margin: 0 60px 0 20px; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-thumb {
+          margin: 0 60px 0 20px; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-thumb:hover {
+          margin: 0 60px 0 20px; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card {
+          padding: 30px;
+          width: 550px;
+          height: 220px;
+          border-radius: 10px; }
+          .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card__title-container {
+            font-size: 20px; }
+            .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card__title-container .schedule__card__title-circle {
+              min-width: 30px;
+              min-height: 30px; }
+          .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-description {
+            margin-left: 45px;
+            font-size: 16px; }
+          .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-repeat {
+            margin-left: 45px;
+            font-size: 16px; } }
 @media screen and (max-width: 1400px) {
   .schedule {
-    background-position: top 60% right -120%; } }
+    background-position: top 60% right -120%; }
+    .schedule__wrapper .schledule__content .schledule__content-description {
+      font-size: 20px; } }
 @media screen and (max-width: 1300px) {
   .home__header {
     height: 180px;
