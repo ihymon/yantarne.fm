@@ -48,8 +48,8 @@
     }
 
     .loader-line {
-        width: 18px;
-        height: 0px;
+        width: 12px;
+        height: 0px;    
         background: $main;
         margin: 0 10px;
         border-radius: 10px;
@@ -97,8 +97,6 @@
 // Loader End
 
 
-
-
 // Home Start
 .home {
 	width: 100%;
@@ -128,8 +126,10 @@
 
 	&__header {
 		width: 100%;
-		height: 180px;
-		padding: 0 60px;
+		// height: 180px;
+		height: 250px;
+		// padding: 0 60px;
+		padding: 0 140px;
 		
 		@include display-center(space-between, center);
 		background-image: url(../img/home/header.svg);
@@ -138,12 +138,19 @@
 		z-index: 2 !important;
         padding-bottom: 55px;
 
+        &-logo img {
+            width: 280px;
+        }
+
 		&-nav {
 			width: 33.333%;
 			ul {
 				@include display-center(flex-start, center);
-				@include font($white, 24px, 500, normal, normal);
-				gap: 50px;
+				// @include font($white, 24px, 500, normal, normal);
+				@include font($white, 32px, 500, normal, normal);
+				// gap: 50px;
+				gap: 70px;
+
 
 				li {
 					@include display-center(flex-start, center);
@@ -670,7 +677,8 @@
 .about-us {
     width: 100%;
     height: 100%;
-    padding: 140px 60px;
+    padding: 140px;
+        
     margin-bottom: 140px;
 
     background-image: url(../img/about-us/about-us__bg.jpg);
@@ -679,19 +687,19 @@
     flex-direction: column;
 
     &__title {
-        @include font($white, 48px, 700, normal, normal);
+       color: $white;
     }
 
     &__destiption {
-        @include font($white, 24px, 500, normal, normal);
+        @include font($white, 28px, 500, normal, normal);
         margin-top: 25px;
         text-align: center;
     }
     a {
         margin-top: 50px;
         img {
-            width: 360px;
-            height: 120px;
+            width: 500px;
+            height: 180px;
         }
     }
 }
@@ -701,13 +709,10 @@
 
 // Team Start
 .team {
-    // padding: 0 60px 140px;
     padding: 0 140px 140px;
-
 
     background-image: url(./../img/main/spiral.svg);
     background-repeat: no-repeat;
-    // background-position: center left -60%;
     background-position: center left -10%;
 
 
@@ -786,6 +791,11 @@
         flex-wrap: wrap;
         column-gap: 50px;
         row-gap: 50px;
+
+        .partner__logo img {
+            min-width: 260px;
+            min-height: 260px;
+        }
     }
 }
 // Partners End
@@ -796,7 +806,8 @@
 .footer {
     overflow: hidden;
     position: relative;
-    padding: 120px 0 30px;
+    padding: 120px 140px 30px;
+
     
     background-color: $black;
 
@@ -812,11 +823,10 @@
         background-image: url(../img/main/spiral--white.svg);
         background-repeat: no-repeat;
         background-position: bottom 0 center;
-        // background-size: ;
     }
 
     &__wrapper {
-        padding: 0 60px 140px;
+        padding: 0 0 140px;
         @include display-center(space-between, start);
         flex-wrap: wrap;
         border-bottom: 2px solid $white;
@@ -828,25 +838,27 @@
             margin-top: -58px;
             &-logo {
                 margin-bottom: 10px;
-                width: 300px;
+                width: 360px;
                 cursor: pointer;
             }
 
             &-description {
-                max-width: 470px;
-                @include font($white, 24px, 500, normal, 0);
+                max-width: 600px;
+                @include font($white, 28px, 500, normal, 0);
             }
         }
 
         .footer__list {
             &-title {
                 margin-bottom: 40px;
-                @include font($white, 32px, 700, normal, 0);
+                // @include font($white, 32px, 700, normal, 0);
+                @include font($white, 48px, 700, normal, 0);
             }
 
             .footer__item {
                 margin-bottom: 15px;
-                @include font($white, 24px, 500, normal, 0);
+                // @include font($white, 24px, 500, normal, 0
+                @include font($white, 28px, 500, normal, 0);
                 cursor: pointer;
                 transition: .5s;
 
@@ -856,10 +868,17 @@
                     column-gap: 10px;
                     color: $white;
                     transition: .5s;
+
     
-                    & svg path {
-                        transition: .5s;
-                    }
+                    & svg {
+                        width: 40px;
+                        height: 40px;
+
+                        & path {
+                            transition: .5s;
+                        }
+                    } 
+
                 }
 
                 &:hover {
@@ -887,8 +906,11 @@
                 column-gap: 15px;
 
                 &__box {
-                    width: 44px;
-                    height: 44px;
+                    // width: 44px;
+                    // height: 44px;
+
+                    width: 55px;
+                    height: 55px;
                     background-color: $white;
                     border-radius: 50%;
                     @include display-center(center, center);
@@ -896,8 +918,13 @@
                     transition: .5s;
 
 
-                    & svg path {
-                        transition: .5s;
+                    & svg {
+                        width: 32px;
+                        height: 32px;
+
+                        & path {
+                            transition: .5s;
+                        }
                     }
 
                     &:hover {
@@ -918,7 +945,7 @@
     &__copyright {
         padding-top: 30px;
         text-align: center;
-        @include font(#ddd, 20px, 500, normal, 0);
+        @include font(#ddd, 24px, 500, normal, 0);
     }
 }
 // Footer End
@@ -927,7 +954,7 @@
 @media screen and (max-width: 2000px) {
     .loader-overlay {
         .loader-line {
-            width: 14px;
+            width: 10px;
             margin: 0 8px;
         }
 
@@ -1030,6 +1057,81 @@
             }
         }   
     }
+
+
+    .about-us {
+        padding: 140px 80px;
+            
+        &__destiption {
+            font-size: 24px;
+        }
+        a {
+            img {
+                width: 450px;
+                height: 140px;
+            }
+        }
+    }
+
+
+    .partners {
+        &__box {
+            .partner__logo img {
+                min-width: auto;
+                min-height: auto;
+            }
+        }
+    }
+
+
+    .footer {
+        padding: 120px 80px 30px;
+
+        &__wrapper {
+            .footer__info {
+                &-logo {
+                    width: 300px;
+                }
+                &-description {
+                    max-width: 470px;
+                    font-size: 24px;
+                }
+            }
+
+            .footer__list {
+                &-title {
+                    font-size: 36px;
+                }
+    
+                .footer__item {
+                    font-size: 24px;
+    
+                    .footer__contact {
+                        & svg {
+                            width: 32px;
+                            height: 32px;
+                        } 
+                    }
+                }
+    
+                .social-media {
+                    &__box {
+                        width: 44px;
+                        height: 44px;
+    
+                        & svg {
+                            width: auto;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__copyright {
+            font-size: 20px;
+        }
+    }
 }
 
 
@@ -1059,7 +1161,7 @@
     
                 &-description {
                     max-width: 640px;
-                    font-size: 24px;
+                    font-size: 22px;
                 }
     
                 &-btn {
@@ -1150,6 +1252,31 @@
     .team {
         padding: 0 60px 140px;
         background-position: center left -60%;
+    }
+
+    .about-us {
+        padding: 140px 60px;
+            
+        a {
+            img {
+                width: 400px;
+                height: 120px;
+            }
+        }
+    }
+
+    .footer {
+        padding: 120px 60px 30px;
+
+        &__wrapper {
+            padding: 0 0 140px;
+
+            .footer__list {
+                &-title {
+                    font-size: 32px;
+                }
+            }
+        }
     }
 }
 
@@ -1790,13 +1917,12 @@
         margin-bottom: 140px;
     }
 
-    
 
     .footer {
-        padding: 120px 0 30px;
+        padding: 120px 30px 30px;
 
         &__wrapper {
-            padding: 0 30px 140px;
+            padding: 0 0 140px;
 
             .footer__info {
                 &-description {
@@ -2039,7 +2165,7 @@
     }
 
     .footer {
-        padding: 120px 0 30px;
+        padding: 120px 30px 30px;
 
         &__wrapper {
             .footer__info {

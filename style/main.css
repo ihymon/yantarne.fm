@@ -137,7 +137,7 @@ body {
       right: -45%;
       bottom: -70%; }
   .loader-overlay .loader-line {
-    width: 18px;
+    width: 12px;
     height: 0px;
     background: #CC0100;
     margin: 0 10px;
@@ -187,8 +187,8 @@ body {
     background-size: cover; }
   .home__header {
     width: 100%;
-    height: 180px;
-    padding: 0 60px;
+    height: 250px;
+    padding: 0 140px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -197,6 +197,8 @@ body {
     background-repeat: no-repeat;
     z-index: 2 !important;
     padding-bottom: 55px; }
+    .home__header-logo img {
+      width: 280px; }
     .home__header-nav {
       width: 33.333%; }
       .home__header-nav ul {
@@ -206,11 +208,11 @@ body {
         font-family: 'Comfortaa', sans-serif;
         font-style: normal;
         font-weight: 500;
-        font-size: 24px;
+        font-size: 32px;
         line-height: normal;
         letter-spacing: normal;
         color: #fff;
-        gap: 50px; }
+        gap: 70px; }
         .home__header-nav ul li {
           display: flex;
           justify-content: flex-start;
@@ -602,7 +604,7 @@ body {
 .about-us {
   width: 100%;
   height: 100%;
-  padding: 140px 60px;
+  padding: 140px;
   margin-bottom: 140px;
   background-image: url(../img/about-us/about-us__bg.jpg);
   background-size: cover;
@@ -611,18 +613,12 @@ body {
   align-items: center;
   flex-direction: column; }
   .about-us__title {
-    font-family: 'Comfortaa', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: normal;
-    letter-spacing: normal;
     color: #fff; }
   .about-us__destiption {
     font-family: 'Comfortaa', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 28px;
     line-height: normal;
     letter-spacing: normal;
     color: #fff;
@@ -631,8 +627,8 @@ body {
   .about-us a {
     margin-top: 50px; }
     .about-us a img {
-      width: 360px;
-      height: 120px; }
+      width: 500px;
+      height: 180px; }
 
 .team {
   padding: 0 140px 140px;
@@ -713,11 +709,14 @@ body {
     flex-wrap: wrap;
     column-gap: 50px;
     row-gap: 50px; }
+    .partners__box .partner__logo img {
+      min-width: 260px;
+      min-height: 260px; }
 
 .footer {
   overflow: hidden;
   position: relative;
-  padding: 120px 0 30px;
+  padding: 120px 140px 30px;
   background-color: #000; }
   .footer__ui-element {
     width: 970px;
@@ -730,7 +729,7 @@ body {
     background-repeat: no-repeat;
     background-position: bottom 0 center; }
   .footer__wrapper {
-    padding: 0 60px 140px;
+    padding: 0 0 140px;
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -742,14 +741,14 @@ body {
       margin-top: -58px; }
       .footer__wrapper .footer__info-logo {
         margin-bottom: 10px;
-        width: 300px;
+        width: 360px;
         cursor: pointer; }
       .footer__wrapper .footer__info-description {
-        max-width: 470px;
+        max-width: 600px;
         font-family: 'Comfortaa', sans-serif;
         font-style: normal;
         font-weight: 500;
-        font-size: 24px;
+        font-size: 28px;
         line-height: normal;
         letter-spacing: 0;
         color: #fff; }
@@ -758,7 +757,7 @@ body {
       font-family: 'Comfortaa', sans-serif;
       font-style: normal;
       font-weight: 700;
-      font-size: 32px;
+      font-size: 48px;
       line-height: normal;
       letter-spacing: 0;
       color: #fff; }
@@ -767,7 +766,7 @@ body {
       font-family: 'Comfortaa', sans-serif;
       font-style: normal;
       font-weight: 500;
-      font-size: 24px;
+      font-size: 28px;
       line-height: normal;
       letter-spacing: 0;
       color: #fff;
@@ -779,8 +778,11 @@ body {
         column-gap: 10px;
         color: #fff;
         transition: .5s; }
-        .footer__wrapper .footer__list .footer__item .footer__contact svg path {
-          transition: .5s; }
+        .footer__wrapper .footer__list .footer__item .footer__contact svg {
+          width: 40px;
+          height: 40px; }
+          .footer__wrapper .footer__list .footer__item .footer__contact svg path {
+            transition: .5s; }
       .footer__wrapper .footer__list .footer__item:hover {
         transition: .5s;
         color: #CC0100; }
@@ -796,8 +798,8 @@ body {
       align-items: center;
       column-gap: 15px; }
       .footer__wrapper .footer__list .social-media__box {
-        width: 44px;
-        height: 44px;
+        width: 55px;
+        height: 55px;
         background-color: #fff;
         border-radius: 50%;
         display: flex;
@@ -805,8 +807,11 @@ body {
         align-items: center;
         cursor: pointer;
         transition: .5s; }
-        .footer__wrapper .footer__list .social-media__box svg path {
-          transition: .5s; }
+        .footer__wrapper .footer__list .social-media__box svg {
+          width: 32px;
+          height: 32px; }
+          .footer__wrapper .footer__list .social-media__box svg path {
+            transition: .5s; }
         .footer__wrapper .footer__list .social-media__box:hover {
           transition: .5s;
           background-color: #CC0100; }
@@ -819,14 +824,14 @@ body {
     font-family: 'Comfortaa', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 24px;
     line-height: normal;
     letter-spacing: 0;
     color: #ddd; }
 
 @media screen and (max-width: 2000px) {
   .loader-overlay .loader-line {
-    width: 14px;
+    width: 10px;
     margin: 0 8px; }
   @keyframes loading {
     0% {
@@ -884,7 +889,42 @@ body {
           margin-top: 10px;
           font-size: 22px; }
         .team__wrapper .team__member-instagram {
-          font-size: 20px; } }
+          font-size: 20px; }
+
+  .about-us {
+    padding: 140px 80px; }
+    .about-us__destiption {
+      font-size: 24px; }
+    .about-us a img {
+      width: 450px;
+      height: 140px; }
+
+  .partners__box .partner__logo img {
+    min-width: auto;
+    min-height: auto; }
+
+  .footer {
+    padding: 120px 80px 30px; }
+    .footer__wrapper .footer__info-logo {
+      width: 300px; }
+    .footer__wrapper .footer__info-description {
+      max-width: 470px;
+      font-size: 24px; }
+    .footer__wrapper .footer__list-title {
+      font-size: 36px; }
+    .footer__wrapper .footer__list .footer__item {
+      font-size: 24px; }
+      .footer__wrapper .footer__list .footer__item .footer__contact svg {
+        width: 32px;
+        height: 32px; }
+    .footer__wrapper .footer__list .social-media__box {
+      width: 44px;
+      height: 44px; }
+      .footer__wrapper .footer__list .social-media__box svg {
+        width: auto;
+        height: auto; }
+    .footer__copyright {
+      font-size: 20px; } }
 @media screen and (max-width: 1700px) {
   .loader-overlay .loader-line {
     width: 10px;
@@ -903,7 +943,7 @@ body {
       font-size: 36px; }
     .schedule__wrapper .schledule__content-description {
       max-width: 640px;
-      font-size: 24px; }
+      font-size: 22px; }
     .schedule__wrapper .schledule__content-btn {
       width: 400px;
       height: 76px;
@@ -952,7 +992,20 @@ body {
 
   .team {
     padding: 0 60px 140px;
-    background-position: center left -60%; } }
+    background-position: center left -60%; }
+
+  .about-us {
+    padding: 140px 60px; }
+    .about-us a img {
+      width: 400px;
+      height: 120px; }
+
+  .footer {
+    padding: 120px 60px 30px; }
+    .footer__wrapper {
+      padding: 0 0 140px; }
+      .footer__wrapper .footer__list-title {
+        font-size: 32px; } }
 @media screen and (max-width: 1400px) {
   .loader-overlay .loader-line {
     width: 8px;
@@ -1401,9 +1454,9 @@ body {
     margin-bottom: 140px; }
 
   .footer {
-    padding: 120px 0 30px; }
+    padding: 120px 30px 30px; }
     .footer__wrapper {
-      padding: 0 30px 140px; }
+      padding: 0 0 140px; }
       .footer__wrapper .footer__info-description {
         font-size: 20px; }
       .footer__wrapper .footer__list-title {
@@ -1548,7 +1601,7 @@ body {
       color: #CC0100; }
 
   .footer {
-    padding: 120px 0 30px; }
+    padding: 120px 30px 30px; }
     .footer__wrapper .footer__info-logo {
       width: 260px; }
     .footer__wrapper .footer__list .footer__item {
