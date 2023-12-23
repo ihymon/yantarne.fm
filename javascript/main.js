@@ -64,6 +64,7 @@ let streamVolume = 0.5;
 let streamPlay = false;
 let titel;
 let stream;
+let audioLoading = false;
 
 updateSliderBackground($slider);
 
@@ -100,9 +101,10 @@ function updateSliderBackground($slider) {
 $(".play__btn-pause").toggle();
 
 
-
 async function loadAudio() {
   try {
+    audioLoading = true; // Set the flag to indicate that audio loading is in progress
+
     const response = await fetch(`https://complex.in.ua/status-json.xsl?mount=/yantarne`);
     const data = await response.json();
 
@@ -112,7 +114,7 @@ async function loadAudio() {
       const audioUrl = data.icestats.source.listenurl;
       const title = data.icestats.source.title;
 
-      stream = new Audio(audioUrl); // No longer a reassignment to a constant variable
+      stream = new Audio(audioUrl);
       stream.volume = streamVolume;
 
       stream.addEventListener('loadedmetadata', () => {
@@ -136,12 +138,15 @@ async function loadAudio() {
     }
   } catch (error) {
     console.error("Error loading audio:", error);
+  } finally {
+    audioLoading = false; // Reset the flag once audio loading is complete
   }
 }
 
 let animationBar;
+let doubleClick = false;
 
-$(".home__play").click(() => {
+$(".home__play").click(async () => {
   $(".play__btn-play").toggle();
   $(".play__btn-pause").toggle();
   $(".voiceBig").show();
@@ -153,35 +158,50 @@ $(".home__play").click(() => {
     const bar = document.querySelectorAll(".bar");
     for (let i = 0; i < bar.length; i++) {
       bar.forEach((item, j) => {
-      // Random move
-      item.style.animationDuration = `${Math.random() * (0.7 - 0.2) + 0.3}s`;
+        // Random move
+        item.style.animationDuration = `${Math.random() * (0.7 - 0.2) + 0.3}s`;
       });
-  }
- }, "1200")
+    }
+  }, "200");
 
-    if (streamPlay === false) {
-      try {
-        if (!streamPlay) {
-          if (stream) {
-            stream.play().catch((playError) => {
-              console.error("Error playing audio:", playError);
-            });
-            streamPlay = true;
-            console.log("play");
-          } else {
-            console.error("Stream is not defined or could not be found.");
-          }
-        }
-      } catch (error) {
-        console.error("Error playing or pausing the audio:", error);
+  if (!streamPlay) {
+    try {
+      // Check if audio is still loading, wait for it to complete
+
+      if (doubleClick == true) {
+        await loadAudio();
       }
-    } else {
+
+      while (audioLoading) {
+        await new Promise(resolve => setTimeout(resolve, 100)); // Wait for 100 milliseconds
+      }
+
+      if (stream && stream.paused) {
+        stream.play().catch((playError) => {
+          if (playError.name === 'AbortError') {
+            console.warn('Play request aborted, possibly due to rapid user interaction.');
+          } else {
+            console.error("Error playing audio:", playError);
+          }
+        });
+        streamPlay = true;
+        doubleClick = true;
+        console.log("play");
+      } else {
+        console.error("Stream is not defined, could not be found, or is already playing.");
+      }
+    } catch (error) {
+      console.error("Error playing audio:", error);
+    }
+  } else {
     console.log("pause");
     $(".voiceBig").hide();
     $(".voiceSmall").show();
+
+    // Pause the stream and do not resume if it's in the paused state
     stream.pause();
     streamPlay = false;
-    $('.bar').css({"animation-name": "none" });
+    $('.bar').css({"animation-name": "none"});
     clearTimeout(animationBar);
   }
 });
@@ -236,16 +256,18 @@ function closeVoice() {
     click = false;
     $("#voice__change").addClass("home__voice-animation--close");
     $("#voice__change").removeClass("home__voice-animation--oepn");
-  }, 2000);
+  }, 4000);
 }
 $(".home__voice").mouseleave(() => {
-  closeVoice();
+  if (click == true) {
+    closeVoice();
+
+  }
 });
 
 
 
 $(".home__voice").mouseenter(() => {
-  console.log("gg");
   clearTimeout(timeId);
 });
 
@@ -253,9 +275,6 @@ $(".home__voice").mouseenter(() => {
 let isMenuOpen = false;
 
 $(".home__header-burger").click(() => {
-  // if(!isMenuOpen) {
-  //   $("body").addClass("overflow-hidden");
-  // }
   $("body").toggleClass("overflow-hidden");
   $(".home__header-left").toggleClass("home__header-active home__header-active1");
   $(".home__header-rigth").toggleClass("home__header-active home__header-active2");

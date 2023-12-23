@@ -111,18 +111,21 @@
 	  }
   
 	  .swiper__bg1{
-		background-image: url(../img/home/home__bg1.jpg);
+		background-image: url(../img/home/home__bg1.webp);
 		background-size: cover;
 	  }
 	  .swiper__bg2{
-		background-image: url(../img/home/home__bg2.jpg);
+		background-image: url(../img/home/home__bg2.webp);
 		background-size: cover;
 	  }
 	  .swiper__bg3{
-		background-image: url(../img/home/home__bg3.jpg);
+		background-image: url(../img/home/home__bg3.webp);
 		background-size: cover;
 	  }
-
+      .swiper__bg4{
+		background-image: url(../img/home/home__bg4.webp);
+		background-size: cover;
+	  }
 
 	&__header {
 		width: 100%;
@@ -679,7 +682,7 @@
         
     margin-bottom: 140px;
 
-    background-image: url(../img/about-us/about-us__bg.jpg);
+    background-image: url(../img/about-us/about-us__bg.webp);
     background-size: cover;
     @include display-center(center, center);
     flex-direction: column;
@@ -1536,7 +1539,7 @@
                 .home__play {
                     width: 200px;
                     height: 200px;
-    
+                    border-radius: 50%;
                     &-box {
                         width: 140px;
                         height: 140px;
@@ -1999,7 +2002,8 @@
                 .home__play {
                     width: 165px;
                     height: 165px;
-    
+                    cursor: none;
+                    user-select: none;
                     &-box {
                         width: 120px;
                         height: 120px;
@@ -2030,14 +2034,19 @@
             }
         }
         .home__voice {
+            cursor: none;
+            user-select: none;
             &-box {
                 width: 65px;
                 height: 50px;
-    
+                cursor: none;
+                user-select: none;
             }
     
             &-animation {
                 width: 65px;
+                cursor: none;
+                user-select: none;
                 &-main {
                     width: 65px;
                     #volme__input {
