@@ -7,7 +7,7 @@ const loader = () => {
     setTimeout(() => {
       $("#loaderOverlay").css("display", "none");
     }, 600);
-  }, 3000)
+  }, 2500)
 }
 
 loader();
