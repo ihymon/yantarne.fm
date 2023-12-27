@@ -808,8 +808,8 @@
         row-gap: 50px;
 
         .partner__logo img {
-            min-width: 260px;
-            min-height: 260px;
+            max-width: 220px;
+            max-height: 220px;
         }
     }
 }
@@ -1221,8 +1221,8 @@
     .partners {
         &__box {
             .partner__logo img {
-                min-width: auto;
-                min-height: auto;
+                max-width: 180px;
+                max-height: 180px;
             }
         }
     }
@@ -1414,6 +1414,18 @@
             }
         }
     }
+
+
+
+    .partners {
+        &__box {
+            .partner__logo img {
+                max-width: 160px;
+                max-height: 160px;
+            }
+        }
+    }
+
 
     .footer {
         padding: 120px 60px 30px;
@@ -1861,6 +1873,16 @@
             display: block;
         }
     }
+
+    .partners {
+        &__box {
+            .partner__logo img {
+                max-width: 140px;
+                max-height: 140px;
+            }
+        }
+    }
+
 }
 
 
@@ -2062,8 +2084,15 @@
     }
 
     .partners {
-        padding: 140px 30px;
+        padding: 0 30px;
         margin-bottom: 140px;
+
+        &__box {
+            .partner__logo img {
+                max-width: 120px;
+                max-height: 120px;
+            }
+        }
     }
 
 

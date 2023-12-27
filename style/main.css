@@ -661,8 +661,8 @@ body {
     column-gap: 50px;
     row-gap: 50px; }
     .partners__box .partner__logo img {
-      min-width: 260px;
-      min-height: 260px; }
+      max-width: 220px;
+      max-height: 220px; }
 
 .footer {
   overflow: hidden;
@@ -923,8 +923,8 @@ body {
       height: 140px; }
 
   .partners__box .partner__logo img {
-    min-width: auto;
-    min-height: auto; }
+    max-width: 180px;
+    max-height: 180px; }
 
   .footer {
     padding: 120px 80px 30px; }
@@ -1002,6 +1002,10 @@ body {
     .about-us a img {
       width: 400px;
       height: 120px; }
+
+  .partners__box .partner__logo img {
+    max-width: 160px;
+    max-height: 160px; }
 
   .footer {
     padding: 120px 60px 30px; }
@@ -1302,7 +1306,11 @@ body {
           margin: 0 20px 0 20px; }
     .schedule__cta {
       margin: 30px 30px 0 30px;
-      display: block; } }
+      display: block; }
+
+  .partners__box .partner__logo img {
+    max-width: 140px;
+    max-height: 140px; } }
 @media screen and (max-width: 1000px) {
   .home__header {
     width: 100%;
@@ -1449,8 +1457,11 @@ body {
     padding: 0 30px 140px; }
 
   .partners {
-    padding: 140px 30px;
+    padding: 0 30px;
     margin-bottom: 140px; }
+    .partners__box .partner__logo img {
+      max-width: 120px;
+      max-height: 120px; }
 
   .footer {
     padding: 120px 30px 30px; }
