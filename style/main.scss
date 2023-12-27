@@ -498,9 +498,8 @@
 // Schedule Start
 .schedule {
     position: relative;
-    
     // padding: 140px 0 140px 60px;
-    padding: 140px 0 140px 140px;
+    padding: 140px;
 
 
     background-image: url(./../img/main/spiral.svg);
@@ -520,128 +519,117 @@
         column-gap: 100px;
         z-index: 4;
     
-        .schledule__content {
-            &-title {
-                margin-bottom: 20px;
-                // @include font($black, 36px, 600, normal, 0);
-                @include font($black, 56px, 600, normal, 0);
-            }
+        // .schledule__content {
+        //     &-title {
+        //         margin-bottom: 20px;
+        //         // @include font($black, 36px, 600, normal, 0);
+        //         @include font($black, 56px, 600, normal, 0);
+        //     }
 
-            &-description {
-                margin-bottom: 50px;
-                // max-width: 640px;
-                max-width: 750px;
+        //     &-description {
+        //         margin-bottom: 50px;
+        //         // max-width: 640px;
+        //         max-width: 750px;
 
-                // @include font($black-light, 20px, 500, normal, 0);
-                @include font($black-light, 28px, 500, normal, 0);
-            }
+        //         // @include font($black-light, 20px, 500, normal, 0);
+        //         @include font($black-light, 28px, 500, normal, 0);
+        //     }
 
-            &-btn {
-                position: relative;
-                overflow: hidden;
-                // width: 400px;
-                // height: 76px;
-                width: 500px;
-                height: 90px;
-                transition: .5s;
-                column-gap: 20px;
+        //     &-btn {
+        //         position: relative;
+        //         overflow: hidden;
+        //         // width: 400px;
+        //         // height: 76px;
+        //         width: 500px;
+        //         height: 90px;
+        //         transition: .5s;
+        //         column-gap: 20px;
 
 
-                & svg {
-                    width: 38px;
-                    height: 38px;
-                }
+        //         & svg {
+        //             width: 38px;
+        //             height: 38px;
+        //         }
 
-                &:hover {
-                    transition: .5s;
+        //         &:hover {
+        //             transition: .5s;
 
-                    .schledule__content-btn-circle {
-                        transition: .5s;
-                        border: 10px solid #ddd;
-                    }
-                }
+        //             .schledule__content-btn-circle {
+        //                 transition: .5s;
+        //                 border: 10px solid #ddd;
+        //             }
+        //         }
 
-                &-circle {
-                    position: absolute;
-                    top: -25px;
-                    right: -25px;
-                    width: 68px;
-                    height: 68px;
-                    border: 10px solid $white;
-                    border-radius: 50%;
-                }
-            }
-        }
+        //         &-circle {
+        //             position: absolute;
+        //             top: -25px;
+        //             right: -25px;
+        //             width: 68px;
+        //             height: 68px;
+        //             border: 10px solid $white;
+        //             border-radius: 50%;
+        //         }
+        //     }
+        // }
 
         
         .schedule__box-wrapper {
-            width: 50%;
+            width: 100%;
             position: relative;
-            overflow-x: auto;
+            // overflow-x: auto;
             display: flex;
-            align-items: end;
+            flex-wrap: wrap;
+            // align-items: end;
             
-            .schedule__box-line {
-                position: absolute;
-                // top: 20px;
-                // left: 0;
-                // height: 470px;
-                // width: 5px;
-                top: 40px;
-                height: 690px;
-                width: 8px;
-                background-color: $main;
-                border-radius: 10px; 
+            // .schedule__box-line {
+            //     position: absolute;
+            //     top: 40px;
+            //     height: 690px;
+            //     width: 8px;
+            //     background-color: $main;
+            //     border-radius: 10px; 
                 
-                &--right {
-                    display: none;
-                }
-            }
+            //     &--right {
+            //         display: none;
+            //     }
+            // }
 
             .schedule__box {
+                padding: 0;
                 width: 100%;
-                // padding: 20px 60px 20px 20px;
-                padding: 40px 60px 40px 40px;
+                // padding: 1px 1px 40px 1px;
                 border-left: $main;
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                gap: 30px;
-                overflow-x: auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 50px 40px;
+
+                // display: grid;
+                // grid-template-columns: repeat(5, 1fr);
+                // gap: 30px;
+                // overflow-x: auto;
 
                 &::-webkit-scrollbar {
-                    // margin: 0 60px 0 20px;
-                    margin: 0 140px 0 20px;
-
-                    // height: 8px;
                     height: 15px;
                 }
                 
                 &::-webkit-scrollbar-track {
-                    // margin: 0 60px 0 20px;
-                    margin: 0 140px 0 20px;
-
                     background: #ddd;
                     border-radius: 10px;
                 }
                 
                 &::-webkit-scrollbar-thumb {
-                    // margin: 0 60px 0 20px;
-                    margin: 0 140px 0 20px;
-
                     background: $main;
                     border-radius: 10px;
                 }
                 
                 &::-webkit-scrollbar-thumb:hover {
-                    margin: 0 60px 0 20px;
                     background: #a60101;
                 }
 
 
                 .schedule__card {
                     padding: 30px;
-                    // width: 550px;
-                    // height: 220px;
                     width: 720px;
                     height: 330px;
                     border-radius: 10px;
@@ -658,12 +646,9 @@
                         align-items: center;
                         column-gap: 15px;
 
-                        // @include font($black, 20px, 500, normal, 0);
                         @include font($black, 28px, 500, normal, 0);
 
                         .schedule__card__title-circle {
-                            // min-width: 30px;
-                            // min-height: 30px;
                             min-width: 35px;
                             min-height: 35px;
                             border-radius: 50%;
@@ -673,15 +658,12 @@
 
 
                     &-description {
-                        // margin-left: 45px;
                         margin-left: 50px;
-                        // @include font(rgba(0, 0, 0, 0.60), 16px, 500, normal, 0);
                         @include font(rgba(0, 0, 0, 0.60), 24px, 500, normal, 0);
                     }
 
                     &-repeat {
                         margin-left: 50px;
-                            // @include font($black, 16px, 500, normal, 0);
                             @include font($black, 24px, 500, normal, 0);
                         &--bold {
                             font-weight: 600;
@@ -856,6 +838,7 @@
         background-image: url(../img/main/spiral--white.svg);
         background-repeat: no-repeat;
         background-position: bottom 0 center;
+        z-index: -1;
     }
 
     &__wrapper {
@@ -1129,33 +1112,32 @@
     }
 
     .schedule {
-        padding: 140px 0 140px 80px;
+        padding: 140px 80px;
         background-position: top 60% right -30%;
 
         &__wrapper {
-            .schledule__content {
-                &-title {
-                    font-size: 48px;
-                }
+            // .schledule__content {
+            //     &-title {
+            //         font-size: 48px;
+            //     }
     
-                &-description {
-                    max-width: 700px;
-                    font-size: 26px;
-                }
+            //     &-description {
+            //         max-width: 700px;
+            //         font-size: 26px;
+            //     }
     
-                &-btn {
-                    width: 450px;
-                    height: 80px;
+            //     &-btn {
+            //         width: 450px;
+            //         height: 80px;
 
-                    & svg {
-                        width: 38px;
-                        height: 38px;
-                    }
-                }
-            }
+            //         & svg {
+            //             width: 38px;
+            //             height: 38px;
+            //         }
+            //     }
+            // }
 
             .schedule__box-wrapper {
-                width: 45%;
 
                 .schedule__box-line {
                     top: 30px;
@@ -1163,7 +1145,7 @@
                 }
     
                 .schedule__box {
-                    padding: 30px 60px 30px 30px;
+                    width: 100%;
     
                     &::-webkit-scrollbar {
                         margin: 0 80px 0 20px;
@@ -1320,53 +1302,51 @@
     }
 
     .schedule {
-        padding: 140px 0 140px 60px;
+        padding: 140px 60px;
         background-position: top 60% right -80%;
 
         &__wrapper {
-            .schledule__content {
-                &-title {
-                    font-size: 36px;
-                }
+            // .schledule__content {
+            //     &-title {
+            //         font-size: 36px;
+            //     }
     
-                &-description {
-                    max-width: 640px;
-                    font-size: 22px;
-                }
+            //     &-description {
+            //         max-width: 640px;
+            //         font-size: 22px;
+            //     }
     
-                &-btn {
-                    width: 400px;
-                    height: 76px;
-                    column-gap: 10px;
+            //     &-btn {
+            //         width: 400px;
+            //         height: 76px;
+            //         column-gap: 10px;
     
-                    & svg {
-                        width: 28px;
-                        height: 28px;
-                    }
+            //         & svg {
+            //             width: 28px;
+            //             height: 28px;
+            //         }
     
-                    &:hover {
-                        transition: .5s;
+            //         &:hover {
+            //             transition: .5s;
     
-                        .schledule__content-btn-circle {
-                            transition: .5s;
-                            border: 10px solid #ddd;
-                        }
-                    }
-                }
-            }
+            //             .schledule__content-btn-circle {
+            //                 transition: .5s;
+            //                 border: 10px solid #ddd;
+            //             }
+            //         }
+            //     }
+            // }
 
             .schedule__box-wrapper {
-                width: 50%;
                 
-                .schedule__box-line {
-                    top: 20px;
-                    // left: 0;
-                    height: 470px;
-                    width: 5px;
-                }
+                // .schedule__box-line {
+                //     top: 20px;
+                //     // left: 0;
+                //     height: 470px;
+                //     width: 5px;
+                // }
     
                 .schedule__box {
-                    padding: 20px 60px 20px 20px;
     
                     &::-webkit-scrollbar {
                         margin: 0 60px 0 20px;
@@ -1820,7 +1800,7 @@
 
     .schedule {
         padding: 140px 60px;
-        background-position: top 88% center;
+        background-position: center;
         background-size: auto 600px;
 
         &__wrapper {
@@ -1854,8 +1834,6 @@
                 }
 
                 .schedule__box {
-                    padding: 20px;
-
                     &::-webkit-scrollbar {
                         margin: 0 20px;
                     }
@@ -2025,16 +2003,16 @@
     }
 
     .schedule {
-        padding: 140px 0;
+        padding: 140px 30px;
 
         &__wrapper {
-            .schledule__content {
-                padding: 0 30px;
+            // .schledule__content {
+            //     padding: 0 30px;
 
-                &-title {
-                    font-size: 28px;
-                }
-            }
+            //     &-title {
+            //         font-size: 28px;
+            //     }
+            // }
 
             .schedule__box-wrapper {
 
@@ -2044,8 +2022,9 @@
 
                 .schedule__box {
                     .schedule__card {
-                        width: 500px;
-                        height: 230px;
+                        width: 100%;
+                        height: fit-content;
+                        row-gap: 30px;
 
                         &__title-container {
                             .schedule__card__title-circle {
@@ -2219,69 +2198,59 @@
 
 
     .schedule {
+        padding: 0 30px;
+
         &__wrapper {
-            .schledule__content {
-                &-title {
-                    font-size: 24px;
-                }
+            // .schledule__content {
+            //     &-title {
+            //         font-size: 24px;
+            //     }
                 
-                &-btn {
-                    width: 100%;
-                    height: 76px;
+            //     &-btn {
+            //         width: 100%;
+            //         height: 76px;
     
-                    &-circle {
-                        top: -25px;
-                        right: -25px;
-                        width: 60px;
-                        height: 60px;
-                        border: 10px solid $white;
-                        border-radius: 50%;
-                    }
-                }
-            }
+            //         &-circle {
+            //             top: -25px;
+            //             right: -25px;
+            //             width: 60px;
+            //             height: 60px;
+            //             border: 10px solid $white;
+            //             border-radius: 50%;
+            //         }
+            //     }
+            // }
 
             .schedule__box-wrapper {
+
                 .schedule__box {
-                    display: grid;
-                    grid-template-columns: repeat(10, 1fr);
 
-
-                    &::-webkit-scrollbar {
-                        margin: 0 20px;
-                    }
-                    
                     &::-webkit-scrollbar-track {
-                        margin: 0 20px 0 20px;
                         background: #ddd;
                         border-radius: 10px;
                     }
-                    
-                    &::-webkit-scrollbar-thumb {
-                        margin: 0 20px 0 20px;
-                    }
-                    
-                    &::-webkit-scrollbar-thumb:hover {
-                        margin: 0 20px 0 20px;
-                    }
-
 
                     .schedule__card {
                         padding: 20px;
-
-                        width: 260px;
-                        height: 340px;
 
                         &__title-container {
                             .schedule__card__title-circle {
                                 display: none;
                             }
+
+                            .schedule__card-title {
+                                text-align: center;
+                            }
                         }
 
                         &-description {
+                            text-align: center;
                             margin-left: 0px;
                         }
     
                         &-repeat {
+                            text-align: center;
+
                             margin-left: 0px;
                         }
                     }
