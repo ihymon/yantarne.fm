@@ -152,8 +152,12 @@ $(".home__play").click(async () => {
   $(".voiceBig").show();
   $(".voiceSmall").hide();
 
-  $('.bar').css({"animation-name": "wave-lg" });
+  $(".home__play-line1").toggleClass("line1__open");
+  $(".home__play-line2").toggleClass("line2__open");
+  $(".home__play-line3").toggleClass("line3__open");
 
+
+  $('.bar').css({"animation-name": "wave-lg" });
   animationBar = setTimeout(() => {
     const bar = document.querySelectorAll(".bar");
     for (let i = 0; i < bar.length; i++) {
@@ -187,6 +191,7 @@ $(".home__play").click(async () => {
         streamPlay = true;
         doubleClick = true;
         console.log("play");
+
       } else {
         console.error("Stream is not defined, could not be found, or is already playing.");
       }
@@ -237,6 +242,7 @@ function updateTitleDescription(title) {
 
 let click = false;
 $("#volme").click(() => {
+  console.log("gg")
   if (click == false) {
     $("#voice__change").addClass("home__voice-animation--oepn");
     $("#voice__change").removeClass("home__voice-animation--close");
