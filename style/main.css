@@ -199,6 +199,20 @@ body {
     background-repeat: no-repeat;
     z-index: 2 !important;
     padding-bottom: 55px; }
+    .home__header-logo {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Bebas Neue', sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #CC0100; }
+      .home__header-logo p {
+        position: relative;
+        bottom: 10px; }
     .home__header-logo img {
       width: 400px; }
     .home__header-nav {
@@ -371,7 +385,9 @@ body {
     justify-content: center;
     align-items: flex-end;
     flex-direction: column;
-    padding: 0 60px; }
+    padding: 0 60px;
+    position: relative;
+    bottom: 20px; }
     .home .home__voice-box {
       width: 100px;
       height: 100px;
@@ -1058,6 +1074,8 @@ body {
       padding-bottom: 55px;
       background-size: 130%;
       z-index: 10 !important; }
+      .home__header-logo img {
+        width: 170px; }
       .home__header .home__header-logo {
         display: flex;
         justify-content: flex-start;
