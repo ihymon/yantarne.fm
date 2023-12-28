@@ -1618,7 +1618,7 @@
             }
 
             .home__header-logo {
-                @include display-center(flex-start, center);
+                @include display-center(flex-start, flex-start);
             }
 
             &-rigth {
@@ -1665,6 +1665,8 @@
                     }
 
                     li {
+                        position: relative;
+                        bottom: 50px;
                         &:hover {
                             color: $white;
                         }
@@ -2239,10 +2241,8 @@
         display: none;
     }
 
-  
+    
     .home {
-      
-
         &__main {
             &-container {
                 width: 100%;
@@ -2265,6 +2265,7 @@
                     height: 165px;
                     cursor: none;
                     user-select: none;
+
                     &-line1 {
                         width: 160px;
                         height: 160px;

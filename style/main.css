@@ -1176,7 +1176,7 @@ body {
       .home__header .home__header-logo {
         display: flex;
         justify-content: flex-start;
-        align-items: center; }
+        align-items: flex-start; }
       .home__header-rigth {
         display: none; }
       .home__header-left {
@@ -1212,10 +1212,13 @@ body {
       position: relative;
       bottom: 0px;
       opacity: 1; } }
-          .home__header-active ul li:hover {
-            color: #fff; }
-          .home__header-active ul li .round {
-            display: none; }
+          .home__header-active ul li {
+            position: relative;
+            bottom: 50px; }
+            .home__header-active ul li:hover {
+              color: #fff; }
+            .home__header-active ul li .round {
+              display: none; }
       .home__header-active2 {
         margin-top: 127px; }
       .home__header-burger {
