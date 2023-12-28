@@ -141,9 +141,9 @@
         padding-bottom: 55px;
 
         &-logo {
+            @include font($main, 24px, 500, normal, normal);
             @include display-center(flex-end, center);
             flex-direction: column;
-            @include font($main, 20px, 500, normal, normal);
             p {
                 position: relative;
                 bottom: 10px;
@@ -154,6 +154,7 @@
         &-logo img {
             // width: 280px;
             width: 400px;
+            margin-top: 20px;
         }
 
 		&-nav {
@@ -1607,8 +1608,12 @@
             z-index: 10 !important;
 
             &-logo {
+                width: auto;
+                @include font($main, 20px, 500, normal, normal);
+
                 img {
                  width: 170px;
+                 margin-top: 0px
                 }
             }
 
@@ -2233,7 +2238,10 @@
     .bar__none2 {
         display: none;
     }
+
+  
     .home {
+      
 
         &__main {
             &-container {
