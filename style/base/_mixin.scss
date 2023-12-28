@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 @mixin font($color, $size, $weight, $line, $spacing) {
-    font-family: 'Comfortaa', sans-serif;
-    font-style: normal;
+    font-family: 'Bebas Neue', sans-serif;
     font-weight: $weight;
     font-size: $size;
     line-height: $line;

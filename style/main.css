@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -53,8 +53,7 @@ body {
   overflow: hidden; }
 
 .secondary-title {
-  font-family: 'Comfortaa', sans-serif;
-  font-style: normal;
+  font-family: 'Bebas Neue', sans-serif;
   font-weight: 700;
   font-size: 64px;
   line-height: normal;
@@ -69,8 +68,7 @@ body {
   background-color: #CC0100;
   border-radius: 10px;
   border: none;
-  font-family: 'Comfortaa', sans-serif;
-  font-style: normal;
+  font-family: 'Bebas Neue', sans-serif;
   font-weight: 500;
   font-size: 28px;
   line-height: normal;
@@ -209,8 +207,7 @@ body {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        font-family: 'Comfortaa', sans-serif;
-        font-style: normal;
+        font-family: 'Bebas Neue', sans-serif;
         font-weight: 500;
         font-size: 36px;
         line-height: normal;
@@ -344,8 +341,7 @@ body {
     .home__main-title {
       width: 100%;
       padding: 0 60px;
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
+      font-family: 'Bebas Neue', sans-serif;
       font-weight: 700;
       font-size: 72px;
       line-height: normal;
@@ -356,8 +352,7 @@ body {
     .home__main-descripton {
       width: 100%;
       padding: 0 60px;
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
+      font-family: 'Bebas Neue', sans-serif;
       font-weight: 300;
       font-size: 48px;
       line-height: normal;
@@ -508,8 +503,7 @@ body {
             justify-content: start;
             align-items: center;
             column-gap: 15px;
-            font-family: 'Comfortaa', sans-serif;
-            font-style: normal;
+            font-family: 'Bebas Neue', sans-serif;
             font-weight: 500;
             font-size: 28px;
             line-height: normal;
@@ -522,8 +516,7 @@ body {
               border: 10px solid #CC0100; }
           .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-description {
             margin-left: 50px;
-            font-family: 'Comfortaa', sans-serif;
-            font-style: normal;
+            font-family: 'Bebas Neue', sans-serif;
             font-weight: 500;
             font-size: 24px;
             line-height: normal;
@@ -531,8 +524,7 @@ body {
             color: rgba(0, 0, 0, 0.6); }
           .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-repeat {
             margin-left: 50px;
-            font-family: 'Comfortaa', sans-serif;
-            font-style: normal;
+            font-family: 'Bebas Neue', sans-serif;
             font-weight: 500;
             font-size: 24px;
             line-height: normal;
@@ -543,8 +535,7 @@ body {
   .schedule__cta {
     display: none;
     margin-top: 30px;
-    font-family: 'Comfortaa', sans-serif;
-    font-style: normal;
+    font-family: 'Bebas Neue', sans-serif;
     font-weight: 500;
     font-size: 24px;
     line-height: normal;
@@ -566,8 +557,7 @@ body {
   .about-us__title {
     color: #fff; }
   .about-us__destiption {
-    font-family: 'Comfortaa', sans-serif;
-    font-style: normal;
+    font-family: 'Bebas Neue', sans-serif;
     font-weight: 500;
     font-size: 28px;
     line-height: normal;
@@ -612,8 +602,7 @@ body {
       .team__wrapper .team__member-position {
         text-align: center;
         margin-top: 25px;
-        font-family: 'Comfortaa', sans-serif;
-        font-style: normal;
+        font-family: 'Bebas Neue', sans-serif;
         font-weight: 500;
         font-size: 20px;
         line-height: normal;
@@ -621,8 +610,7 @@ body {
         color: rgba(0, 0, 0, 0.6); }
       .team__wrapper .team__member-name {
         margin-top: 20px;
-        font-family: 'Comfortaa', sans-serif;
-        font-style: normal;
+        font-family: 'Bebas Neue', sans-serif;
         font-weight: 600;
         font-size: 28px;
         line-height: normal;
@@ -630,8 +618,7 @@ body {
         color: #000; }
       .team__wrapper .team__member-instagram {
         margin-top: 25px;
-        font-family: 'Comfortaa', sans-serif;
-        font-style: normal;
+        font-family: 'Bebas Neue', sans-serif;
         font-weight: 600;
         font-size: 26px;
         line-height: normal;
@@ -697,8 +684,7 @@ body {
         cursor: pointer; }
       .footer__wrapper .footer__info-description {
         max-width: 600px;
-        font-family: 'Comfortaa', sans-serif;
-        font-style: normal;
+        font-family: 'Bebas Neue', sans-serif;
         font-weight: 500;
         font-size: 28px;
         line-height: normal;
@@ -706,8 +692,7 @@ body {
         color: #fff; }
     .footer__wrapper .footer__list-title {
       margin-bottom: 40px;
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
+      font-family: 'Bebas Neue', sans-serif;
       font-weight: 700;
       font-size: 48px;
       line-height: normal;
@@ -715,8 +700,7 @@ body {
       color: #fff; }
     .footer__wrapper .footer__list .footer__item {
       margin-bottom: 15px;
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
+      font-family: 'Bebas Neue', sans-serif;
       font-weight: 500;
       font-size: 28px;
       line-height: normal;
@@ -773,8 +757,7 @@ body {
   .footer__copyright {
     padding-top: 30px;
     text-align: center;
-    font-family: 'Comfortaa', sans-serif;
-    font-style: normal;
+    font-family: 'Bebas Neue', sans-serif;
     font-weight: 500;
     font-size: 24px;
     line-height: normal;
@@ -821,16 +804,14 @@ body {
               width: 50px;
               height: 50px; }
     .home__main-title {
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
+      font-family: 'Bebas Neue', sans-serif;
       font-weight: 700;
       font-size: 48px;
       line-height: normal;
       letter-spacing: 4.8px;
       color: #fff; }
     .home__main-descripton {
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
+      font-family: 'Bebas Neue', sans-serif;
       font-weight: 300;
       font-size: 32px;
       line-height: normal;
@@ -1180,8 +1161,7 @@ body {
               width: 40px;
               height: 40px; }
     .home__main-title {
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
+      font-family: 'Bebas Neue', sans-serif;
       font-weight: 700;
       font-size: 42px;
       line-height: normal;
@@ -1323,8 +1303,7 @@ body {
   .home__main {
     height: calc(90vh - 100px); }
     .home__main-title {
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
+      font-family: 'Bebas Neue', sans-serif;
       font-weight: 700;
       font-size: 36px;
       line-height: normal;
@@ -1332,8 +1311,7 @@ body {
       color: #fff;
       margin-top: 35px; }
     .home__main-descripton {
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
+      font-family: 'Bebas Neue', sans-serif;
       font-weight: 300;
       font-size: 28px;
       line-height: normal;
@@ -1403,8 +1381,7 @@ body {
         width: 6px;
         z-index: 20; }
     .home__main-title {
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
+      font-family: 'Bebas Neue', sans-serif;
       font-weight: 700;
       font-size: 32px;
       line-height: normal;
@@ -1413,8 +1390,7 @@ body {
       margin-top: 35px;
       padding: 0 30px; }
     .home__main-descripton {
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
+      font-family: 'Bebas Neue', sans-serif;
       font-weight: 300;
       font-size: 28px;
       line-height: normal;
@@ -1444,8 +1420,7 @@ body {
   .about-us {
     padding: 80px 30px; }
     .about-us__destiption {
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
+      font-family: 'Bebas Neue', sans-serif;
       font-weight: 500;
       font-size: 20px;
       line-height: normal;
@@ -1502,8 +1477,7 @@ body {
             width: 35px;
             height: 35px; }
   .home__main-title {
-    font-family: 'Comfortaa', sans-serif;
-    font-style: normal;
+    font-family: 'Bebas Neue', sans-serif;
     font-weight: 700;
     font-size: 28px;
     line-height: normal;
@@ -1511,8 +1485,7 @@ body {
     color: #fff;
     margin-top: 30px; }
   .home__main-descripton {
-    font-family: 'Comfortaa', sans-serif;
-    font-style: normal;
+    font-family: 'Bebas Neue', sans-serif;
     font-weight: 300;
     font-size: 24px;
     line-height: normal;
@@ -1569,8 +1542,7 @@ body {
   .about-us {
     padding: 60px 30px; }
     .about-us__descripton {
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
+      font-family: 'Bebas Neue', sans-serif;
       font-weight: 500;
       font-size: 18px;
       line-height: normal;
@@ -1593,8 +1565,7 @@ body {
       font-size: 20px; }
     .team__wrapper .team__member-instagram {
       margin-top: 20px;
-      font-family: 'Comfortaa', sans-serif;
-      font-style: normal;
+      font-family: 'Bebas Neue', sans-serif;
       font-weight: 600;
       font-size: 20px;
       line-height: normal;
