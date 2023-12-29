@@ -1672,7 +1672,7 @@ body {
           cursor: pointer; }
 
   .schedule {
-    padding: 140px 30px 0 30px; }
+    padding: 140px 30px; }
     .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-track {
       background: #ddd;
       border-radius: 10px; }
