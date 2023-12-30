@@ -572,7 +572,7 @@ body {
         .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card {
           padding: 30px;
           width: 720px;
-          height: 330px;
+          height: 400px;
           border-radius: 10px;
           box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
           background-color: #fff;
@@ -611,7 +611,7 @@ body {
             line-height: normal;
             letter-spacing: 0;
             color: #000; }
-            .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-repeat--bold {
+            .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-repeat span {
               font-weight: 600; }
   .schedule__cta {
     display: none;
@@ -1062,7 +1062,7 @@ body {
     .schedule__wrapper .schedule__box-wrapper .schedule__box::-webkit-scrollbar-thumb:hover {
       margin: 0 60px 0 20px; }
     .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card {
-      padding: 30px;
+      padding: 25px;
       width: 550px;
       height: 220px;
       border-radius: 10px; }
@@ -1678,10 +1678,13 @@ body {
       border-radius: 10px; }
     .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card {
       padding: 20px; }
-      .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card__title-container .schedule__card__title-circle {
-        display: none; }
-      .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card__title-container .schedule__card-title {
-        text-align: center; }
+      .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card__title-container {
+        display: flex;
+        justify-content: center; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card__title-container .schedule__card__title-circle {
+          display: none; }
+        .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card__title-container .schedule__card-title {
+          text-align: center; }
       .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card-description {
         text-align: center;
         margin-left: 0px; }

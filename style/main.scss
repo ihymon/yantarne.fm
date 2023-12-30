@@ -666,7 +666,7 @@
                 .schedule__card {
                     padding: 30px;
                     width: 720px;
-                    height: 330px;
+                    height: 400px;
                     border-radius: 10px;
                     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.50);
                     background-color: $white;
@@ -699,8 +699,9 @@
 
                     &-repeat {
                         margin-left: 50px;
-                            @include font($black, 24px, 500, normal, 0);
-                        &--bold {
+                        @include font($black, 24px, 500, normal, 0);
+
+                        & span {
                             font-weight: 600;
                         }
                     }
@@ -1432,7 +1433,7 @@
     
     
                     .schedule__card {
-                        padding: 30px;
+                        padding: 25px;
                         width: 550px;
                         height: 220px;
                         border-radius: 10px;
@@ -2392,6 +2393,9 @@
                         padding: 20px;
 
                         &__title-container {
+                            display: flex;
+                            justify-content: center;
+
                             .schedule__card__title-circle {
                                 display: none;
                             }
