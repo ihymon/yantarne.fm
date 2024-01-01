@@ -1572,8 +1572,13 @@ body {
 
   .home__header {
     padding: 0 30px; }
-    .home__header-logo img {
-      width: 150px; }
+    .home__header-logo {
+      font-size: 16px; }
+      .home__header-logo p {
+        position: relative;
+        bottom: 10px; }
+      .home__header-logo img {
+        width: 150px; }
   .home__main {
     width: 100%;
     display: flex;
