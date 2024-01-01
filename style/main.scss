@@ -1619,7 +1619,7 @@
             }
 
             .home__header-logo {
-                @include display-center(flex-start, flex-start);
+                @include display-center(flex-start, center);
             }
 
             &-rigth {
