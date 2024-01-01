@@ -246,7 +246,9 @@ $(".home__play").click(async () => {
 // Обробник події натискання клавіші
 document.addEventListener("keydown", async function(event) {
   console.log(event)
+
   if (event.code === "Space") {
+    event.preventDefault();
     $(".play__btn-play").toggle();
     $(".play__btn-pause").toggle();
     $(".voiceBig").show();
