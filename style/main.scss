@@ -97,28 +97,6 @@
 // Loader End
 
 
-// .marquee-infinity {
-//     margin: 0 auto;
-//     height: 35px;
-//     max-width: 80%;
-//     overflow: hidden;
-//     background-color: $main;
-//     display: flex;
-//     align-items: center;
-// }
-
-// .marquee-infinity div {
-//     display: flex;
-//     width: 200%;
-// }
-
-// .marquee-infinity p {
-//     width: 100%;
-//     white-space: nowrap;
-//     @include font($white, 20px, 500, normal, normal);
-//     animation: marquee-infinity 3s linear infinite;
-// }
-
 
 .marquee-infinity {
     margin: auto;
@@ -140,7 +118,7 @@
 .marquee-infinity p {
     white-space: nowrap;
     width: 100%;
-    @include font($white, 20px, 500, normal, normal);
+    @include font($white, 16px, 500, normal, normal);
 }
 
 
