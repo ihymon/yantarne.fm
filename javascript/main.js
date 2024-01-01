@@ -52,7 +52,7 @@ if (textLength.length >= 60) {
 
 console.log(textLength.length);
 
-var swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".mySwiper", {
   spaceBetween: 0,
   centeredSlides: true,
   loop: true,
@@ -370,51 +370,84 @@ $(".home--scroll").click(function() {
 
 
 // Schedule Start
+function removeClassOnScroll(selector, className) {
+  let elements = $(selector);
+
+  $(window).scroll(function () {
+    let windowTop = $(window).scrollTop();
+    let windowBottom = windowTop + $(window).height();
+
+    elements.each(function () {
+      let element = $(this);
+      let elementTop = element.offset().top;
+      let elementBottom = elementTop + element.height();
+
+      if (elementBottom >= windowTop && elementTop <= windowBottom) {
+        element.removeClass(className);
+      }
+    });
+  });
+}
+
+removeClassOnScroll(".schedule__title", "animation-show3");
+removeClassOnScroll(".schedule__card", "animation-show1");
+removeClassOnScroll(".schedule__card", "animation-show2");
+
 // Schedule End
 
 
 
 // About Us Start
+
+removeClassOnScroll(".about-us__title", "animation-show3");
+removeClassOnScroll(".about-us__destiption", "animation-show3");
+removeClassOnScroll(".about-us__button", "animation-show3");
+
 // About Us End
 
 
 
 // Team Start
+
+let delay;
+
+if (window.innerWidth <= 500) {
+  delay = 450;
+} else {
+  console.log('Тут інший код');
+  delay = 200;
+}
+
+$(document).ready(function () {
+  let teamMembers = $(".team__member");
+
+  $(window).scroll(function () {
+    let windowTop = $(window).scrollTop();
+    let windowBottom = windowTop + $(window).height();
+
+    let teamSection = $("#team");
+    let teamSectionTop = teamSection.offset().top;
+
+    if (windowBottom >= teamSectionTop) {
+      teamMembers.each(function (index) {
+        let teamMember = $(this);
+        setTimeout(function () {
+          teamMember.addClass("animation-show");
+        }, index * delay);
+      });
+    }
+  });
+});
+
+removeClassOnScroll(".team__title", "animation-show3");
+
 // Team End
 
 
 
 // Partners Start
-// let owlSecond = $('.owl-carousel').owlCarousel({
-//   items: 3,
-//   loop: true,
-//   center: true,
-//   margin: 200,
-//   autoWidth: true,
-//   autoplay: true,
-//   autoplayTimeout: 1500,
-//   responsiveClass:true,
-//   dots: false,
-//   animateOut: 'slideOutDown',
-//   animateIn: 'flipInX',
-//   stagePadding:30,
-//   smartSpeed:650,
-  
-//   responsive: {
-//     600: {
-//       margin: 80,
-//     },
-//     600: {
-//       margin: 100,
-//     },
-//     1400: {
-//       margin: 300,
-//     },
-//     2000: {
-//       margin: 200,
-//     },
-//   }
-// })
+removeClassOnScroll(".partners__title", "animation-show3");
+removeClassOnScroll(".partners__box", "animation-show3");
 // Partners End
 
 

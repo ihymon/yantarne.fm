@@ -657,6 +657,8 @@
     &__title {
         text-align: center;
         margin-bottom: 80px;
+        opacity: 1;
+        transition: 0.3s
     }
 
     &__wrapper {
@@ -711,6 +713,9 @@
                     display: flex;
                     justify-content: space-between;
                     flex-direction: column;
+                    transition: 0.5s;
+                    position: relative;
+                    opacity: 1;
 
 
                     &__title-container {
@@ -777,14 +782,18 @@
 
     &__title {
        color: $white;
+       transition: 0.3s;
     }
 
     &__destiption {
         @include font($white, 28px, 500, normal, normal);
         margin-top: 25px;
         text-align: center;
+        transition: 0.5s;
+
     }
     a {
+       transition: 0.7s;
         margin-top: 50px;
         img {
             width: 500px;
@@ -808,6 +817,7 @@
     &__title {
         text-align: center;
         margin-bottom: 80px;
+        transition: 0.3s;
     }
 
 
@@ -827,6 +837,16 @@
             box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.50);
             @include  display-center(start, center);
             flex-direction: column;
+            opacity: 0;
+            transition: 0.5s;
+
+            &:hover {
+                transition: 0.5s;
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.50);
+                cursor: pointer;
+
+            }
+
 
             &-picture {
                 width: 100%;     
@@ -847,11 +867,11 @@
             &-instagram {
                 margin-top: 25px;
                 @include font($main, 26px, 600, normal, 0);
-                transition: .5s;
+                transition: 0.5s;
 
                 &:hover {
-                    transition: .5s;
-                    color: #a60101;
+                    transition: 0.5s;
+                    color: $black;
                 }
             }
         }
@@ -870,6 +890,10 @@
     @include display-center(center, center);
     flex-direction: column;
 
+    &__title {
+        transition: 0.3s;
+    }
+
 
     &__box {
         margin-top: 80px;
@@ -880,6 +904,7 @@
         flex-wrap: wrap;
         column-gap: 50px;
         row-gap: 50px;
+        transition: 0.7s;
 
         .partner__logo img {
             max-width: 220px;
@@ -2359,19 +2384,13 @@
             }
         }
         .home__voice {
-            cursor: none;
-            user-select: none;
             &-box {
                 width: 65px;
                 height: 50px;
-                cursor: none;
-                user-select: none;
             }
     
             &-animation {
                 width: 65px;
-                cursor: none;
-                user-select: none;
                 &-main {
                     width: 65px;
                     #volme__input {
