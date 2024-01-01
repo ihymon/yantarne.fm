@@ -78,17 +78,24 @@ let titel;
 let stream;
 let audioLoading = false;
 
-updateSliderBackground($slider);
 
+if (localStorage.getItem('streamVolume')) {
+  streamVolume = parseFloat(localStorage.getItem('streamVolume'));
+}
+
+$slider.val(streamVolume * 100);
+updateSliderBackground($slider);
 
 $(".voiceBig").hide();
 
 $slider.on("input", function() {
+  streamVolume = $(this).val() / 100;
   updateSliderBackground($(this));
   clearTimeout(timeId);
   closeVoice();
+  
+  localStorage.setItem('streamVolume', streamVolume);
 });
-
 
 function updateSliderBackground($slider) {
   const value = $slider.val();
