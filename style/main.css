@@ -580,7 +580,8 @@ body {
   background-image: url(./../img/main/spiral.svg);
   background-repeat: no-repeat;
   background-position: top 60% right -20%;
-  background-size: auto 700px; }
+  background-size: auto 700px;
+  overflow: hidden; }
   .schedule__title {
     text-align: center;
     margin-bottom: 80px;
