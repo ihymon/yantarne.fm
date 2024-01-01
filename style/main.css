@@ -35,6 +35,25 @@ body {
   min-height: 100%;
   overflow-x: hidden; }
 
+.animation-show {
+  opacity: 1 !important;
+  transition: 0.5s; }
+
+.animation-show1 {
+  transform: translateX(-100px);
+  opacity: 0 !important;
+  transition: 0.5s; }
+
+.animation-show2 {
+  transform: translateX(100px);
+  opacity: 0 !important;
+  transition: 0.5s; }
+
+.animation-show3 {
+  transform: translateY(100px);
+  opacity: 0 !important;
+  transition: 0.3s; }
+
 ::-webkit-scrollbar {
   width: 13px; }
 
@@ -539,7 +558,9 @@ body {
   background-size: auto 700px; }
   .schedule__title {
     text-align: center;
-    margin-bottom: 80px; }
+    margin-bottom: 80px;
+    opacity: 1;
+    transition: 0.3s; }
   .schedule__wrapper {
     display: flex;
     justify-content: space-between;
@@ -578,7 +599,10 @@ body {
           background-color: #fff;
           display: flex;
           justify-content: space-between;
-          flex-direction: column; }
+          flex-direction: column;
+          transition: 0.5s;
+          position: relative;
+          opacity: 1; }
           .schedule__wrapper .schedule__box-wrapper .schedule__box .schedule__card__title-container {
             display: flex;
             justify-content: start;
@@ -636,7 +660,8 @@ body {
   align-items: center;
   flex-direction: column; }
   .about-us__title {
-    color: #fff; }
+    color: #fff;
+    transition: 0.3s; }
   .about-us__destiption {
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 500;
@@ -645,8 +670,10 @@ body {
     letter-spacing: normal;
     color: #fff;
     margin-top: 25px;
-    text-align: center; }
+    text-align: center;
+    transition: 0.5s; }
   .about-us a {
+    transition: 0.7s;
     margin-top: 50px; }
     .about-us a img {
       width: 500px;
@@ -659,7 +686,8 @@ body {
   background-position: center left -10%; }
   .team__title {
     text-align: center;
-    margin-bottom: 80px; }
+    margin-bottom: 80px;
+    transition: 0.3s; }
   .team__wrapper {
     display: flex;
     align-items: center;
@@ -676,7 +704,9 @@ body {
       display: flex;
       justify-content: start;
       align-items: center;
-      flex-direction: column; }
+      flex-direction: column;
+      opacity: 0;
+      transition: 0.5s; }
       .team__wrapper .team__member-picture {
         width: 100%;
         border-radius: 10px 10px 0px 0px; }
@@ -719,6 +749,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column; }
+  .partners__title {
+    transition: 0.3s; }
   .partners__box {
     margin-top: 80px;
     width: 100%;
@@ -727,7 +759,8 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     column-gap: 50px;
-    row-gap: 50px; }
+    row-gap: 50px;
+    transition: 0.7s; }
     .partners__box .partner__logo img {
       max-width: 220px;
       max-height: 220px; }

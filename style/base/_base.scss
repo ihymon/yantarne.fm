@@ -8,6 +8,30 @@ body {
     overflow-x: hidden
 }
 
+.animation-show {
+    opacity: 1 !important;
+    transition: 0.5s;
+}
+
+.animation-show1 {
+    transform: translateX(-100px);
+    opacity: 0 !important;
+    transition: 0.5s;
+}
+
+.animation-show2 {
+    transform: translateX(100px);
+    opacity: 0 !important;
+    transition: 0.5s;
+}
+
+.animation-show3 {
+    transform: translateY(100px);
+    opacity: 0 !important;
+    transition: 0.3s;
+}
+
+
 ::-webkit-scrollbar {
     width: 13px;
   }
