@@ -97,16 +97,54 @@
 // Loader End
 
 
+.marquee-infinity {
+    margin: 0 auto;
+    height: 35px;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: $main;
+    display: flex;
+    align-items: center;
+}
+
+.marquee-infinity div {
+    display: flex;
+    width: auto;
+    animation: marquee-infinity 20s linear infinite;
+    animation-delay: -5s;
+}
+
+.marquee-infinity p {
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+    @include font($white, 20px, 500, normal, normal);
+    margin: 0;
+}
+
+
+@keyframes marquee-infinity {
+    0% {
+        transform: translateX(70%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
 // Home Start
 .home {
 	width: 100%;
-	height: 100vh;
+	height: calc(100vh - 35px);
     overflow-x: hidden;
     overflow-y: hidden;
 
 	.swiper {
 		width: 100%;
-		height: 100vh;
+		height: calc(100vh - 35px);
 		position: absolute;
 		z-index: -1;
 	  }
@@ -467,7 +505,7 @@
 
 	.home__voice {
         width: 100%;
-        height: 10vh;
+        height: 50px;
         @include display-center(center, flex-end);
         flex-direction: column;
         padding: 0 60px;
@@ -1038,7 +1076,7 @@
         }
 
         &__main {
-            height: calc(90vh - 180px);
+            height: calc(90vh - 180px - 35px);
             &-container {
                 height: 230px;
                 .home__play {
@@ -1581,10 +1619,19 @@
     }
 
     .home {
+        height: 100vh;
         @include display-center(center, center);
         flex-direction: column;
         overflow: hidden;
         position: relative;
+
+
+        .swiper {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            z-index: -1;
+          }
         
         &__menu {
             width: 50px;
