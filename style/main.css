@@ -184,39 +184,31 @@ body {
   .loader-overlay .loader-decoration {
     position: absolute; }
 
-.marquee-infinity {
-  margin: auto;
-  padding: 5px 0;
-  border: 1px solid #000;
-  max-width: 100%;
-  overflow: hidden;
-  background-color: #CC0100; }
-
-.marquee-infinity div {
-  display: flex;
-  width: 200%;
-  animation: marquee-infinity 10s linear infinite; }
-
-.marquee-infinity p {
-  white-space: nowrap;
-  width: 100%;
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #fff; }
-
-@keyframes marquee-infinity {
-  0% {
-    transform: translateX(0%); }
-  100% {
-    transform: translateX(-50%); } }
 .home {
   width: 100%;
   height: calc(100vh - 35px);
   overflow-x: hidden;
   overflow-y: hidden; }
+  .home .marquee-infinity {
+    margin: auto;
+    padding: 6px 0;
+    border: 1px solid #000;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #CC0100; }
+  .home .marquee-infinity div {
+    display: flex;
+    width: 200%;
+    animation: marquee-infinity 20s linear infinite; }
+  .home .marquee-infinity p {
+    white-space: nowrap;
+    width: 100%;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff; }
   .home .swiper {
     width: 100%;
     height: calc(100vh - 35px);
@@ -577,6 +569,11 @@ body {
     position: relative;
     bottom: 50px;
     opacity: 0; } }
+@keyframes marquee-infinity {
+  0% {
+    transform: translateX(0%); }
+  100% {
+    transform: translateX(-50%); } }
 .schedule {
   position: relative;
   padding: 140px;

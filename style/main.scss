@@ -98,45 +98,6 @@
 
 
 
-.marquee-infinity {
-    margin: auto;
-    padding: 5px 0;
-    border: 1px solid #000;
-    max-width: 100%;
-    overflow: hidden;
-    background-color: $main;
-}
-
-
-.marquee-infinity div {
-    display: flex;
-    width: 200%;
-    animation: marquee-infinity 10s linear infinite;
-}
-
-
-.marquee-infinity p {
-    white-space: nowrap;
-    width: 100%;
-    @include font($white, 16px, 500, normal, normal);
-}
-
-
-
-
-@keyframes marquee-infinity {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-
-
-
 
 // Home Start
 .home {
@@ -144,6 +105,33 @@
 	height: calc(100vh - 35px);
     overflow-x: hidden;
     overflow-y: hidden;
+
+
+    .marquee-infinity {
+        margin: auto;
+        padding: 6px 0;
+        border: 1px solid #000;
+        max-width: 100%;
+        overflow: hidden;
+        background-color: $main;
+    }
+    
+    
+    .marquee-infinity div {
+        display: flex;
+        width: 200%;
+        animation: marquee-infinity 20s linear infinite;
+    }
+    
+    
+    .marquee-infinity p {
+        white-space: nowrap;
+        width: 100%;
+        @include font($white, 16px, 500, normal, normal);
+    }
+
+    
+
 
 	.swiper {
 		width: 100%;
@@ -640,6 +628,20 @@
     }
 }
 // Home End
+
+
+@keyframes marquee-infinity {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+
 
 
 
