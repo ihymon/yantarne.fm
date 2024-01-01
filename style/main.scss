@@ -119,18 +119,16 @@
     
     .marquee-infinity div {
         display: flex;
-        width: 200%;
-        animation: marquee-infinity 20s linear infinite;
+        width: 6240px;
+        animation: marquee-infinity 50s linear infinite;
     }
     
     
     .marquee-infinity p {
         white-space: nowrap;
-        width: 100%;
-        @include font($white, 16px, 500, normal, normal);
+        width: 3120px;
+        @include font($white, 20px, 500, normal, normal);
     }
-
-    
 
 
 	.swiper {
@@ -1088,6 +1086,11 @@
 
 
     .home {
+        .marquee-infinity p {
+           font-size: 16px;
+        }
+
+
         &__header {
             height: 180px;
             padding: 0 80px;
