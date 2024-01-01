@@ -17,6 +17,15 @@ loader();
 
 // Home Start
 
+
+if (/Mobile|iPhone|Android/.test(navigator.userAgent)) {
+  console.log('Тут вимкнути позунок');
+  $("#volme").hide();
+} else {
+  console.log('Тут інший код');
+  $("#volme").show();
+}
+
 fetch(`https://complex.in.ua/status-json.xsl?mount=/yantarne`)
 .then((response) => {
    return response.json()
@@ -55,6 +64,9 @@ var swiper = new Swiper(".mySwiper", {
   },
 
 });
+
+
+
 
 const $slider = $("#volme__input");
 const min = $slider.attr("min");
