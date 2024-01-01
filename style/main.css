@@ -185,37 +185,33 @@ body {
     position: absolute; }
 
 .marquee-infinity {
-  margin: 0 auto;
-  height: 35px;
+  margin: auto;
+  padding: 5px 0;
+  border: 1px solid #000;
   max-width: 100%;
   overflow: hidden;
-  background-color: #CC0100;
-  display: flex;
-  align-items: center; }
+  background-color: #CC0100; }
 
 .marquee-infinity div {
   display: flex;
-  width: auto;
-  animation: marquee-infinity 20s linear infinite;
-  animation-delay: -5s; }
+  width: 200%;
+  animation: marquee-infinity 10s linear infinite; }
 
 .marquee-infinity p {
-  width: 100%;
   white-space: nowrap;
-  text-align: center;
+  width: 100%;
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: normal;
   letter-spacing: normal;
-  color: #fff;
-  margin: 0; }
+  color: #fff; }
 
 @keyframes marquee-infinity {
   0% {
-    transform: translateX(70%); }
+    transform: translateX(0%); }
   100% {
-    transform: translateX(-100%); } }
+    transform: translateX(-50%); } }
 .home {
   width: 100%;
   height: calc(100vh - 35px);
