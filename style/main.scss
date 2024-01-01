@@ -178,6 +178,16 @@
                 bottom: 15px;
                 z-index: 1;
             }
+
+            &::after {
+                content: "97.6";
+                font-size: 32px;
+                position: absolute;
+                color: #fff;
+                margin-bottom: 60px;
+                margin-left: 150px;
+
+            }
         }
 
         &-logo img {
@@ -1092,6 +1102,18 @@
             height: 180px;
             padding: 0 80px;
             padding-bottom: 55px;
+
+            &-logo {
+                &::after {
+                    content: "97.6";
+                    font-size: 24px;
+                    position: absolute;
+                    color: #fff;
+                    margin-bottom: 50px;
+                    margin-left: 100px;
+    
+                }
+            }
 
             &-logo img {
                 width: auto;
@@ -2057,6 +2079,19 @@
             background-image: none;
             background-color: rgba(0, 0, 0, 0.45);
             padding-top: 10px;
+
+            &-logo {
+                &::after {
+                    content: "97.6";
+                    font-size: 20px;
+                    position: absolute;
+                    color: #fff;
+                    margin-bottom: 0px;
+                    margin-top: 5px;
+                    margin-left: 60px;
+    
+                }
+            }
 
         }
 

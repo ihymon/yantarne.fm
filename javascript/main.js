@@ -239,8 +239,78 @@ $(".home__play").click(async () => {
     streamPlay = false;
     $('.bar').css({"animation-name": "none"});
     clearTimeout(animationBar);
+    
   }
 });
+
+// Обробник події натискання клавіші
+document.addEventListener("keydown", async function(event) {
+  console.log(event)
+  if (event.code === "Space") {
+    $(".play__btn-play").toggle();
+    $(".play__btn-pause").toggle();
+    $(".voiceBig").show();
+    $(".voiceSmall").hide();
+  
+    $(".home__play-line1").toggleClass("line1__open");
+    $(".home__play-line2").toggleClass("line2__open");
+    $(".home__play-line3").toggleClass("line3__open");
+  
+  
+    $('.bar').css({"animation-name": "wave-lg" });
+    animationBar = setTimeout(() => {
+      const bar = document.querySelectorAll(".bar");
+      for (let i = 0; i < bar.length; i++) {
+        bar.forEach((item, j) => {
+          // Random move
+          item.style.animationDuration = `${Math.random() * (0.7 - 0.2) + 0.3}s`;
+        });
+      }
+    }, "200");
+  
+    if (!streamPlay) {
+      try {
+        // Check if audio is still loading, wait for it to complete
+  
+        if (doubleClick == true) {
+          await loadAudio();
+        }
+  
+        while (audioLoading) {
+          await new Promise(resolve => setTimeout(resolve, 100)); // Wait for 100 milliseconds
+        }
+  
+        if (stream && stream.paused) {
+          stream.play().catch((playError) => {
+            if (playError.name === 'AbortError') {
+              console.warn('Play request aborted, possibly due to rapid user interaction.');
+            } else {
+              console.error("Error playing audio:", playError);
+            }
+          });
+          streamPlay = true;
+          doubleClick = true;
+  
+        } else {
+          console.error("Stream is not defined, could not be found, or is already playing.");
+        }
+      } catch (error) {
+        console.error("Error playing audio:", error);
+      }
+    } else {
+      $(".voiceBig").hide();
+      $(".voiceSmall").show();
+  
+      // Pause the stream and do not resume if it's in the paused state
+      stream.pause();
+      streamPlay = false;
+      $('.bar').css({"animation-name": "none"});
+      clearTimeout(animationBar);
+      
+    }
+  }
+});
+
 
 function updateTitleDescription(title) {
   $(".home__main-title").empty();

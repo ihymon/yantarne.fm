@@ -253,6 +253,13 @@ body {
         position: relative;
         bottom: 15px;
         z-index: 1; }
+      .home__header-logo::after {
+        content: "97.6";
+        font-size: 32px;
+        position: absolute;
+        color: #fff;
+        margin-bottom: 60px;
+        margin-left: 150px; }
     .home__header-logo img {
       width: 400px;
       margin-top: 20px; }
@@ -923,6 +930,13 @@ body {
     height: 180px;
     padding: 0 80px;
     padding-bottom: 55px; }
+    .home__header-logo::after {
+      content: "97.6";
+      font-size: 24px;
+      position: absolute;
+      color: #fff;
+      margin-bottom: 50px;
+      margin-left: 100px; }
     .home__header-logo img {
       width: auto; }
     .home__header-nav ul {
@@ -1489,6 +1503,14 @@ body {
     background-image: none;
     background-color: rgba(0, 0, 0, 0.45);
     padding-top: 10px; }
+    .home__header-logo::after {
+      content: "97.6";
+      font-size: 20px;
+      position: absolute;
+      color: #fff;
+      margin-bottom: 0px;
+      margin-top: 5px;
+      margin-left: 60px; }
   .home__main {
     height: calc(90vh - 100px); }
     .home__main-container .home__play-line1 {
