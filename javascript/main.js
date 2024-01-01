@@ -1,3 +1,25 @@
+// Basic Start
+let timeRefreshPage = 300000; 
+let refreshPage = false; 
+let refreshId;
+
+$(window).focus(function() {
+  clearTimeout(refreshId);
+  if(refreshPage) {
+    console.log("refreshPage")
+    location.reload(true);
+    refreshPage = false;
+  }
+});
+
+$(window).blur(function() {
+  refreshId = setTimeout(() => {
+    refreshPage = true;
+  }, timeRefreshPage)
+});
+
+// Basic Finish
+
 // Loader Start
 
 const loader = () => {
@@ -19,10 +41,8 @@ loader();
 
 
 if (/Mobile|iPhone|Android/.test(navigator.userAgent)) {
-  console.log('Тут вимкнути позунок');
   $("#volme").hide();
 } else {
-  console.log('Тут інший код');
   $("#volme").show();
 }
 
@@ -31,7 +51,6 @@ fetch(`https://complex.in.ua/status-json.xsl?mount=/yantarne`)
    return response.json()
 })
 .then((data) => {
-  console.log(data);
   titel = data.icestats.source.title;
 
   let indexOf2 = titel.indexOf("-");
@@ -50,7 +69,6 @@ if (textLength.length >= 60) {
     $(".home__main-title").css("font-size", "24px");
 }
 
-console.log(textLength.length);
 
 let swiper = new Swiper(".mySwiper", {
   spaceBetween: 0,
@@ -102,7 +120,6 @@ function updateSliderBackground($slider) {
   const background = `linear-gradient(to right, rgba(255, 255, 255, 0.8) ${value}%, rgba(255, 255, 255, 0.4) ${value}%)`;
   $slider.css("background", background);
 
-  console.log(value / 100);
   streamVolume = value / 100;
 
   if (stream) {
@@ -127,8 +144,6 @@ async function loadAudio() {
     const response = await fetch(`https://complex.in.ua/status-json.xsl?mount=/yantarne`);
     const data = await response.json();
 
-    console.log(data.icestats);
-
     if (data.icestats.source) {
       const audioUrl = data.icestats.source.listenurl;
       const title = data.icestats.source.title;
@@ -148,7 +163,6 @@ async function loadAudio() {
         const response = await fetch(`https://complex.in.ua/status-json.xsl?mount=/yantarne`);
         const newData = await response.json();
 
-        console.log('changed');
         updateTitleDescription(newData.icestats.source.title);
 
       }, 2000);
@@ -209,7 +223,6 @@ $(".home__play").click(async () => {
         });
         streamPlay = true;
         doubleClick = true;
-        console.log("play");
 
       } else {
         console.error("Stream is not defined, could not be found, or is already playing.");
@@ -218,7 +231,6 @@ $(".home__play").click(async () => {
       console.error("Error playing audio:", error);
     }
   } else {
-    console.log("pause");
     $(".voiceBig").hide();
     $(".voiceSmall").show();
 
@@ -261,7 +273,6 @@ function updateTitleDescription(title) {
 
 let click = false;
 $("#volme").click(() => {
-  console.log("gg")
   if (click == false) {
     $("#voice__change").addClass("home__voice-animation--oepn");
     $("#voice__change").removeClass("home__voice-animation--close");
@@ -421,7 +432,6 @@ let delay;
 if (window.innerWidth <= 500) {
   delay = 450;
 } else {
-  console.log('Тут інший код');
   delay = 200;
 }
 
