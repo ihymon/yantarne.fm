@@ -77,7 +77,7 @@ let swiper = new Swiper(".mySwiper", {
   effect: "fade",
   speed: 1000,
   autoplay: {
-	delay: 10000,
+	delay: 20000,
 	disableOnInteraction: false
   },
 
