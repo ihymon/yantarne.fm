@@ -802,6 +802,13 @@
             opacity: 0;
             transition: 0.5s;
 
+            &:hover {
+                transition: 0.5s;
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.50);
+                cursor: pointer;
+
+            }
+
 
             &-picture {
                 width: 100%;     
@@ -822,11 +829,11 @@
             &-instagram {
                 margin-top: 25px;
                 @include font($main, 26px, 600, normal, 0);
-                transition: .5s;
+                transition: 0.5s;
 
                 &:hover {
-                    transition: .5s;
-                    color: #a60101;
+                    transition: 0.5s;
+                    color: $black;
                 }
             }
         }
