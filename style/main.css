@@ -241,7 +241,7 @@ body {
     .home__header-logo {
       font-family: 'Bebas Neue', sans-serif;
       font-weight: 500;
-      font-size: 24px;
+      font-size: 32px;
       line-height: normal;
       letter-spacing: normal;
       color: #CC0100;
@@ -251,7 +251,7 @@ body {
       flex-direction: column; }
       .home__header-logo p {
         position: relative;
-        bottom: 10px;
+        bottom: 15px;
         z-index: 1; }
     .home__header-logo img {
       width: 400px;
@@ -1110,6 +1110,8 @@ body {
     height: 180px;
     padding: 0 60px;
     padding-bottom: 55px; }
+    .home__header-logo {
+      font-size: 24px; }
 
   .schedule {
     padding: 140px 60px;
