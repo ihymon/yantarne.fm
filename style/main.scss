@@ -802,7 +802,7 @@
     &__destiption {
         @include font($white, 28px, 500, normal, normal);
         margin-top: 25px;
-        text-align: center;
+        text-align: flex-start;
         transition: 0.5s;
 
     }

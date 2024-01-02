@@ -867,7 +867,7 @@ body {
   letter-spacing: normal;
   color: #fff;
   margin-top: 25px;
-  text-align: center;
+  text-align: flex-start;
   transition: 0.5s;
 }
 .about-us a {
