@@ -127,6 +127,7 @@
     .marquee-infinity p {
         white-space: nowrap;
         width: 3120px;
+       
         @include font($white, 20px, 500, normal, normal);
     }
 
@@ -1098,6 +1099,14 @@
     .home {
         .marquee-infinity p {
            font-size: 16px;
+           margin-right: 10px;
+           transition: 1s;
+            &:nth-child(2){
+                position: relative;
+                 left: 50px;
+                
+            }
+           
         }
 
 
