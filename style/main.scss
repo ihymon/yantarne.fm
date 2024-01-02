@@ -168,7 +168,7 @@
         padding-bottom: 55px;
 
         &-logo {
-            @include font($main, 32px, 500, normal, normal);
+            @include font(#fff, 32px, 500, normal, normal);
             @include display-center(flex-end, center);
             flex-direction: column;
             p {
