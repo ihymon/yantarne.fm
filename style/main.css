@@ -1148,7 +1148,7 @@ body {
   }
   .home__header-logo::after {
     content: "97.6";
-    font-size: 24px;
+    font-size: 38px;
     position: absolute;
     color: #fff;
     margin-bottom: 50px;
