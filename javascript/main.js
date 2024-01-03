@@ -1,5 +1,5 @@
 // Basic Start
-let timeRefreshPage = 300000; 
+let timeRefreshPage = 5000; 
 let refreshPage = false; 
 let refreshId;
 
@@ -14,7 +14,18 @@ $(window).focus(function() {
 
 $(window).blur(function() {
   refreshId = setTimeout(() => {
-    refreshPage = true;
+    fetch(`https://complex.in.ua/status-json.xsl?mount=/yantarne`)
+    .then((response) => {
+      return response.json()
+    })
+    .then((data) => {
+      let thisTitle = $(".home__main-title").text() + "- " + $(".home__main-descripton").text();
+      if (thisTitle != data.icestats.source.title) {
+        refreshPage = true;
+      }
+    });
+
+
   }, timeRefreshPage)
 });
 
@@ -245,7 +256,6 @@ $(".home__play").click(async () => {
 
 // Обробник події натискання клавіші
 document.addEventListener("keydown", async function(event) {
-  console.log(event)
 
   if (event.code === "Space") {
     event.preventDefault();
