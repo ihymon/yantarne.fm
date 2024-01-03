@@ -1,5 +1,5 @@
 // Basic Start
-let timeRefreshPage = 5000; 
+let timeRefreshPage = 300000; 
 let refreshPage = false; 
 let refreshId;
 
