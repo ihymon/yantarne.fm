@@ -119,14 +119,14 @@
     
     .marquee-infinity div {
         display: flex;
-        width: 6240px;
+        width: 7800px;
         animation: marquee-infinity 50s linear infinite;
     }
     
     
     .marquee-infinity p {
         white-space: nowrap;
-        width: 3120px;
+        width: 3900px;
        
         @include font($white, 20px, 500, normal, normal);
     }
@@ -513,8 +513,6 @@
         bottom: 20px;
 
         &-box {
-            // width: 50px;
-            // height: 50px;
             width: 100px;
             height: 100px;
             background-color: $transparent-main;
@@ -531,8 +529,6 @@
         }
 
         &-animation {
-            // width: 50px;
-            // height: 150px;
             width: 100px;
             height: 200px;
             border-radius: 10px;
@@ -542,22 +538,17 @@
             z-index: 0;
 
             &-main {
-                // width: 50px;
                 width: 100px;
-                // height: 150px;
                 height: 200px;
                 background-color: $transparent-main;
                 border-radius: 10px;
                 position: relative;
-                // bottom: 105px;
                 bottom: 160px;
                 @include display-center(center, center);
                 cursor: pointer;
 
                #volme__input {
                 border-radius: 8px;
-                // height: 3px;
-                // width: 150px;
                 height: 6px;
                 width: 300px;
                 outline: none;
@@ -569,18 +560,13 @@
               }
               
               input[type='range']::-webkit-slider-thumb {
-                // width: 18px;
-                // height: 18px;
                 width: 35px;
                 height: 35px;
                 -webkit-appearance: none;
                 background: #fff;
                 border-radius: 50%;
                 cursor: pointer;
-
               }
-
-                
             }
         }
 
@@ -599,7 +585,6 @@
                     }
                     100% {
                         position: relative;
-                        // bottom: 105px;
                         bottom: 160px;
                         opacity: 1;
                     }
@@ -631,9 +616,6 @@
                 }
             }
         }
-        
-
-        
     }
 }
 // Home End
@@ -1083,6 +1065,31 @@
 
 @media screen and (min-width: 2700px) {
     .home {
+        .marquee-infinity {
+            margin: auto;
+            padding: 6px 0;
+            border: 1px solid #000;
+            max-width: 100%;
+            overflow: hidden;
+            background-color: $main;
+        }
+        
+        
+        .marquee-infinity div {
+            display: flex;
+            width: 10920px;
+            animation: marquee-infinity 50s linear infinite;
+        }
+        
+        
+        .marquee-infinity p {
+            white-space: nowrap;
+            width: 5500px;
+            @include font($white, 28px, 500, normal, normal);
+        }
+
+
+
         &__header {
             width: 100%;
             padding: 0 200px;
@@ -1366,6 +1373,11 @@
 
 
     .home {
+        
+        .marquee-infinity div {
+            width: 6130px;
+        }
+
         .marquee-infinity p {
            font-size: 16px;
            margin-right: 10px;
@@ -1375,7 +1387,10 @@
                  left: 50px;
                 
             }
-           
+        }
+
+        .marquee-infinity p {
+            width: 3065px;
         }
 
 
