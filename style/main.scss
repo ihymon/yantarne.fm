@@ -1081,6 +1081,275 @@
 // Footer End
 
 
+@media screen and (min-width: 2700px) {
+    .home {
+        &__header {
+            width: 100%;
+            padding: 0 200px;
+            padding-bottom: 20px;
+    
+            &-logo {
+                @include font(#fff, 48px, 500, normal, normal);
+                p {
+                    position: relative;
+                    bottom: 10px;
+                }
+                &::after {
+                    content: "97.6";
+                    font-size: 42px;
+                    position: absolute;
+                    margin-bottom: 100px;
+                    margin-left: 150px;
+    
+                }
+            }
+    
+            &-nav {
+                ul {
+                    @include font($white, 48px, 500, normal, normal);
+                    gap: 100px;
+    
+                    li {
+                        gap: 15px;
+
+                        .round {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        &__main {
+            &-container {
+                height: 600px;
+
+                .home__play {
+                    width: 600px;
+                    height: 600px;
+    
+                    &-line1 {
+                        width: 600px;
+                        height: 600px;
+                    }
+    
+                    
+                    &-line2 {
+                        width: 700px;
+                        height: 700px;
+                    }
+    
+                    &-line3 {
+                        width: 850px;
+                        height: 850px;
+                    }
+    
+                    &-box {
+                        width: 470px;
+                        height: 470px;
+    
+                        .play__btn {
+                            width: 300px;
+                            height: 300px;
+    
+                            img {
+                                width: 150px;
+                                height: 150px;
+                            }
+                        }
+                        
+                    }
+                }
+    
+            }
+    
+            &-title {
+                @include font($white, 96px, 700, normal, 4.8px);
+                margin-top: 80px;
+            }
+    
+            &-descripton {
+                @include font($white, 64px, 300, normal, 4.8px);
+            }
+    
+        }   
+
+        .home__voice {
+            width: 100%;
+            height: 100px;
+        }
+    }
+
+    .schedule {
+        padding: 200px;
+        background-size: auto 1200px;
+    
+        &__wrapper {
+            column-gap: 100px;
+            
+            .schedule__box-wrapper {
+                .schedule__box {
+                    .schedule__card {
+                        padding: 45px;
+                        width: 820px;
+                        height: 450px;
+    
+                        &__title-container {
+                            column-gap: 15px;
+                            @include font($black, 36px, 500, normal, 0);
+    
+                            .schedule__card__title-circle {
+                                min-width: 50px;
+                                min-height: 50px;
+                                border: 15px solid $main;
+                            }
+                        }
+    
+    
+                        &-description {
+                            @include font(rgba(0, 0, 0, 0.60), 28px, 500, normal, 0);
+                        }
+    
+                        &-repeat {
+                            @include font($black, 28px, 500, normal, 0);
+    
+                            & span {
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+
+    .about-us {
+        padding: 200px;
+        &__destiption {
+            @include font($white, 48px, 500, normal, normal);
+            margin-top: 25px;
+            text-align: flex-start;
+    
+        }
+        a {
+            img {
+                width: 700px;
+                height: 250px;
+            }
+        }
+    }
+
+    .team {
+        padding: 0 200px 200px;
+    
+        &__wrapper {    
+            .team__member {
+                width: 500px;
+                height: 700px;
+                &-position {
+                    text-align: center;
+                    margin-top: 25px;
+                    @include font(rgba(0, 0, 0, 0.60), 28px, 500, normal, 0);
+                }
+    
+                &-name {
+                    margin-top: 20px;
+                    @include font($black, 36px, 600, normal, 0);
+                }
+    
+                &-instagram {
+                    margin-top: 25px;
+                    @include font($main, 32px, 600, normal, 0);
+                    transition: 0.5s;
+    
+                    &:hover {
+                        transition: 0.5s;
+                        color: $black;
+                    }
+                }
+            }
+        }   
+    }
+
+    .partners {
+        &__box {
+            .partner__logo img {
+                min-width: 340px;
+                min-height: 340px;
+            }
+        }
+    }
+
+
+    .footer {
+        padding: 120px 200px 30px;
+    
+        &__wrapper {
+            .footer__info {
+                &-logo {
+                    width: 480px;
+                }
+    
+                &-description {
+                    max-width: 800px;
+                    @include font($white, 36px, 500, normal, 0);
+                }
+            }
+    
+            .footer__list {
+                &-title {
+                    @include font($white, 64px, 700, normal, 0);
+                }
+                
+                .footer__item {
+                    @include font($white, 36px, 500, normal, 0);
+                    
+                    a {
+                        column-gap: 20px !important;
+                    }
+                    .footer__contact {
+                        & svg {
+                            width: 50px;
+                            height: 50px;
+    
+                        } 
+    
+                    }
+                }
+    
+                .social-media {
+                    &__box {
+                        width: 70px;
+                        height: 70px;
+                        background-color: $white;
+                        border-radius: 50%;
+                        @include display-center(center, center);
+                        cursor: pointer;
+                        transition: .5s;
+    
+    
+                        & svg {
+                            width: 36px;
+                            height: 36px;
+    
+                            & path {
+                                transition: .5s;
+                            }
+                        }
+    
+                    }
+                }
+            }
+        }
+    
+    
+        &__copyright {
+            @include font(#ddd, 32px, 500, normal, 0);
+        }
+    }
+}
+
 @media screen and (max-width: 2000px) {
     .loader-overlay {
         .loader-line {
