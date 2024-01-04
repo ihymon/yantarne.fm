@@ -2010,7 +2010,16 @@
 
             &-logo {
                 width: auto;
-                @include font($main, 20px, 500, normal, normal);
+                @include font($white, 20px, 500, normal, normal);
+
+                &::after {
+                    content: "97.6";
+                    font-size: 32px;
+                    position: absolute;
+                    color: #fff;
+                    margin-bottom: 60px;
+                    margin-left: 100px;
+                }
 
                 img {
                  width: 170px;

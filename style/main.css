@@ -1514,7 +1514,14 @@ body {
         font-size: 20px;
         line-height: normal;
         letter-spacing: normal;
-        color: #CC0100; }
+        color: #fff; }
+        .home__header-logo::after {
+          content: "97.6";
+          font-size: 32px;
+          position: absolute;
+          color: #fff;
+          margin-bottom: 60px;
+          margin-left: 100px; }
         .home__header-logo img {
           width: 170px;
           margin-top: 0px; }
