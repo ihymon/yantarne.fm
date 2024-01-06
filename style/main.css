@@ -1181,9 +1181,6 @@ body {
     font-size: 16px;
     margin-right: 10px;
     transition: 1s; }
-    .home .marquee-infinity p:nth-child(2) {
-      position: relative;
-      left: 50px; }
   .home .marquee-infinity p {
     width: 3065px; }
   .home__header {
