@@ -1176,13 +1176,13 @@ body {
     100% {
       height: 0; } }
   .home .marquee-infinity div {
-    width: 6130px; }
+    width: 6220px; }
   .home .marquee-infinity p {
     font-size: 16px;
     margin-right: 10px;
     transition: 1s; }
   .home .marquee-infinity p {
-    width: 3065px; }
+    width: 3110px; }
   .home__header {
     height: 180px;
     padding: 0 80px;
