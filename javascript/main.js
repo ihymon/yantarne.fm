@@ -242,6 +242,7 @@ $(".home__play").click(async () => {
       console.error("Error playing audio:", error);
     }
   } else {
+    stream.src = '';
     $(".voiceBig").hide();
     $(".voiceSmall").show();
 
@@ -250,7 +251,6 @@ $(".home__play").click(async () => {
     streamPlay = false;
     $('.bar').css({"animation-name": "none"});
     clearTimeout(animationBar);
-    
   }
 });
 
