@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', function() {
+  // Ваш код тут, наприклад:
+  console.log('Сторінка повністю завантажена і готова до використання.');
+
+
 // Basic Start
 let timeRefreshPage = 300000; 
 let refreshPage = false; 
@@ -189,6 +194,7 @@ async function loadAudio() {
 
 let animationBar;
 let doubleClick = false;
+
 
 $(".home__play").click(async () => {
   $(".play__btn-play").toggle();
@@ -560,3 +566,5 @@ function displayCurrentYear() {
 
 displayCurrentYear();
 // Footer End
+
+});
