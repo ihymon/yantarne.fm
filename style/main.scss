@@ -119,14 +119,14 @@
     
     .marquee-infinity div {
         display: flex;
-        width: 7800px;
-        animation: marquee-infinity 50s linear infinite;
+        width: 7802px;
+        animation: marquee-infinity 30s linear infinite;
     }
     
     
     .marquee-infinity p {
         white-space: nowrap;
-        width: 3900px;
+        width: 3901px;
         overflow: hidden;
        
         @include font($white, 20px, 500, normal, normal);
@@ -1382,11 +1382,9 @@
         .marquee-infinity p {
            font-size: 16px;
            transition: 1s;
+           width: 3120px;
         }
 
-        .marquee-infinity p {
-            width: 3120px;
-        }
 
 
         &__header {
