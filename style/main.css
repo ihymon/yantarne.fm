@@ -211,6 +211,7 @@ body {
   .home .marquee-infinity p {
     white-space: nowrap;
     width: 3900px;
+    overflow: hidden;
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 500;
     font-size: 20px;
@@ -937,7 +938,7 @@ body {
     animation: marquee-infinity 50s linear infinite; }
   .home .marquee-infinity p {
     white-space: nowrap;
-    width: 5500px;
+    width: 5460px;
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 500;
     font-size: 28px;
@@ -1176,13 +1177,12 @@ body {
     100% {
       height: 0; } }
   .home .marquee-infinity div {
-    width: 6220px; }
+    width: 6240px; }
   .home .marquee-infinity p {
     font-size: 16px;
-    margin-right: 10px;
     transition: 1s; }
   .home .marquee-infinity p {
-    width: 3110px; }
+    width: 3120px; }
   .home__header {
     height: 180px;
     padding: 0 80px;
