@@ -119,14 +119,14 @@
     
     .marquee-infinity div {
         display: flex;
-        width: 7802px;
+        width: 7810px;
         animation: marquee-infinity 50s linear infinite;
     }
     
     
     .marquee-infinity p {
         white-space: nowrap;
-        width: 3900px;
+        width: 3905px;
         overflow: hidden;
        
         @include font($white, 20px, 400, normal, normal);
@@ -1078,7 +1078,7 @@
         
         .marquee-infinity div {
             display: flex;
-            width: 10926px;
+            width: 11140px;
             animation: marquee-infinity 50s linear infinite;
         }
         
@@ -1086,7 +1086,7 @@
         .marquee-infinity p {
             white-space: nowrap;
             overflow: hidden;
-            width:  5640px;
+            width:  5465px;
             @include font($white, 28px, 400, normal, normal);
         }
 
@@ -1377,12 +1377,12 @@
     .home {
         
         .marquee-infinity div {
-            width: 6452px;
+            width: 6240px;
         }
 
         .marquee-infinity p {
            font-size: 16px;
-           width: 3226px;
+           width: 3120px;
         }
 
 

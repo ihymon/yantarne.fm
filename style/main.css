@@ -206,11 +206,11 @@ body {
     background-color: #CC0100; }
   .home .marquee-infinity div {
     display: flex;
-    width: 7802px;
+    width: 7810px;
     animation: marquee-infinity 50s linear infinite; }
   .home .marquee-infinity p {
     white-space: nowrap;
-    width: 3900px;
+    width: 3905px;
     overflow: hidden;
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 400;
@@ -934,12 +934,12 @@ body {
     background-color: #CC0100; }
   .home .marquee-infinity div {
     display: flex;
-    width: 10926px;
+    width: 11140px;
     animation: marquee-infinity 50s linear infinite; }
   .home .marquee-infinity p {
     white-space: nowrap;
     overflow: hidden;
-    width: 5640px;
+    width: 5465px;
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 400;
     font-size: 28px;
@@ -1178,10 +1178,10 @@ body {
     100% {
       height: 0; } }
   .home .marquee-infinity div {
-    width: 6452px; }
+    width: 6240px; }
   .home .marquee-infinity p {
     font-size: 16px;
-    width: 3226px; }
+    width: 3120px; }
   .home__header {
     height: 180px;
     padding: 0 80px;
