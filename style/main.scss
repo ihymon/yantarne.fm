@@ -126,7 +126,7 @@
     
     .marquee-infinity p {
         white-space: nowrap;
-        width: 100%;
+        width: 3900px;
         overflow: hidden;
        
         @include font($white, 20px, 400, normal, normal);
@@ -1086,7 +1086,7 @@
         .marquee-infinity p {
             white-space: nowrap;
             overflow: hidden;
-            width: 100%;
+            width:  5640px;
             @include font($white, 28px, 400, normal, normal);
         }
 
@@ -1377,13 +1377,12 @@
     .home {
         
         .marquee-infinity div {
-            width: 6240px;
+            width: 6452px;
         }
 
         .marquee-infinity p {
            font-size: 16px;
-           transition: 1s;
-           width: 100%;
+           width: 3226px;
         }
 
 
