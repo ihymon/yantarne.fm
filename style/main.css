@@ -207,13 +207,13 @@ body {
   .home .marquee-infinity div {
     display: flex;
     width: 7802px;
-    animation: marquee-infinity 30s linear infinite; }
+    animation: marquee-infinity 50s linear infinite; }
   .home .marquee-infinity p {
     white-space: nowrap;
-    width: 3901px;
+    width: 100%;
     overflow: hidden;
     font-family: 'Bebas Neue', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 20px;
     line-height: normal;
     letter-spacing: normal;
@@ -934,13 +934,14 @@ body {
     background-color: #CC0100; }
   .home .marquee-infinity div {
     display: flex;
-    width: 10920px;
+    width: 10926px;
     animation: marquee-infinity 50s linear infinite; }
   .home .marquee-infinity p {
     white-space: nowrap;
-    width: 5460px;
+    overflow: hidden;
+    width: 100%;
     font-family: 'Bebas Neue', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 28px;
     line-height: normal;
     letter-spacing: normal;
@@ -1181,7 +1182,7 @@ body {
   .home .marquee-infinity p {
     font-size: 16px;
     transition: 1s;
-    width: 3120px; }
+    width: 100%; }
   .home__header {
     height: 180px;
     padding: 0 80px;
