@@ -1071,8 +1071,8 @@ body {
       margin-top: 25px;
       text-align: flex-start; }
     .about-us a img {
-      width: 700px;
-      height: 250px; }
+      width: 320px;
+      height: 50px; }
 
   .team {
     padding: 0 200px 200px; }
@@ -1337,8 +1337,8 @@ body {
     .about-us__destiption {
       font-size: 24px; }
     .about-us a img {
-      width: 450px;
-      height: 140px; }
+      width: 320px;
+      height: 50px; }
 
   .partners__box .partner__logo img {
     max-width: 180px;
@@ -1420,8 +1420,8 @@ body {
   .about-us {
     padding: 140px 60px; }
     .about-us a img {
-      width: 400px;
-      height: 120px; }
+      width: 320px;
+      height: 50px; }
 
   .partners__box .partner__logo img {
     max-width: 160px;
