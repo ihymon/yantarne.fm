@@ -175,7 +175,7 @@
             flex-direction: column;
             p {
                 position: relative;
-                bottom: 15px;
+                bottom: 30px;
                 z-index: 1;
             }
 
@@ -184,9 +184,8 @@
                 font-size: 32px;
                 position: absolute;
                 color: #fff;
-                margin-bottom: 60px;
+                padding-bottom: 60px;
                 margin-left: 150px;
-
             }
         }
 
@@ -1098,18 +1097,17 @@
             padding-bottom: 20px;
     
             &-logo {
-                @include font(#fff, 48px, 500, normal, normal);
+                @include font(#fff, 40px, 500, normal, normal);
                 p {
                     position: relative;
-                    bottom: 10px;
+                    bottom: 35px;
                 }
                 &::after {
                     content: "97.6";
                     font-size: 42px;
                     position: absolute;
-                    margin-bottom: 100px;
+                    padding-bottom: 100px;
                     margin-left: 150px;
-    
                 }
             }
     
@@ -1393,14 +1391,17 @@
             padding-bottom: 55px;
 
             &-logo {
+                p {
+                    bottom: 15px;
+                }
+
                 &::after {
                     content: "97.6";
-                    font-size: 38px;
+                    font-size: 32px;
                     position: absolute;
                     color: #fff;
-                    margin-bottom: 50px;
+                    padding-bottom: 50px;
                     margin-left: 100px;
-    
                 }
             }
 
@@ -2010,7 +2011,7 @@
                     font-size: 32px;
                     position: absolute;
                     color: #fff;
-                    margin-bottom: 60px;
+                    padding-bottom: 60px;
                     margin-left: 100px;
                 }
 
@@ -2384,7 +2385,7 @@
                     font-size: 20px;
                     position: absolute;
                     color: #fff;
-                    margin-bottom: 0px;
+                    padding-bottom: 0px;
                     margin-top: 5px;
                     margin-left: 60px;
     
