@@ -1945,6 +1945,8 @@ body {
 }
 
 @media screen and (max-width: 1700px) {
+
+
   .loader-overlay .loader-line {
     width: 10px;
     margin: 0 6px;
@@ -2058,6 +2060,16 @@ body {
   .loader-overlay .loader-line {
     width: 8px;
     margin: 0 5px;
+  }
+
+  .home .swiper__bg1 {
+    background-color: #000;
+    background-image: url(../img//home/mob.png);
+  }
+
+  .home .swiper__bg2 {
+    background-color: #000;
+    background-image: url(../img//home/mob.png);
   }
 
   @keyframes loading {
