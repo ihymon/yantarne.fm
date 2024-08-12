@@ -2062,19 +2062,9 @@ body {
     margin: 0 5px;
   }
 
-  .home .swiper__bg1 {
-    background-color: #000;
-    background-image: url(../img//home/mob.png);
-    background-position: center;
-    background-size: cover;
-  }
 
-  .home .swiper__bg2 {
-    background-color: #000;
-    background-position: center;
-    background-size: cover;
-    background-image: url(../img//home/mob.png);
-  }
+
+
 
   @keyframes loading {
     0% {
