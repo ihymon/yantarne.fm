@@ -642,7 +642,6 @@
     // padding: 140px 0 140px 60px;
     padding: 140px;
 
-
     background-image: url(./../img/main/spiral.svg);
     background-repeat: no-repeat;
     // background-position: top 60% right -80%;
@@ -650,10 +649,22 @@
     background-size: auto 700px;
     overflow: hidden;
 
+    
+    .schedule__photo{
+        padding: 50px 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        img{
+            width: 220px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+    }
 
     &__title {
         text-align: center;
-        margin-bottom: 80px;
         opacity: 1;
         transition: 0.3s
     }
@@ -662,15 +673,19 @@
         @include display-center(space-between, center);
         column-gap: 100px;
         z-index: 4;
+
+        
         
         .schedule__box-wrapper {
             width: 100%;
             position: relative;
             display: flex;
             flex-wrap: wrap;
+          
 
 
             .schedule__box {
+               
                 padding: 0;
                 width: 100%;
                 // padding: 1px 1px 40px 1px;
@@ -713,6 +728,7 @@
                     transition: 0.5s;
                     position: relative;
                     opacity: 1;
+                    
 
 
                     &__title-container {
