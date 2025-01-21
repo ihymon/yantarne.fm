@@ -657,7 +657,8 @@
         justify-content: space-around;
         flex-wrap: wrap;
         img{
-            width: 220px;
+            min-width: 220px;
+            width: 20%;
             margin: 20px;
             border-radius: 10px;
         }
