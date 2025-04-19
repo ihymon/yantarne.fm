@@ -302,6 +302,10 @@ body {
   background-image: url(../img/home/home__bg4.webp);
   background-size: cover;
 }
+.home .swiper__bg5 {
+  background-image: url(../img/home/home__bg5.webp);
+  background-size: cover;
+}
 .home__header {
   width: 100%;
   height: 250px;
