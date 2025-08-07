@@ -732,6 +732,16 @@ body {
   }
 }
 
+.festivalPartners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+.festivalPartners p {
+  text-align: center;
+}
+
 @keyframes marquee-infinity {
   0% {
     transform: translateX(0%);

@@ -624,6 +624,16 @@
 }
 // Home End
 
+.festivalPartners{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    p{
+        text-align: center;
+        
+    }
+}
 
 @keyframes marquee-infinity {
     0% {
